@@ -15,7 +15,9 @@
 #include <polaris/types/types.hpp>
 #include <polaris/parser/parser.hpp>
 
+#include <memory>
 #include <string>
+#include <vector>
 
 namespace polaris
 {
@@ -23,5 +25,30 @@ Parser::Parser()
 {
   std::string grammar = "";
   grammar = types::Double().grammar;
+  parser_ptr_ = std::make_unique<peg::parser>(grammar.c_str());
+  parser_ptr_->enable_ast();
 }
+
+bool Parser::evaluate(std::string line) const
+{
+  std::shared_ptr<peg::Ast> ast_ptr;
+  auto ret = parser_ptr_->parse(line.c_str(), ast_ptr);
+  if (!ret) {
+    return false;
+  }
+  return true;
 }
+
+bool Parser::evaluate(std::vector<std::string> lines) const
+{
+  if (lines.size() == 0) {
+    return false;
+  }
+  for (const auto & line : lines) {
+    if (!evaluate(line)) {
+      return false;
+    }
+  }
+  return true;
+}
+}  // namespace polaris

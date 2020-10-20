@@ -13,10 +13,16 @@
 // limitations under the License.
 
 #include <gtest/gtest.h>
+#include <polaris/parser/parser.hpp>
+
+TEST(parser, double_type)
+{
+  polaris::Parser parser;
+  ASSERT_TRUE(parser.evaluate("1"));
+}
 
 int main(int argc, char ** argv)
 {
   testing::InitGoogleTest(&argc, argv);
-
   return RUN_ALL_TESTS();
 }

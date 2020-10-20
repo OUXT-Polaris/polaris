@@ -52,8 +52,8 @@ if(BUILD_TESTING)
   # uncomment the line when this package is not in a git repo
   #set(ament_cmake_cpplint_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
-  ament_add_gtest(test_types test/test_types.cpp)
-  target_link_libraries(test_types types)
+  ament_add_gtest(test_parser test/test_parser.cpp)
+  target_link_libraries(test_parser parser)
 endif()
 
 ament_export_include_directories(include)

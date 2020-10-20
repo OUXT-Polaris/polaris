@@ -16,6 +16,9 @@
 #define POLARIS__PARSER__PARSER_HPP_
 
 #include <peglib.h>
+#include <memory>
+#include <vector>
+#include <string>
 
 namespace polaris
 {
@@ -23,7 +26,12 @@ class Parser
 {
 public:
   Parser();
+  bool evaluate(std::string line) const;
+  bool evaluate(std::vector<std::string> lines) const;
+
+private:
+  std::unique_ptr<peg::parser> parser_ptr_;
 };
-}
+}  // namespace polaris
 
 #endif  // POLARIS__PARSER__PARSER_HPP_
