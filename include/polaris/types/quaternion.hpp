@@ -16,4 +16,18 @@
 
 #include <geometry_msgs/msg/quaternion.hpp>
 
+namespace polaris
+{
+namespace types
+{
+class QuaternionType : public TypeBase<geometry_msgs::msg::Quaternion>
+{
+public:
+  QuaternionType()
+  : TypeBase("QUATERNION") {}
+};
+
+}  // namespace types
+}  // namespace polaris
+
 #endif  // POLARIS__TYPES__QUATERNION_HPP_

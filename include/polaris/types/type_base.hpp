@@ -21,20 +21,20 @@ namespace polaris
 {
 namespace types
 {
-template<class T>
+template<typename T>
 class TypeBase
 {
 public:
-  TypeBase(
-    const std::string & grammar)
-  : grammar(grammar)
+  explicit TypeBase(const std::string & keyword)
+  : keyword(keyword)
   {}
-  const std::string grammar;
-  const T getValue() const {return value;}
+  const std::string keyword;
+  T getValue() const {return value;}
 
 private:
   T value;
 };
+
 }  // namespace types
 }  // namespace polaris
 

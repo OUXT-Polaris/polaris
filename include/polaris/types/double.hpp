@@ -21,12 +21,13 @@ namespace polaris
 {
 namespace types
 {
-class Double : public TypeBase<double>
+class DoubleType : public TypeBase<double>
 {
 public:
-  Double()
-  : TypeBase<double>(R"(DOUBLE <- '-'? [0-9]+ ('.' [0-9]+)?)") {}
+  DoubleType()
+  : TypeBase("DOUBLE") {}
 };
+
 }  // namespace types
 }  // namespace polaris
 

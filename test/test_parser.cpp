@@ -14,11 +14,31 @@
 
 #include <gtest/gtest.h>
 #include <polaris/parser/parser.hpp>
+#include <vector>
+#include <string>
+
+TEST(parser, empty)
+{
+  polaris::Parser parser;
+  ASSERT_TRUE(parser.evaluate(""));
+  std::vector<std::string> lines = {""};
+  ASSERT_TRUE(parser.evaluate(lines));
+}
 
 TEST(parser, double_type)
 {
   polaris::Parser parser;
   ASSERT_TRUE(parser.evaluate("1"));
+  ASSERT_TRUE(parser.evaluate("1.5"));
+  ASSERT_TRUE(parser.evaluate("-1.2"));
+  ASSERT_FALSE(parser.evaluate("a"));
+  ASSERT_FALSE(parser.evaluate("-1.2a"));
+}
+
+TEST(parser, quaternion_type)
+{
+  polaris::Parser parser;
+  ASSERT_TRUE(parser.evaluate("quaternion(0.0,0,0,1.0)"));
 }
 
 int main(int argc, char ** argv)

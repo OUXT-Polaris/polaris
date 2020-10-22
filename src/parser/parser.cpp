@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+#include <polaris/grammar/grammar.hpp>
 #include <polaris/types/types.hpp>
 #include <polaris/parser/parser.hpp>
 
@@ -23,8 +24,7 @@ namespace polaris
 {
 Parser::Parser()
 {
-  std::string grammar = "";
-  grammar = types::Double().grammar;
+  std::string grammar = polaris::grammar;
   parser_ptr_ = std::make_unique<peg::parser>(grammar.c_str());
   parser_ptr_->enable_ast();
 }

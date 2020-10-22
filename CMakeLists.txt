@@ -21,18 +21,12 @@ find_package(peglib_vendor REQUIRED)
 
 include_directories(include)
 
-add_library(types
-  src/types/types.cpp)
-ament_target_dependencies(types
-  geometry_msgs)
-
 add_library(parser
   src/parser/parser.cpp
 )
 ament_target_dependencies(parser
   geometry_msgs
   peglib_vendor)
-target_link_libraries(parser types)
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
