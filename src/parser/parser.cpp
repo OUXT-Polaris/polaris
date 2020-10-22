@@ -38,17 +38,4 @@ bool Parser::evaluate(std::string line) const
   }
   return true;
 }
-
-bool Parser::evaluate(std::vector<std::string> lines) const
-{
-  if (lines.size() == 0) {
-    return false;
-  }
-  for (const auto & line : lines) {
-    if (!evaluate(line)) {
-      return false;
-    }
-  }
-  return true;
-}
 }  // namespace polaris

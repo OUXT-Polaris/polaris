@@ -28,7 +28,6 @@ class Parser
 public:
   Parser();
   bool evaluate(std::string line) const;
-  bool evaluate(std::vector<std::string> lines) const;
 
 private:
   std::unique_ptr<peg::parser> parser_ptr_;

@@ -23,7 +23,7 @@ const char grammar[] =
   R"(
     PROGRAM                <-  STATEMENTS
 
-    STATEMENTS             <-  (STATEMENT ';'?)*
+    STATEMENTS             <-  (STATEMENT ';')*
     STATEMENT              <-  ASSIGNMENT / RETURN / EXPRESSION
 
     ASSIGNMENT             <-  'let' IDENTIFIER '=' EXPRESSION
@@ -56,7 +56,7 @@ const char grammar[] =
 
 
     IDENTIFIER             <-  !KEYWORD < [a-zA-Z]+ >
-    INTEGER                <- < '-'? [0-9] >
+    INTEGER                <- < '-'? [0-9]+ >
     DOUBLE                 <- < '-'? [0-9]+ '.' [0-9] >
     STRING                 <-  < ["] < (!["] .)* > ["] >
     BOOLEAN                <-  < 'true' / 'false' >
