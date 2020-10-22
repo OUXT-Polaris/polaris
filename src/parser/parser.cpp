@@ -36,6 +36,7 @@ bool Parser::evaluate(std::string line) const
   if (!ret) {
     return false;
   }
+  ast_ptr = peg::AstOptimizer(true).optimize(ast_ptr);
   return true;
 }
 }  // namespace polaris
