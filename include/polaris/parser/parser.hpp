@@ -15,8 +15,9 @@
 #ifndef POLARIS__PARSER__PARSER_HPP_
 #define POLARIS__PARSER__PARSER_HPP_
 
+#include <polaris/types/type_base.hpp>
+
 #include <boost/any.hpp>
-#include <boost/optional.hpp>
 
 #include <peglib.h>
 
@@ -32,9 +33,19 @@ public:
   Parser();
   bool evaluate(std::string line);
   template<typename T>
-  boost::optional<T> getValue() const
+  bool getValue(std::string name, T & value) const
   {
-    return boost::none;
+    if (variables_.count(name) == 0) {
+      return false;
+    }
+    boost::any variable = variables_.at(name);
+    try {
+      value = boost::any_cast<const types::TypeBase<T> &>(variable).getValue();
+      return true;
+    } catch (boost::bad_any_cast) {
+      return false;
+    }
+    return false;
   }
 
 private:

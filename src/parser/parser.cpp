@@ -16,6 +16,8 @@
 #include <polaris/types/type_base.hpp>
 #include <polaris/parser/parser.hpp>
 
+#include <boost/optional.hpp>
+
 #include <memory>
 #include <string>
 #include <vector>
