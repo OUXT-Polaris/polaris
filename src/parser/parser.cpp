@@ -13,7 +13,7 @@
 // limitations under the License.
 
 #include <polaris/grammar/grammar.hpp>
-#include <polaris/types/types.hpp>
+#include <polaris/types/type_base.hpp>
 #include <polaris/parser/parser.hpp>
 
 #include <memory>
@@ -29,14 +29,33 @@ Parser::Parser()
   parser_ptr_->enable_ast();
 }
 
-bool Parser::evaluate(std::string line) const
+bool Parser::evaluate(std::string line)
 {
+  variables_.clear();
   std::shared_ptr<peg::Ast> ast_ptr;
   auto ret = parser_ptr_->parse(line.c_str(), ast_ptr);
   if (!ret) {
     return false;
   }
   ast_ptr = peg::AstOptimizer(true).optimize(ast_ptr);
+  evaluate(ast_ptr);
   return true;
+}
+
+boost::any Parser::evaluate(std::shared_ptr<peg::Ast> ast)
+{
+  if (ast->name == "ASSIGNMENT") {
+    auto symbol = ast->nodes[0]->token;
+    auto value = evaluate(ast->nodes[1]);
+    variables_[symbol] = value;
+    return value;
+  }
+  if (ast->name == "DOUBLE") {
+    types::TypeBase<double> double_value;
+    double_value.setValue(stod(ast->token));
+    return double_value;
+  }
+  return boost::none;
+  // throw std::runtime_error("ast name " + ast->name + " does not implemented.");
 }
 }  // namespace polaris

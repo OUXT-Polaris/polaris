@@ -15,9 +15,12 @@
 #ifndef POLARIS__PARSER__PARSER_HPP_
 #define POLARIS__PARSER__PARSER_HPP_
 
+#include <boost/any.hpp>
+#include <boost/optional.hpp>
+
 #include <peglib.h>
+
 #include <memory>
-#include <vector>
 #include <string>
 #include <unordered_map>
 
@@ -27,10 +30,17 @@ class Parser
 {
 public:
   Parser();
-  bool evaluate(std::string line) const;
+  bool evaluate(std::string line);
+  template<typename T>
+  boost::optional<T> getValue() const
+  {
+    return boost::none;
+  }
 
 private:
+  boost::any evaluate(std::shared_ptr<peg::Ast> ast);
   std::unique_ptr<peg::parser> parser_ptr_;
+  std::unordered_map<std::string, boost::any> variables_;
 };
 }  // namespace polaris
 

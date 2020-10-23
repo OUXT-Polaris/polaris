@@ -25,11 +25,9 @@ template<typename T>
 class TypeBase
 {
 public:
-  explicit TypeBase(const std::string & keyword)
-  : keyword(keyword)
-  {}
-  const std::string keyword;
+  TypeBase() {}
   T getValue() const {return value;}
+  void setValue(const T & v) {value = v;}
 
 private:
   T value;
