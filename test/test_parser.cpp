@@ -27,6 +27,8 @@ TEST(parser, double_type)
 {
   polaris::Parser parser;
   ASSERT_TRUE(parser.evaluate("let a = 1.0;"));
+  const auto a = parser.getValue<double>("a");
+  ASSERT_FALSE(a);
   /*
   ASSERT_TRUE(parser.evaluate("1;"));
   ASSERT_TRUE(parser.evaluate("1.5;"));
