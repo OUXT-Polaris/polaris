@@ -21,7 +21,7 @@ find_package(peglib_vendor REQUIRED)
 
 include_directories(include)
 
-add_library(polaris
+add_library(polaris SHARED
   src/parser/parser.cpp
 )
 ament_target_dependencies(polaris

@@ -16,6 +16,7 @@
 #define POLARIS__PARSER__PARSER_HPP_
 
 #include <polaris/types/type_base.hpp>
+#include <polaris/built_in_functions/functions.hpp>
 
 #include <boost/any.hpp>
 #include <boost/optional.hpp>
@@ -31,7 +32,7 @@ namespace polaris
 class Parser
 {
 public:
-  Parser();
+  explicit Parser(bool verbose = true);
   bool evaluate(std::string line);
   template<typename T>
   const boost::optional<T> getValue(std::string name) const
@@ -53,6 +54,8 @@ private:
   boost::any evaluate(std::shared_ptr<peg::Ast> ast);
   std::unique_ptr<peg::parser> parser_ptr_;
   std::unordered_map<std::string, boost::any> variables_;
+  bool verbose_;
+  built_in_functions::Functions functions_;
 };
 }  // namespace polaris
 

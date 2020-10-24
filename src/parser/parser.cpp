@@ -13,6 +13,7 @@
 // limitations under the License.
 
 #include <polaris/grammar/grammar.hpp>
+#include <polaris/built_in_functions/functions.hpp>
 #include <polaris/types/type_base.hpp>
 #include <polaris/parser/parser.hpp>
 
@@ -21,11 +22,14 @@
 #include <memory>
 #include <string>
 #include <vector>
+#include <iostream>
+
 
 namespace polaris
 {
-Parser::Parser()
+Parser::Parser(bool verbose)
 {
+  verbose_ = verbose;
   std::string grammar = polaris::grammar;
   parser_ptr_ = std::make_unique<peg::parser>(grammar.c_str());
   parser_ptr_->enable_ast();
@@ -46,6 +50,9 @@ bool Parser::evaluate(std::string line)
 
 boost::any Parser::evaluate(std::shared_ptr<peg::Ast> ast)
 {
+  if (verbose_) {
+    std::cout << peg::ast_to_s(ast) << std::endl;
+  }
   if (ast->name == "ASSIGNMENT") {
     auto symbol = ast->nodes[0]->token;
     auto value = evaluate(ast->nodes[1]);
@@ -53,11 +60,11 @@ boost::any Parser::evaluate(std::shared_ptr<peg::Ast> ast)
     return value;
   }
   if (ast->name == "DOUBLE") {
-    types::TypeBase<double> double_value;
-    double_value.setValue(stod(ast->token));
-    return double_value;
+    return built_in_functions::math::construct_double(ast);
+  }
+  if (ast->name == "CALL") {
+    return functions_.evaluate(ast->nodes[0]->token, ast->nodes[1]);
   }
   return boost::none;
-  // throw std::runtime_error("ast name " + ast->name + " does not implemented.");
 }
 }  // namespace polaris
