@@ -53,6 +53,12 @@ boost::any Parser::evaluate(std::shared_ptr<peg::Ast> ast)
   if (verbose_) {
     std::cout << peg::ast_to_s(ast) << std::endl;
   }
+  if (ast->name == "STATEMENTS") {
+    for (size_t i = 0; i < ast->nodes.size(); i++) {
+      evaluate(ast->nodes[i]);
+      functions_.setVariables(variables_);
+    }
+  }
   if (ast->name == "ASSIGNMENT") {
     auto symbol = ast->nodes[0]->token;
     auto value = evaluate(ast->nodes[1]);

@@ -71,6 +71,9 @@ boost::any Functions::constructDuaternion(std::shared_ptr<peg::Ast> ast)
           throw std::runtime_error("failed to interprit as double value");
         }
         quat.x = boost::any_cast<types::TypeBase<double>>(val).getValue();
+      } else if (ast->nodes[0]->name == "IDENTIFIER") {
+        quat.x =
+          boost::any_cast<types::TypeBase<double>>(variables_[ast->nodes[0]->token]).getValue();
       } else {
         quat.x =
           boost::any_cast<types::TypeBase<double>>(constructDouble(ast->nodes[0])).getValue();
@@ -81,6 +84,9 @@ boost::any Functions::constructDuaternion(std::shared_ptr<peg::Ast> ast)
           throw std::runtime_error("failed to interprit as double value");
         }
         quat.y = boost::any_cast<types::TypeBase<double>>(val).getValue();
+      } else if (ast->nodes[1]->name == "IDENTIFIER") {
+        quat.y =
+          boost::any_cast<types::TypeBase<double>>(variables_[ast->nodes[1]->token]).getValue();
       } else {
         quat.y =
           boost::any_cast<types::TypeBase<double>>(constructDouble(ast->nodes[1])).getValue();
@@ -91,16 +97,22 @@ boost::any Functions::constructDuaternion(std::shared_ptr<peg::Ast> ast)
           throw std::runtime_error("failed to interprit as double value");
         }
         quat.z = boost::any_cast<types::TypeBase<double>>(val).getValue();
+      } else if (ast->nodes[2]->name == "IDENTIFIER") {
+        quat.z =
+          boost::any_cast<types::TypeBase<double>>(variables_[ast->nodes[2]->token]).getValue();
       } else {
         quat.z =
           boost::any_cast<types::TypeBase<double>>(constructDouble(ast->nodes[2])).getValue();
       }
-      if (ast->nodes[2]->name == "CALL") {
+      if (ast->nodes[3]->name == "CALL") {
         auto val = evaluate(ast->nodes[3]->nodes[0]->token, ast->nodes[3]->nodes[1]);
         if (val.type() != typeid(types::TypeBase<double>)) {
           throw std::runtime_error("failed to interprit as double value");
         }
         quat.w = boost::any_cast<types::TypeBase<double>>(val).getValue();
+      } else if (ast->nodes[3]->name == "IDENTIFIER") {
+        quat.w =
+          boost::any_cast<types::TypeBase<double>>(variables_[ast->nodes[3]->token]).getValue();
       } else {
         quat.w =
           boost::any_cast<types::TypeBase<double>>(constructDouble(ast->nodes[3])).getValue();

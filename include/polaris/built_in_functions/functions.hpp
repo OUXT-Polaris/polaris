@@ -52,7 +52,13 @@ public:
     return functions_[function](ast);
   }
 
+  void setVariables(std::unordered_map<std::string, boost::any> variables)
+  {
+    variables_ = variables;
+  }
+
 private:
+  std::unordered_map<std::string, boost::any> variables_;
   std::unordered_map<std::string,
     std::function<boost::any(std::shared_ptr<peg::Ast> ast)>> functions_;
   boost::any constructInteger(std::shared_ptr<peg::Ast> ast);
