@@ -45,7 +45,7 @@ boost::any construct_integer(std::shared_ptr<peg::Ast> ast)
 
 boost::any construct_double(std::shared_ptr<peg::Ast> ast)
 {
-  if (ast->name == "DOUBLE") {
+  if (ast->name == "DOUBLE" || ast->name == "INTEGER") {
     try {
       types::TypeBase<double> double_value;
       double_value.setValue(std::stod(ast->token));
