@@ -42,7 +42,7 @@ TEST(parser, double_type)
   ASSERT_TRUE(parser.evaluate("a;3;"));
 }
 
-TEST(parser, quaternion_type)
+TEST(parser, quaternion_type_0)
 {
   polaris::Parser parser;
   ASSERT_TRUE(parser.evaluate("let a = quaternion(0.0,0.0,0.0,1.0);"));
@@ -52,6 +52,21 @@ TEST(parser, quaternion_type)
   ASSERT_DOUBLE_EQ(a.get().y, 0.0);
   ASSERT_DOUBLE_EQ(a.get().z, 0.0);
   ASSERT_DOUBLE_EQ(a.get().w, 1.0);
+}
+
+TEST(parser, quaternion_type_1)
+{
+  polaris::Parser parser;
+  ASSERT_TRUE(parser.evaluate("let w = 1.0;let a = quaternion(double(0.0),0,0.0,w);"));
+  const auto a = parser.getValue<geometry_msgs::msg::Quaternion>("a");
+  ASSERT_TRUE(a);
+  ASSERT_DOUBLE_EQ(a.get().x, 0.0);
+  ASSERT_DOUBLE_EQ(a.get().y, 0.0);
+  ASSERT_DOUBLE_EQ(a.get().z, 0.0);
+  ASSERT_DOUBLE_EQ(a.get().w, 1.0);
+  const auto w = parser.getValue<double>("w");
+  ASSERT_TRUE(w);
+  ASSERT_DOUBLE_EQ(w.get(), 1.0);
 }
 
 int main(int argc, char ** argv)
