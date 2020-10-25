@@ -13,7 +13,11 @@
 // limitations under the License.
 
 #include <gtest/gtest.h>
+
 #include <polaris/parser/parser.hpp>
+
+#include <geometry_msgs/msg/quaternion.hpp>
+
 #include <vector>
 #include <string>
 
@@ -29,20 +33,21 @@ TEST(parser, double_type)
   ASSERT_TRUE(parser.evaluate("let a = 1.0;"));
   const auto a = parser.getValue<double>("a");
   ASSERT_TRUE(a);
-  /*
+  ASSERT_DOUBLE_EQ(a.get(), 1.0);
   ASSERT_TRUE(parser.evaluate("1;"));
   ASSERT_TRUE(parser.evaluate("1.5;"));
   ASSERT_TRUE(parser.evaluate("-1.2;"));
   ASSERT_FALSE(parser.evaluate("-1.2a;"));
   ASSERT_FALSE(parser.evaluate("a3;"));
   ASSERT_TRUE(parser.evaluate("a;3;"));
-  */
 }
 
 TEST(parser, quaternion_type)
 {
   polaris::Parser parser;
-  // ASSERT_TRUE(parser.evaluate("quaternion(0.0,0,0,1.0);"));
+  ASSERT_TRUE(parser.evaluate("let a = quaternion(0.0,0.0,0.0,1.0);"));
+  const auto a = parser.getValue<geometry_msgs::msg::Quaternion>("a");
+  ASSERT_TRUE(a);
 }
 
 int main(int argc, char ** argv)

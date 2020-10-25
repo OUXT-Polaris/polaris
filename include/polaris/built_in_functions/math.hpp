@@ -33,41 +33,9 @@ namespace built_in_functions
 {
 namespace math
 {
-boost::any construct_double(std::shared_ptr<peg::Ast> ast)
-{
-  if (ast->name == "DOUBLE") {
-    try {
-      types::TypeBase<double> double_value;
-      double_value.setValue(std::stod(ast->token));
-      return double_value;
-    } catch (std::invalid_argument) {
-      throw std::runtime_error("failed to parse token into double value, std::invalid_argument");
-    } catch (std::out_of_range) {
-      throw std::runtime_error("failed to parse token into double value, std::out_of_range");
-    }
-  }
-  return boost::none;
-}
-
-boost::any construct_quaternion(std::shared_ptr<peg::Ast> ast)
-{
-  geometry_msgs::msg::Quaternion quat;
-  if (ast->name == "ARGUMENTS") {
-    try {
-      quat.x = boost::any_cast<types::TypeBase<double>>(construct_double(ast->nodes[0])).getValue();
-      quat.y = boost::any_cast<types::TypeBase<double>>(construct_double(ast->nodes[1])).getValue();
-      quat.z = boost::any_cast<types::TypeBase<double>>(construct_double(ast->nodes[2])).getValue();
-      quat.w = boost::any_cast<types::TypeBase<double>>(construct_double(ast->nodes[3])).getValue();
-      types::TypeBase<geometry_msgs::msg::Quaternion> quat_value;
-      quat_value.setValue(quat);
-      return quat_value;
-    } catch (boost::bad_any_cast) {
-      std::runtime_error(
-        "failed to cast as double value in constructing quaternion, boost::bad_any_cast");
-    }
-  }
-  return boost::none;
-}
+boost::any construct_integer(std::shared_ptr<peg::Ast> ast);
+boost::any construct_double(std::shared_ptr<peg::Ast> ast);
+boost::any construct_quaternion(std::shared_ptr<peg::Ast> ast);
 }  // namespace math
 }  // namespace built_in_functions
 }  // namespace polaris

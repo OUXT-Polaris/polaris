@@ -62,6 +62,9 @@ boost::any Parser::evaluate(std::shared_ptr<peg::Ast> ast)
   if (ast->name == "DOUBLE") {
     return built_in_functions::math::construct_double(ast);
   }
+  if (ast->name == "INTEGER") {
+    return built_in_functions::math::construct_integer(ast);
+  }
   if (ast->name == "CALL") {
     return functions_.evaluate(ast->nodes[0]->token, ast->nodes[1]);
   }
