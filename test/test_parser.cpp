@@ -67,6 +67,8 @@ TEST(parser, quaternion_type_1)
   const auto w = parser.getValue<double>("w");
   ASSERT_TRUE(w);
   ASSERT_DOUBLE_EQ(w.get(), 1.0);
+  const auto x = parser.getValue<double>("x");
+  ASSERT_FALSE(x);
 }
 
 int main(int argc, char ** argv)
