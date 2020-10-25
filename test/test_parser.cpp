@@ -48,6 +48,10 @@ TEST(parser, quaternion_type)
   ASSERT_TRUE(parser.evaluate("let a = quaternion(0.0,0.0,0.0,1.0);"));
   const auto a = parser.getValue<geometry_msgs::msg::Quaternion>("a");
   ASSERT_TRUE(a);
+  ASSERT_DOUBLE_EQ(a.get().x, 0.0);
+  ASSERT_DOUBLE_EQ(a.get().y, 0.0);
+  ASSERT_DOUBLE_EQ(a.get().z, 0.0);
+  ASSERT_DOUBLE_EQ(a.get().w, 1.0);
 }
 
 int main(int argc, char ** argv)
