@@ -60,13 +60,20 @@ boost::any Parser::evaluate(std::shared_ptr<peg::Ast> ast)
     return value;
   }
   if (ast->name == "DOUBLE") {
-    return built_in_functions::math::construct_double(ast);
+    return functions_.evaluate("double", ast);
   }
   if (ast->name == "INTEGER") {
-    return built_in_functions::math::construct_integer(ast);
+    return functions_.evaluate("integer", ast);
   }
   if (ast->name == "CALL") {
-    return functions_.evaluate(ast->nodes[0]->token, ast->nodes[1]);
+    auto ret = functions_.evaluate(ast->nodes[0]->token, ast->nodes[1]);
+    if (ret.type() == typeid(boost::none)) {
+      if (variables_.count(ast->nodes[0]->token) != 0) {
+        return variables_[ast->nodes[0]->token];
+      }
+      return boost::none;
+    }
+    return ret;
   }
   return boost::none;
 }
