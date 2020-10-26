@@ -12,8 +12,4 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#ifndef POLARIS__OPERATORS__OPERATORS_HPP_
-#define POLARIS__OPERATORS__OPERATORS_HPP_
-
-
-#endif  // POLARIS__OPERATORS__OPERATORS_HPP_
+#include <polaris/built_in_functions/operators.hpp>
