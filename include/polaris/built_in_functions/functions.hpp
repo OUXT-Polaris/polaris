@@ -48,7 +48,9 @@ public:
     functions_.insert(std::make_pair("quaternion",
       std::bind(&Functions::constructDuaternion, this, std::placeholders::_1)));
     functions_.insert(std::make_pair("+",
-      std::bind(&Functions::additive, this, std::placeholders::_1)));
+      std::bind(&Functions::addition, this, std::placeholders::_1)));
+    functions_.insert(std::make_pair("-",
+      std::bind(&Functions::subtraction, this, std::placeholders::_1)));
   }
   boost::any evaluate(std::string function, std::shared_ptr<peg::Ast> ast)
   {
@@ -70,7 +72,8 @@ private:
   boost::any constructInteger(std::shared_ptr<peg::Ast> ast);
   boost::any constructDouble(std::shared_ptr<peg::Ast> ast);
   boost::any constructDuaternion(std::shared_ptr<peg::Ast> ast);
-  boost::any additive(std::shared_ptr<peg::Ast> ast);
+  boost::any addition(std::shared_ptr<peg::Ast> ast);
+  boost::any subtraction(std::shared_ptr<peg::Ast> ast);
 };
 }  // namespace built_in_functions
 }  // namespace polaris

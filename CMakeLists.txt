@@ -24,7 +24,6 @@ include_directories(include)
 add_library(polaris SHARED
   src/parser/parser.cpp
   src/built_in_functions/functions.cpp
-  #src/built_in_functions/operators.cpp
 )
 ament_target_dependencies(polaris
   geometry_msgs
@@ -67,8 +66,11 @@ EXPORT export_polaris
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   ament_lint_auto_find_test_dependencies()
-  ament_add_gtest(test_parser test/test_parser.cpp)
-  target_link_libraries(test_parser polaris)
+  ament_add_gtest(test_types test/test_types.cpp)
+  target_link_libraries(test_types polaris)
+
+  ament_add_gtest(test_operator test/test_operator.cpp)
+  target_link_libraries(test_operator polaris)
 endif()
 
 ament_export_include_directories(include)

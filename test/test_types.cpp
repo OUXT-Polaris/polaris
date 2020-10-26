@@ -21,13 +21,13 @@
 #include <vector>
 #include <string>
 
-TEST(parser, empty)
+TEST(types, empty)
 {
   polaris::Parser parser;
   ASSERT_TRUE(parser.evaluate(""));
 }
 
-TEST(parser, double_type)
+TEST(types, double_type)
 {
   polaris::Parser parser;
   ASSERT_TRUE(parser.evaluate("let a = 1.0;"));
@@ -42,7 +42,7 @@ TEST(parser, double_type)
   ASSERT_TRUE(parser.evaluate("a;3;"));
 }
 
-TEST(parser, quaternion_type_0)
+TEST(types, quaternion_type_0)
 {
   polaris::Parser parser;
   ASSERT_TRUE(parser.evaluate("let a = quaternion(0.0,0.0,0.0,1.0);"));
@@ -54,7 +54,7 @@ TEST(parser, quaternion_type_0)
   ASSERT_DOUBLE_EQ(a.get().w, 1.0);
 }
 
-TEST(parser, quaternion_type_1)
+TEST(types, quaternion_type_1)
 {
   polaris::Parser parser;
   ASSERT_TRUE(parser.evaluate("let w = 1.0;let a = quaternion(double(0.0),0,0.0,w);"));

@@ -128,7 +128,50 @@ boost::any Functions::constructDuaternion(std::shared_ptr<peg::Ast> ast)
   return boost::none;
 }
 
-boost::any Functions::additive(std::shared_ptr<peg::Ast> ast)
+boost::any Functions::subtraction(std::shared_ptr<peg::Ast> ast)
+{
+  auto v0 = evaluate(ast->nodes[0]->name, ast->nodes[0]);
+  auto v1 = evaluate(ast->nodes[2]->name, ast->nodes[2]);
+  // (double value) - (double value)
+  if (v0.type() == typeid(types::TypeBase<double>) &&
+    v1.type() == typeid(types::TypeBase<double>))
+  {
+    types::TypeBase<double> ret;
+    ret.setValue(boost::any_cast<types::TypeBase<double>>(v0).getValue() -
+      boost::any_cast<types::TypeBase<double>>(v1).getValue());
+    return ret;
+  }
+  // (int value) - (double value)
+  if (v0.type() == typeid(types::TypeBase<int>) &&
+    v1.type() == typeid(types::TypeBase<double>))
+  {
+    types::TypeBase<double> ret;
+    ret.setValue(static_cast<double>(boost::any_cast<types::TypeBase<int>>(v0).getValue()) -
+      boost::any_cast<types::TypeBase<double>>(v1).getValue());
+    return ret;
+  }
+  // (double value) - (int value)
+  if (v0.type() == typeid(types::TypeBase<double>) &&
+    v1.type() == typeid(types::TypeBase<int>))
+  {
+    types::TypeBase<double> ret;
+    ret.setValue(boost::any_cast<types::TypeBase<double>>(v0).getValue() -
+      static_cast<double>(boost::any_cast<types::TypeBase<int>>(v1).getValue()));
+    return ret;
+  }
+  // (int value) - (int value)
+  if (v0.type() == typeid(types::TypeBase<double>) &&
+    v1.type() == typeid(types::TypeBase<int>))
+  {
+    types::TypeBase<int> ret;
+    ret.setValue(boost::any_cast<types::TypeBase<int>>(v0).getValue() -
+      boost::any_cast<types::TypeBase<int>>(v1).getValue());
+    return ret;
+  }
+  throw std::runtime_error("subcraction operators did not defined yet.");
+}
+
+boost::any Functions::addition(std::shared_ptr<peg::Ast> ast)
 {
   auto v0 = evaluate(ast->nodes[0]->name, ast->nodes[0]);
   auto v1 = evaluate(ast->nodes[2]->name, ast->nodes[2]);
@@ -168,7 +211,7 @@ boost::any Functions::additive(std::shared_ptr<peg::Ast> ast)
       boost::any_cast<types::TypeBase<int>>(v1).getValue());
     return ret;
   }
-  throw std::runtime_error("additive operators did not defined yet.");
+  throw std::runtime_error("addition operators did not defined yet.");
 }
 }  // namespace built_in_functions
 }  // namespace polaris
