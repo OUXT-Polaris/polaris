@@ -24,6 +24,7 @@ include_directories(include)
 add_library(polaris SHARED
   src/parser/parser.cpp
   src/built_in_functions/functions.cpp
+  #src/built_in_functions/operators.cpp
 )
 ament_target_dependencies(polaris
   geometry_msgs

@@ -18,7 +18,7 @@
 
 int main()
 {
-  polaris::Parser parser(true);
+  polaris::Parser parser(false);
   /*
   if (parser.evaluate("let a = 1.0;")) {
     std::cout << "evaluate succeced" << std::endl;
@@ -40,7 +40,11 @@ int main()
     }
   }
   */
-  if (parser.evaluate("1.0+3.0;")) {
+  if (parser.evaluate("let a = 1.0+3.0;")) {
     std::cout << "evaluate succeced" << std::endl;
+    auto a_value = parser.getValue<double>("a");
+    if (a_value) {
+      std::cout << "a = " << a_value.get() << std::endl;
+    }
   }
 }

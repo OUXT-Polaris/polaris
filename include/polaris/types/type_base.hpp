@@ -16,6 +16,7 @@
 #define POLARIS__TYPES__TYPE_BASE_HPP_
 
 #include <string>
+#include <type_traits>
 
 namespace polaris
 {
@@ -28,6 +29,13 @@ public:
   TypeBase() {}
   T getValue() const {return value;}
   void setValue(const T & v) {value = v;}
+  bool matchValueType(const std::type_info & type) const
+  {
+    if (typeid(T) == type) {
+      return true;
+    }
+    return false;
+  }
 
 private:
   T value;
