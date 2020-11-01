@@ -16,6 +16,7 @@
 #include <polaris/built_in_functions/functions.hpp>
 #include <polaris/exception.hpp>
 
+#include <quaternion_operation/quaternion_operation.h>
 #include <geometry_msgs/msg/quaternion.hpp>
 
 #include <boost/optional.hpp>
@@ -137,6 +138,15 @@ boost::any Functions::multiplication(std::shared_ptr<peg::Ast> ast)
 {
   auto v0 = evaluate(ast->nodes[0]->name, ast->nodes[0]);
   auto v1 = evaluate(ast->nodes[2]->name, ast->nodes[2]);
+  // (quaternion value) * (quaternion value)
+  if (v0.type() == typeid(types::TypeBase<geometry_msgs::msg::Quaternion>) &&
+    v1.type() == typeid(types::TypeBase<geometry_msgs::msg::Quaternion>))
+  {
+    types::TypeBase<geometry_msgs::msg::Quaternion> ret;
+    ret.setValue(boost::any_cast<types::TypeBase<geometry_msgs::msg::Quaternion>>(v0).getValue() *
+      boost::any_cast<types::TypeBase<geometry_msgs::msg::Quaternion>>(v1).getValue());
+    return ret;
+  }
   // (double value) * (double value)
   if (v0.type() == typeid(types::TypeBase<double>) &&
     v1.type() == typeid(types::TypeBase<double>))

@@ -18,7 +18,7 @@
 
 int main()
 {
-  polaris::Parser parser(true);
+  polaris::Parser parser(false);
   /*
   if (parser.evaluate("let a = 1.0;")) {
     std::cout << "evaluate succeced" << std::endl;
@@ -40,11 +40,14 @@ int main()
     }
   }
   */
-  if (parser.evaluate("let a = -1 + -double(3.0);")) {
+  if (parser.evaluate("let a = quaternion(0,0,0.0,1)*quaternion(0.1,0,0.0,1);")) {
     std::cout << "evaluate succeced" << std::endl;
-    auto a_value = parser.getValue<double>("a");
+    auto a_value = parser.getValue<geometry_msgs::msg::Quaternion>("a");
     if (a_value) {
-      std::cout << "a = " << a_value.get() << std::endl;
+      std::cout << "a.x = " << a_value.get().x << std::endl;
+      std::cout << "a.y = " << a_value.get().y << std::endl;
+      std::cout << "a.z = " << a_value.get().z << std::endl;
+      std::cout << "a.w = " << a_value.get().w << std::endl;
     }
   }
 }

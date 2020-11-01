@@ -18,8 +18,14 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(peglib_vendor REQUIRED)
+find_package(quaternion_operation REQUIRED)
 
-include_directories(include)
+find_package(Eigen3 REQUIRED)
+
+include_directories(
+  include
+  ${EIGEN3_INCLUDE_DIR}
+)
 
 add_library(polaris SHARED
   src/parser/parser.cpp
@@ -27,7 +33,8 @@ add_library(polaris SHARED
 )
 ament_target_dependencies(polaris
   geometry_msgs
-  peglib_vendor)
+  peglib_vendor
+  quaternion_operation)
 target_link_libraries(polaris
   Threads::Threads
 )
@@ -39,15 +46,12 @@ add_executable(example
 )
 ament_target_dependencies(example
   geometry_msgs
-  peglib_vendor)
+  peglib_vendor
+  quaternion_operation)
 target_link_libraries(example
   polaris
   Threads::Threads
 )
-
-# find dependencies
-find_package(ament_cmake REQUIRED)
-find_package(peglib_vendor REQUIRED)
 
 install(
   DIRECTORY "include/"
