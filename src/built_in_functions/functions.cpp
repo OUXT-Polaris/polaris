@@ -18,6 +18,7 @@
 
 #include <quaternion_operation/quaternion_operation.h>
 #include <geometry_msgs/msg/quaternion.hpp>
+#include <geometry_msgs/msg/point.hpp>
 
 #include <boost/optional.hpp>
 #include <boost/any.hpp>
@@ -66,9 +67,63 @@ boost::any Functions::constructDouble(std::shared_ptr<peg::Ast> ast)
   return boost::none;
 }
 
+boost::any Functions::constructPoint(std::shared_ptr<peg::Ast> ast)
+{
+  geometry_msgs::msg::Point point;
+  if (ast->name == "ARGUMENTS") {
+    try {
+      if (ast->nodes[0]->name == "CALL") {
+        auto val = evaluate(ast->nodes[0]->nodes[0]->token, ast->nodes[0]->nodes[1]);
+        if (val.type() != typeid(types::TypeBase<double>)) {
+          POLARIS_THROW_EVALUATION_ERROR(ast, "failed to interprit as double value");
+        }
+        point.x = boost::any_cast<types::TypeBase<double>>(val).getValue();
+      } else if (ast->nodes[0]->name == "IDENTIFIER") {
+        point.x =
+          boost::any_cast<types::TypeBase<double>>(variables_[ast->nodes[0]->token]).getValue();
+      } else {
+        point.x =
+          boost::any_cast<types::TypeBase<double>>(constructDouble(ast->nodes[0])).getValue();
+      }
+      if (ast->nodes[1]->name == "CALL") {
+        auto val = evaluate(ast->nodes[1]->nodes[0]->token, ast->nodes[1]->nodes[1]);
+        if (val.type() != typeid(types::TypeBase<double>)) {
+          POLARIS_THROW_EVALUATION_ERROR(ast, "failed to interprit as double value");
+        }
+        point.y = boost::any_cast<types::TypeBase<double>>(val).getValue();
+      } else if (ast->nodes[1]->name == "IDENTIFIER") {
+        point.y =
+          boost::any_cast<types::TypeBase<double>>(variables_[ast->nodes[1]->token]).getValue();
+      } else {
+        point.y =
+          boost::any_cast<types::TypeBase<double>>(constructDouble(ast->nodes[1])).getValue();
+      }
+      if (ast->nodes[2]->name == "CALL") {
+        auto val = evaluate(ast->nodes[2]->nodes[0]->token, ast->nodes[2]->nodes[1]);
+        if (val.type() != typeid(types::TypeBase<double>)) {
+          POLARIS_THROW_EVALUATION_ERROR(ast, "failed to interprit as double value");
+        }
+        point.z = boost::any_cast<types::TypeBase<double>>(val).getValue();
+      } else if (ast->nodes[2]->name == "IDENTIFIER") {
+        point.z =
+          boost::any_cast<types::TypeBase<double>>(variables_[ast->nodes[2]->token]).getValue();
+      } else {
+        point.z =
+          boost::any_cast<types::TypeBase<double>>(constructDouble(ast->nodes[2])).getValue();
+      }
+      types::TypeBase<geometry_msgs::msg::Point> point_value;
+      point_value.setValue(point);
+      return point_value;
+    } catch (boost::bad_any_cast) {
+      std::runtime_error(
+        "failed to cast as double value in constructing quaternion, boost::bad_any_cast");
+    }
+  }
+  return boost::none;
+}
+
 boost::any Functions::constructQuaternionFromRpy(std::shared_ptr<peg::Ast> ast)
 {
-  // geometry_msgs::msg::Quaternion quat;
   geometry_msgs::msg::Vector3 rpy;
   if (ast->name == "ARGUMENTS") {
     try {

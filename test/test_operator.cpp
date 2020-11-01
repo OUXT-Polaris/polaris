@@ -172,9 +172,9 @@ TEST(operator, quaternion0)
   const auto a = parser.getValue<geometry_msgs::msg::Quaternion>("a");
   ASSERT_TRUE(a);
   ASSERT_DOUBLE_EQ(a.get().x, 0.1);
-  ASSERT_DOUBLE_EQ(a.get().y, 0.1);
-  ASSERT_DOUBLE_EQ(a.get().z, 0.1);
-  ASSERT_DOUBLE_EQ(a.get().w, 0.1);
+  ASSERT_DOUBLE_EQ(a.get().y, 0);
+  ASSERT_DOUBLE_EQ(a.get().z, 0);
+  ASSERT_DOUBLE_EQ(a.get().w, 1);
 }
 
 int main(int argc, char ** argv)

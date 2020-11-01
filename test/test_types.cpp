@@ -16,6 +16,7 @@
 
 #include <polaris/parser/parser.hpp>
 
+#include <geometry_msgs/msg/point.hpp>
 #include <geometry_msgs/msg/quaternion.hpp>
 
 #include <vector>
@@ -70,6 +71,18 @@ TEST(types, quaternion_type_1)
   const auto x = parser.getValue<double>("x");
   ASSERT_FALSE(x);
 }
+
+TEST(types, point_type_0)
+{
+  polaris::Parser parser;
+  ASSERT_TRUE(parser.evaluate("let a = point(0.0,0.0,1.0);"));
+  const auto a = parser.getValue<geometry_msgs::msg::Point>("a");
+  ASSERT_TRUE(a);
+  ASSERT_DOUBLE_EQ(a.get().x, 0.0);
+  ASSERT_DOUBLE_EQ(a.get().y, 0.0);
+  ASSERT_DOUBLE_EQ(a.get().z, 1.0);
+}
+
 
 int main(int argc, char ** argv)
 {
