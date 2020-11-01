@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+#include <polaris/exception.hpp>
 #include <polaris/grammar/grammar.hpp>
 #include <polaris/built_in_functions/functions.hpp>
 #include <polaris/types/type_base.hpp>

@@ -14,6 +14,7 @@
 
 #include <polaris/types/type_base.hpp>
 #include <polaris/built_in_functions/functions.hpp>
+#include <polaris/exception.hpp>
 
 #include <geometry_msgs/msg/quaternion.hpp>
 
@@ -36,9 +37,11 @@ boost::any Functions::constructInteger(std::shared_ptr<peg::Ast> ast)
       int_value.setValue(std::stoi(ast->token));
       return int_value;
     } catch (std::invalid_argument) {
-      throw std::runtime_error("failed to parse token into int value, std::invalid_argument");
+      POLARIS_THROW_EVALUATION_ERROR(ast,
+        "failed to parse token into int value, std::invalid_argument");
     } catch (std::out_of_range) {
-      throw std::runtime_error("failed to parse token into int value, std::out_of_range");
+      POLARIS_THROW_EVALUATION_ERROR(ast,
+        "failed to parse token into int value, std::out_of_range");
     }
   }
   return boost::none;
@@ -52,9 +55,11 @@ boost::any Functions::constructDouble(std::shared_ptr<peg::Ast> ast)
       double_value.setValue(std::stod(ast->token));
       return double_value;
     } catch (std::invalid_argument) {
-      throw std::runtime_error("failed to parse token into double value, std::invalid_argument");
+      POLARIS_THROW_EVALUATION_ERROR(ast,
+        "failed to parse token into double value, std::invalid_argument");
     } catch (std::out_of_range) {
-      throw std::runtime_error("failed to parse token into double value, std::out_of_range");
+      POLARIS_THROW_EVALUATION_ERROR(ast,
+        "failed to parse token into double value, std::out_of_range");
     }
   }
   return boost::none;
@@ -68,7 +73,7 @@ boost::any Functions::constructDuaternion(std::shared_ptr<peg::Ast> ast)
       if (ast->nodes[0]->name == "CALL") {
         auto val = evaluate(ast->nodes[0]->nodes[0]->token, ast->nodes[0]->nodes[1]);
         if (val.type() != typeid(types::TypeBase<double>)) {
-          throw std::runtime_error("failed to interprit as double value");
+          POLARIS_THROW_EVALUATION_ERROR(ast, "failed to interprit as double value");
         }
         quat.x = boost::any_cast<types::TypeBase<double>>(val).getValue();
       } else if (ast->nodes[0]->name == "IDENTIFIER") {
@@ -81,7 +86,7 @@ boost::any Functions::constructDuaternion(std::shared_ptr<peg::Ast> ast)
       if (ast->nodes[1]->name == "CALL") {
         auto val = evaluate(ast->nodes[1]->nodes[0]->token, ast->nodes[1]->nodes[1]);
         if (val.type() != typeid(types::TypeBase<double>)) {
-          throw std::runtime_error("failed to interprit as double value");
+          POLARIS_THROW_EVALUATION_ERROR(ast, "failed to interprit as double value");
         }
         quat.y = boost::any_cast<types::TypeBase<double>>(val).getValue();
       } else if (ast->nodes[1]->name == "IDENTIFIER") {
@@ -94,7 +99,7 @@ boost::any Functions::constructDuaternion(std::shared_ptr<peg::Ast> ast)
       if (ast->nodes[2]->name == "CALL") {
         auto val = evaluate(ast->nodes[2]->nodes[0]->token, ast->nodes[2]->nodes[1]);
         if (val.type() != typeid(types::TypeBase<double>)) {
-          throw std::runtime_error("failed to interprit as double value");
+          POLARIS_THROW_EVALUATION_ERROR(ast, "failed to interprit as double value");
         }
         quat.z = boost::any_cast<types::TypeBase<double>>(val).getValue();
       } else if (ast->nodes[2]->name == "IDENTIFIER") {
@@ -107,7 +112,7 @@ boost::any Functions::constructDuaternion(std::shared_ptr<peg::Ast> ast)
       if (ast->nodes[3]->name == "CALL") {
         auto val = evaluate(ast->nodes[3]->nodes[0]->token, ast->nodes[3]->nodes[1]);
         if (val.type() != typeid(types::TypeBase<double>)) {
-          throw std::runtime_error("failed to interprit as double value");
+          POLARIS_THROW_EVALUATION_ERROR(ast, "failed to interprit as double value");
         }
         quat.w = boost::any_cast<types::TypeBase<double>>(val).getValue();
       } else if (ast->nodes[3]->name == "IDENTIFIER") {
@@ -126,6 +131,15 @@ boost::any Functions::constructDuaternion(std::shared_ptr<peg::Ast> ast)
     }
   }
   return boost::none;
+}
+
+boost::any Functions::multiplication(std::shared_ptr<peg::Ast> ast)
+{
+  POLARIS_THROW_EVALUATION_ERROR(ast, "multiplication operators did not defined yet.");
+}
+
+boost::any Functions::division(std::shared_ptr<peg::Ast> ast)
+{
 }
 
 boost::any Functions::subtraction(std::shared_ptr<peg::Ast> ast)
@@ -168,7 +182,7 @@ boost::any Functions::subtraction(std::shared_ptr<peg::Ast> ast)
       boost::any_cast<types::TypeBase<int>>(v1).getValue());
     return ret;
   }
-  throw std::runtime_error("subcraction operators did not defined yet.");
+  POLARIS_THROW_EVALUATION_ERROR(ast, "subcraction operators did not defined yet.");
 }
 
 boost::any Functions::addition(std::shared_ptr<peg::Ast> ast)
@@ -211,7 +225,7 @@ boost::any Functions::addition(std::shared_ptr<peg::Ast> ast)
       boost::any_cast<types::TypeBase<int>>(v1).getValue());
     return ret;
   }
-  throw std::runtime_error("addition operators did not defined yet.");
+  POLARIS_THROW_EVALUATION_ERROR(ast, "addition operators did not defined yet.");
 }
 }  // namespace built_in_functions
 }  // namespace polaris

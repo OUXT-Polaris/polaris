@@ -51,9 +51,23 @@ public:
       std::bind(&Functions::addition, this, std::placeholders::_1)));
     functions_.insert(std::make_pair("-",
       std::bind(&Functions::subtraction, this, std::placeholders::_1)));
+    functions_.insert(std::make_pair("*",
+      std::bind(&Functions::multiplication, this, std::placeholders::_1)));
+    functions_.insert(std::make_pair("/",
+      std::bind(&Functions::division, this, std::placeholders::_1)));
   }
   boost::any evaluate(std::string function, std::shared_ptr<peg::Ast> ast)
   {
+    if (ast->name == "CALL") {
+      auto ret = evaluate(ast->nodes[0]->token, ast->nodes[1]);
+      if (ret.type() == typeid(boost::none)) {
+        if (variables_.count(ast->nodes[0]->token) != 0) {
+          return variables_[ast->nodes[0]->token];
+        }
+        return boost::none;
+      }
+      return ret;
+    }
     if (functions_.count(function) == 0) {
       return boost::none;
     }
@@ -74,6 +88,8 @@ private:
   boost::any constructDuaternion(std::shared_ptr<peg::Ast> ast);
   boost::any addition(std::shared_ptr<peg::Ast> ast);
   boost::any subtraction(std::shared_ptr<peg::Ast> ast);
+  boost::any multiplication(std::shared_ptr<peg::Ast> ast);
+  boost::any division(std::shared_ptr<peg::Ast> ast);
 };
 }  // namespace built_in_functions
 }  // namespace polaris

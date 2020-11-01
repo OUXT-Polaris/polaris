@@ -23,6 +23,7 @@
 
 #include <peglib.h>
 
+#include <type_traits>
 #include <memory>
 #include <string>
 #include <unordered_map>
