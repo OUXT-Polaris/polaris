@@ -129,6 +129,42 @@ TEST(operator, multiplication3)
   ASSERT_DOUBLE_EQ(a.get(), -3.0);
 }
 
+TEST(operator, division0)
+{
+  polaris::Parser parser;
+  ASSERT_TRUE(parser.evaluate("let a = 1.0 / 3.0;"));
+  const auto a = parser.getValue<double>("a");
+  ASSERT_TRUE(a);
+  ASSERT_DOUBLE_EQ(a.get(), 1.0 / 3.0);
+}
+
+TEST(operator, division1)
+{
+  polaris::Parser parser;
+  ASSERT_TRUE(parser.evaluate("let a = 1 / 3.0;"));
+  const auto a = parser.getValue<double>("a");
+  ASSERT_TRUE(a);
+  ASSERT_DOUBLE_EQ(a.get(), 1.0 / 3.0);
+}
+
+TEST(operator, division2)
+{
+  polaris::Parser parser;
+  ASSERT_TRUE(parser.evaluate("let a = 1 / double(3.0);"));
+  const auto a = parser.getValue<double>("a");
+  ASSERT_TRUE(a);
+  ASSERT_DOUBLE_EQ(a.get(), 1.0 / 3.0);
+}
+
+TEST(operator, division3)
+{
+  polaris::Parser parser;
+  ASSERT_TRUE(parser.evaluate("let a = -1 / double(3.0);"));
+  const auto a = parser.getValue<double>("a");
+  ASSERT_TRUE(a);
+  ASSERT_DOUBLE_EQ(a.get(), -1.0 / 3.0);
+}
+
 int main(int argc, char ** argv)
 {
   testing::InitGoogleTest(&argc, argv);

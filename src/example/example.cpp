@@ -40,7 +40,7 @@ int main()
     }
   }
   */
-  if (parser.evaluate("let a = -1 + double(3.0);")) {
+  if (parser.evaluate("let a = -1 + -double(3.0);")) {
     std::cout << "evaluate succeced" << std::endl;
     auto a_value = parser.getValue<double>("a");
     if (a_value) {
