@@ -48,6 +48,60 @@ TEST(operator, addition2)
   ASSERT_DOUBLE_EQ(a.get(), 4.0);
 }
 
+TEST(operator, subtraction0)
+{
+  polaris::Parser parser;
+  ASSERT_TRUE(parser.evaluate("let a = 1.0 - 3.0;"));
+  const auto a = parser.getValue<double>("a");
+  ASSERT_TRUE(a);
+  ASSERT_DOUBLE_EQ(a.get(), -2.0);
+}
+
+TEST(operator, subtraction1)
+{
+  polaris::Parser parser;
+  ASSERT_TRUE(parser.evaluate("let a = 1 - 3.0;"));
+  const auto a = parser.getValue<double>("a");
+  ASSERT_TRUE(a);
+  ASSERT_DOUBLE_EQ(a.get(), -2.0);
+}
+
+TEST(operator, subtraction2)
+{
+  polaris::Parser parser;
+  ASSERT_TRUE(parser.evaluate("let a = 1 - double(3.0);"));
+  const auto a = parser.getValue<double>("a");
+  ASSERT_TRUE(a);
+  ASSERT_DOUBLE_EQ(a.get(), -2.0);
+}
+
+TEST(operator, multiplication0)
+{
+  polaris::Parser parser;
+  ASSERT_TRUE(parser.evaluate("let a = 1.0 * 3.0;"));
+  const auto a = parser.getValue<double>("a");
+  ASSERT_TRUE(a);
+  ASSERT_DOUBLE_EQ(a.get(), 3.0);
+}
+
+TEST(operator, multiplication1)
+{
+  polaris::Parser parser;
+  ASSERT_TRUE(parser.evaluate("let a = 1 * 3.0;"));
+  const auto a = parser.getValue<double>("a");
+  ASSERT_TRUE(a);
+  ASSERT_DOUBLE_EQ(a.get(), 3.0);
+}
+
+TEST(operator, multiplication2)
+{
+  polaris::Parser parser;
+  ASSERT_TRUE(parser.evaluate("let a = 1 * double(3.0);"));
+  const auto a = parser.getValue<double>("a");
+  ASSERT_TRUE(a);
+  ASSERT_DOUBLE_EQ(a.get(), 3.0);
+}
+
 int main(int argc, char ** argv)
 {
   testing::InitGoogleTest(&argc, argv);
