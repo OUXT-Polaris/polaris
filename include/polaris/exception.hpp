@@ -38,8 +38,8 @@ public:
       ).c_str()),
     ast_string(peg::ast_to_s(ast)), description(description)
   {}
-  const std::string description;
   const std::string ast_string;
+  const std::string description;
 };
 }  // namespace polaris
 

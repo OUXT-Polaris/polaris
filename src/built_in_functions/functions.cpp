@@ -135,11 +135,88 @@ boost::any Functions::constructDuaternion(std::shared_ptr<peg::Ast> ast)
 
 boost::any Functions::multiplication(std::shared_ptr<peg::Ast> ast)
 {
+  auto v0 = evaluate(ast->nodes[0]->name, ast->nodes[0]);
+  auto v1 = evaluate(ast->nodes[2]->name, ast->nodes[2]);
+  // (double value) * (double value)
+  if (v0.type() == typeid(types::TypeBase<double>) &&
+    v1.type() == typeid(types::TypeBase<double>))
+  {
+    types::TypeBase<double> ret;
+    ret.setValue(boost::any_cast<types::TypeBase<double>>(v0).getValue() *
+      boost::any_cast<types::TypeBase<double>>(v1).getValue());
+    return ret;
+  }
+  // (int value) * (double value)
+  if (v0.type() == typeid(types::TypeBase<int>) &&
+    v1.type() == typeid(types::TypeBase<double>))
+  {
+    types::TypeBase<double> ret;
+    ret.setValue(boost::any_cast<types::TypeBase<int>>(v0).getValue() *
+      boost::any_cast<types::TypeBase<double>>(v1).getValue());
+    return ret;
+  }
+  // (double value) * (int value)
+  if (v0.type() == typeid(types::TypeBase<double>) &&
+    v1.type() == typeid(types::TypeBase<int>))
+  {
+    types::TypeBase<double> ret;
+    ret.setValue(boost::any_cast<types::TypeBase<double>>(v0).getValue() *
+      boost::any_cast<types::TypeBase<int>>(v1).getValue());
+    return ret;
+  }
+  // (int value) * (int value)
+  if (v0.type() == typeid(types::TypeBase<int>) &&
+    v1.type() == typeid(types::TypeBase<int>))
+  {
+    types::TypeBase<int> ret;
+    ret.setValue(boost::any_cast<types::TypeBase<int>>(v0).getValue() *
+      boost::any_cast<types::TypeBase<int>>(v1).getValue());
+    return ret;
+  }
   POLARIS_THROW_EVALUATION_ERROR(ast, "multiplication operators did not defined yet.");
 }
 
 boost::any Functions::division(std::shared_ptr<peg::Ast> ast)
 {
+  auto v0 = evaluate(ast->nodes[0]->name, ast->nodes[0]);
+  auto v1 = evaluate(ast->nodes[2]->name, ast->nodes[2]);
+  // (double value) * (double value)
+  if (v0.type() == typeid(types::TypeBase<double>) &&
+    v1.type() == typeid(types::TypeBase<double>))
+  {
+    types::TypeBase<double> ret;
+    ret.setValue(boost::any_cast<types::TypeBase<double>>(v0).getValue() /
+      boost::any_cast<types::TypeBase<double>>(v1).getValue());
+    return ret;
+  }
+  // (int value) * (double value)
+  if (v0.type() == typeid(types::TypeBase<int>) &&
+    v1.type() == typeid(types::TypeBase<double>))
+  {
+    types::TypeBase<double> ret;
+    ret.setValue(boost::any_cast<types::TypeBase<int>>(v0).getValue() /
+      boost::any_cast<types::TypeBase<double>>(v1).getValue());
+    return ret;
+  }
+  // (double value) * (int value)
+  if (v0.type() == typeid(types::TypeBase<double>) &&
+    v1.type() == typeid(types::TypeBase<int>))
+  {
+    types::TypeBase<double> ret;
+    ret.setValue(boost::any_cast<types::TypeBase<double>>(v0).getValue() /
+      boost::any_cast<types::TypeBase<int>>(v1).getValue());
+    return ret;
+  }
+  // (int value) * (int value)
+  if (v0.type() == typeid(types::TypeBase<int>) &&
+    v1.type() == typeid(types::TypeBase<int>))
+  {
+    types::TypeBase<int> ret;
+    ret.setValue(boost::any_cast<types::TypeBase<int>>(v0).getValue() /
+      boost::any_cast<types::TypeBase<int>>(v1).getValue());
+    return ret;
+  }
+  POLARIS_THROW_EVALUATION_ERROR(ast, "division operators did not defined yet.");
 }
 
 boost::any Functions::subtraction(std::shared_ptr<peg::Ast> ast)
