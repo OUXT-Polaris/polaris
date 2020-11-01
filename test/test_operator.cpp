@@ -165,6 +165,18 @@ TEST(operator, division3)
   ASSERT_DOUBLE_EQ(a.get(), -1.0 / 3.0);
 }
 
+TEST(operator, quaternion0)
+{
+  polaris::Parser parser;
+  ASSERT_TRUE(parser.evaluate("let a = rpy(0,0,0)*quaternion(0.1,0,0.0,1);"));
+  const auto a = parser.getValue<geometry_msgs::msg::Quaternion>("a");
+  ASSERT_TRUE(a);
+  ASSERT_DOUBLE_EQ(a.get().x, 0.1);
+  ASSERT_DOUBLE_EQ(a.get().y, 0.1);
+  ASSERT_DOUBLE_EQ(a.get().z, 0.1);
+  ASSERT_DOUBLE_EQ(a.get().w, 0.1);
+}
+
 int main(int argc, char ** argv)
 {
   testing::InitGoogleTest(&argc, argv);
