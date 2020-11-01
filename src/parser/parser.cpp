@@ -54,15 +54,15 @@ boost::any Parser::evaluate(std::shared_ptr<peg::Ast> ast)
   if (verbose_) {
     std::cout << peg::ast_to_s(ast) << std::endl;
   }
-  if (ast->nodes.size() >= 3) {
-    if (ast->nodes[1]->name == "INFIX_OPE") {
-      return functions_.evaluate(ast->nodes[1]->token, ast);
-    }
-  }
   if (ast->name == "STATEMENTS") {
     for (size_t i = 0; i < ast->nodes.size(); i++) {
       evaluate(ast->nodes[i]);
       functions_.setVariables(variables_);
+    }
+  }
+  if (ast->nodes.size() >= 3) {
+    if (ast->nodes[1]->name == "INFIX_OPE") {
+      return functions_.evaluate(ast->nodes[1]->token, ast);
     }
   }
   if (ast->name == "ASSIGNMENT") {

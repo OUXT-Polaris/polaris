@@ -15,6 +15,9 @@
 #ifndef POLARIS__BUILT_IN_FUNCTIONS__FUNCTIONS_HPP_
 #define POLARIS__BUILT_IN_FUNCTIONS__FUNCTIONS_HPP_
 
+#include <polaris/exception.hpp>
+#include <polaris/types/type_base.hpp>
+
 #include <peglib.h>
 
 #include <geometry_msgs/msg/quaternion.hpp>
@@ -58,6 +61,24 @@ public:
   }
   boost::any evaluate(std::string function, std::shared_ptr<peg::Ast> ast)
   {
+    if (ast->name == "PREFIX_EXPR") {
+      if (ast->nodes[0]->token == "-") {
+        auto ret = evaluate(ast->nodes[1]->name, ast->nodes[1]);
+        if (ret.type() == typeid(boost::none)) {
+          return boost::none;
+        }
+        if (ret.type() == typeid(types::TypeBase<double>)) {
+          types::TypeBase<double> double_value = boost::any_cast<types::TypeBase<double>>(ret);
+          double_value.setValue(-1 * double_value.getValue());
+          return double_value;
+        }
+        if (ret.type() == typeid(types::TypeBase<int>)) {
+          types::TypeBase<int> int_value = boost::any_cast<types::TypeBase<int>>(ret);
+          int_value.setValue(-1 * int_value.getValue());
+          return int_value;
+        }
+      }
+    }
     if (ast->name == "CALL") {
       auto ret = evaluate(ast->nodes[0]->token, ast->nodes[1]);
       if (ret.type() == typeid(boost::none)) {
@@ -69,7 +90,7 @@ public:
       return ret;
     }
     if (functions_.count(function) == 0) {
-      return boost::none;
+      POLARIS_THROW_EVALUATION_ERROR(ast, "function did not defined yet.");
     }
     return functions_[function](ast);
   }
