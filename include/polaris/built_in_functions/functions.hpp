@@ -49,7 +49,9 @@ public:
     functions_.insert(std::make_pair("DOUBLE",
       std::bind(&Functions::constructDouble, this, std::placeholders::_1)));
     functions_.insert(std::make_pair("quaternion",
-      std::bind(&Functions::constructDuaternion, this, std::placeholders::_1)));
+      std::bind(&Functions::constructQuaternion, this, std::placeholders::_1)));
+    functions_.insert(std::make_pair("rpy",
+      std::bind(&Functions::constructQuaternionFromRpy, this, std::placeholders::_1)));
     functions_.insert(std::make_pair("+",
       std::bind(&Functions::addition, this, std::placeholders::_1)));
     functions_.insert(std::make_pair("-",
@@ -106,7 +108,8 @@ private:
     std::function<boost::any(std::shared_ptr<peg::Ast> ast)>> functions_;
   boost::any constructInteger(std::shared_ptr<peg::Ast> ast);
   boost::any constructDouble(std::shared_ptr<peg::Ast> ast);
-  boost::any constructDuaternion(std::shared_ptr<peg::Ast> ast);
+  boost::any constructQuaternion(std::shared_ptr<peg::Ast> ast);
+  boost::any constructQuaternionFromRpy(std::shared_ptr<peg::Ast> ast);
   boost::any addition(std::shared_ptr<peg::Ast> ast);
   boost::any subtraction(std::shared_ptr<peg::Ast> ast);
   boost::any multiplication(std::shared_ptr<peg::Ast> ast);

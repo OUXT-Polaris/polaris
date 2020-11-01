@@ -40,7 +40,7 @@ int main()
     }
   }
   */
-  if (parser.evaluate("let a = quaternion(0,0,0.0,1)*quaternion(0.1,0,0.0,1);")) {
+  if (parser.evaluate("let a = rpy(0,0,0)*quaternion(0.1,0,0.0,1);")) {
     std::cout << "evaluate succeced" << std::endl;
     auto a_value = parser.getValue<geometry_msgs::msg::Quaternion>("a");
     if (a_value) {
