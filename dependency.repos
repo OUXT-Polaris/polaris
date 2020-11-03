@@ -3,3 +3,7 @@ repositories:
     type: git
     url: https://github.com/OUXT-Polaris/quaternion_operation.git
     version: ros2
+  peglib_vendor:
+    type: git
+    url: https://github.com/OUXT-Polaris/peglib_vendor.git
+    version: master
