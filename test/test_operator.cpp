@@ -190,6 +190,20 @@ TEST(operator, array_0)
   ASSERT_EQ(a.get()[2], 3);
 }
 
+TEST(operator, array_1)
+{
+  std::string code = R"(let a = [1.0,2.9,3.0,12.0];)";
+  polaris::Parser parser;
+  ASSERT_TRUE(parser.evaluate(code));
+  const auto a = parser.getValue<std::vector<double>>("a");
+  ASSERT_TRUE(a);
+  ASSERT_DOUBLE_EQ(a.get().size(), static_cast<size_t>(4));
+  ASSERT_DOUBLE_EQ(a.get()[0], 1.0);
+  ASSERT_DOUBLE_EQ(a.get()[1], 2.9);
+  ASSERT_DOUBLE_EQ(a.get()[2], 3.0);
+  ASSERT_DOUBLE_EQ(a.get()[3], 12.0);
+}
+
 int main(int argc, char ** argv)
 {
   testing::InitGoogleTest(&argc, argv);
