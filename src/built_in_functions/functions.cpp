@@ -26,11 +26,22 @@
 #include <functional>
 #include <unordered_map>
 #include <memory>
+#include <string>
 
 namespace polaris
 {
 namespace built_in_functions
 {
+boost::any Functions::constructString(std::shared_ptr<peg::Ast> ast)
+{
+  if (ast->name == "STRING") {
+    types::TypeBase<std::string> str_value;
+    str_value.setValue(ast->token);
+    return str_value;
+  }
+  return boost::none;
+}
+
 boost::any Functions::constructInteger(std::shared_ptr<peg::Ast> ast)
 {
   if (ast->name == "INTEGER") {

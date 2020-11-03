@@ -49,6 +49,10 @@ public:
       std::bind(&Functions::constructDouble, this, std::placeholders::_1)));
     functions_.insert(std::make_pair("DOUBLE",
       std::bind(&Functions::constructDouble, this, std::placeholders::_1)));
+    functions_.insert(std::make_pair("string",
+      std::bind(&Functions::constructString, this, std::placeholders::_1)));
+    functions_.insert(std::make_pair("STRING",
+      std::bind(&Functions::constructString, this, std::placeholders::_1)));
     functions_.insert(std::make_pair("quaternion",
       std::bind(&Functions::constructQuaternion, this, std::placeholders::_1)));
     functions_.insert(std::make_pair("rpy",
@@ -111,6 +115,7 @@ private:
   std::unordered_map<std::string, boost::any> variables_;
   std::unordered_map<std::string,
     std::function<boost::any(std::shared_ptr<peg::Ast> ast)>> functions_;
+  boost::any constructString(std::shared_ptr<peg::Ast> ast);
   boost::any constructInteger(std::shared_ptr<peg::Ast> ast);
   boost::any constructDouble(std::shared_ptr<peg::Ast> ast);
   boost::any constructQuaternion(std::shared_ptr<peg::Ast> ast);
