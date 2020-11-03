@@ -128,6 +128,26 @@ TEST(types, pose_type_2)
   ASSERT_DOUBLE_EQ(a.get().orientation.w, 1.0);
 }
 
+TEST(types, string_0)
+{
+  std::string code = R"(let a = string("test");)";
+  polaris::Parser parser;
+  ASSERT_TRUE(parser.evaluate(code));
+  const auto a = parser.getValue<std::string>("a");
+  ASSERT_TRUE(a);
+  ASSERT_STREQ(a.get().c_str(), "test");
+}
+
+TEST(types, string_1)
+{
+  std::string code = R"(let a = "test";)";
+  polaris::Parser parser;
+  ASSERT_TRUE(parser.evaluate(code));
+  const auto a = parser.getValue<std::string>("a");
+  ASSERT_TRUE(a);
+  ASSERT_STREQ(a.get().c_str(), "test");
+}
+
 int main(int argc, char ** argv)
 {
   testing::InitGoogleTest(&argc, argv);
