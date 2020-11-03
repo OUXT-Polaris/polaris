@@ -83,6 +83,21 @@ TEST(types, point_type_0)
   ASSERT_DOUBLE_EQ(a.get().z, 1.0);
 }
 
+TEST(types, pose_type_0)
+{
+  polaris::Parser parser;
+  ASSERT_TRUE(parser.evaluate("let a = pose(point(1,2,3),quaternion(0,0,0,1));"));
+  const auto a = parser.getValue<geometry_msgs::msg::Pose>("a");
+  ASSERT_TRUE(a);
+  ASSERT_DOUBLE_EQ(a.get().position.x, 1.0);
+  ASSERT_DOUBLE_EQ(a.get().position.y, 2.0);
+  ASSERT_DOUBLE_EQ(a.get().position.z, 3.0);
+  ASSERT_DOUBLE_EQ(a.get().orientation.x, 0.0);
+  ASSERT_DOUBLE_EQ(a.get().orientation.y, 0.0);
+  ASSERT_DOUBLE_EQ(a.get().orientation.z, 0.0);
+  ASSERT_DOUBLE_EQ(a.get().orientation.w, 1.0);
+}
+
 
 int main(int argc, char ** argv)
 {
