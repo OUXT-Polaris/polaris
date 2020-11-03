@@ -25,7 +25,7 @@ let a = rpy(0,0,0)*quaternion(0.1,0,0.0,1);
 ```
 rpy function construct quaternion type from RPY value
 
-### Build-In types
+### Built-In types
 ```
 int : integer type
 double : double type
@@ -33,4 +33,5 @@ string : string type
 quaternion : quaternion type
 point : point type
 pose : pose type
+array type : integer/double/string array support
 ```
