@@ -40,7 +40,7 @@ int main()
     }
   }
   */
-  if (parser.evaluate("let a = pose(point(1,2,3),quaternion(0,0,0,1));")) {
+  if (parser.evaluate("let p = point(1,2,3);let a = pose(p,quaternion(0,0,0,1));")) {
     std::cout << "evaluate succeced" << std::endl;
     auto a_value = parser.getValue<geometry_msgs::msg::Pose>("a");
     if (a_value) {

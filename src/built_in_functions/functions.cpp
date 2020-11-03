@@ -70,41 +70,46 @@ boost::any Functions::constructDouble(std::shared_ptr<peg::Ast> ast)
 boost::any Functions::constructPose(std::shared_ptr<peg::Ast> ast)
 {
   geometry_msgs::msg::Pose pose;
-  try {
-    if (ast->name == "ARGUMENTS") {
-      if (ast->nodes[0]->name == "CALL") {
-        if (ast->nodes[0]->nodes[0]->name == "IDENTIFIER") {
-          boost::any val = evaluate(ast->nodes[0]->nodes[0]->token, ast->nodes[0]);
-          if (ast->nodes[0]->nodes[0]->token == "point") {
+  if (ast->name == "ARGUMENTS") {
+    if (ast->nodes[0]->name == "CALL") {
+      if (ast->nodes[0]->nodes[0]->name == "IDENTIFIER") {
+        boost::any val = evaluate(ast->nodes[0]->nodes[0]->token, ast->nodes[0]);
+        if (ast->nodes[0]->nodes[0]->token == "point") {
+          if (val.type() == typeid(types::TypeBase<geometry_msgs::msg::Point>)) {
             auto p = boost::any_cast<types::TypeBase<geometry_msgs::msg::Point>>(val).getValue();
             pose.position = p;
-          } else if (ast->nodes[0]->nodes[0]->token == "quaternion") {
-            auto q =
-              boost::any_cast<types::TypeBase<geometry_msgs::msg::Quaternion>>(val).getValue();
-            pose.orientation = q;
+          } else {
+            POLARIS_THROW_EVALUATION_ERROR(ast,
+              "constracting point type failed");
           }
-        }
-        if (ast->nodes[1]->nodes[0]->name == "IDENTIFIER") {
-          boost::any val = evaluate(ast->nodes[1]->nodes[0]->token, ast->nodes[1]);
-          if (ast->nodes[1]->nodes[0]->token == "point") {
-            auto p = boost::any_cast<types::TypeBase<geometry_msgs::msg::Point>>(val).getValue();
-            pose.position = p;
-          } else if (ast->nodes[1]->nodes[0]->token == "quaternion") {
-            auto q =
-              boost::any_cast<types::TypeBase<geometry_msgs::msg::Quaternion>>(val).getValue();
-            pose.orientation = q;
-          }
+        } else {
+          POLARIS_THROW_EVALUATION_ERROR(ast,
+            "first argument shold be point type");
         }
       }
     }
-    types::TypeBase<geometry_msgs::msg::Pose> pose_value;
-    pose_value.setValue(pose);
-    return pose_value;
-  } catch (boost::bad_any_cast) {
-    POLARIS_THROW_EVALUATION_ERROR(ast,
-      "failed to cast as double value in constructing quaternion, boost::bad_any_cast");
+    if (ast->nodes[1]->name == "CALL") {
+      if (ast->nodes[1]->nodes[0]->name == "IDENTIFIER") {
+        boost::any val = evaluate(ast->nodes[1]->nodes[0]->token, ast->nodes[1]);
+        if (ast->nodes[1]->nodes[0]->token == "quaternion") {
+          if (val.type() == typeid(types::TypeBase<geometry_msgs::msg::Quaternion>)) {
+            auto q =
+              boost::any_cast<types::TypeBase<geometry_msgs::msg::Quaternion>>(val).getValue();
+            pose.orientation = q;
+          } else {
+            POLARIS_THROW_EVALUATION_ERROR(ast,
+              "constracting quaternion type failed");
+          }
+        } else {
+          POLARIS_THROW_EVALUATION_ERROR(ast,
+            "second argument shold be quaternion type");
+        }
+      }
+    }
   }
-  return boost::none;
+  types::TypeBase<geometry_msgs::msg::Pose> pose_value;
+  pose_value.setValue(pose);
+  return pose_value;
 }
 
 boost::any Functions::constructPoint(std::shared_ptr<peg::Ast> ast)
