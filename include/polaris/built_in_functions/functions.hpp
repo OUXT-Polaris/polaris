@@ -20,6 +20,7 @@
 
 #include <peglib.h>
 
+#include <geometry_msgs/msg/pose.hpp>
 #include <geometry_msgs/msg/quaternion.hpp>
 
 #include <boost/optional.hpp>
@@ -54,6 +55,8 @@ public:
       std::bind(&Functions::constructQuaternionFromRpy, this, std::placeholders::_1)));
     functions_.insert(std::make_pair("point",
       std::bind(&Functions::constructPoint, this, std::placeholders::_1)));
+    functions_.insert(std::make_pair("pose",
+      std::bind(&Functions::constructPose, this, std::placeholders::_1)));
     functions_.insert(std::make_pair("+",
       std::bind(&Functions::addition, this, std::placeholders::_1)));
     functions_.insert(std::make_pair("-",
@@ -113,6 +116,7 @@ private:
   boost::any constructQuaternion(std::shared_ptr<peg::Ast> ast);
   boost::any constructQuaternionFromRpy(std::shared_ptr<peg::Ast> ast);
   boost::any constructPoint(std::shared_ptr<peg::Ast> ast);
+  boost::any constructPose(std::shared_ptr<peg::Ast> ast);
   boost::any addition(std::shared_ptr<peg::Ast> ast);
   boost::any subtraction(std::shared_ptr<peg::Ast> ast);
   boost::any multiplication(std::shared_ptr<peg::Ast> ast);

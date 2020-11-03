@@ -40,14 +40,13 @@ int main()
     }
   }
   */
-  if (parser.evaluate("let a = rpy(0,0,0)*quaternion(0.1,0,0.0,1);")) {
+  if (parser.evaluate("let a = pose(point(1,2,3),quaternion(0,0,0,1));")) {
     std::cout << "evaluate succeced" << std::endl;
-    auto a_value = parser.getValue<geometry_msgs::msg::Quaternion>("a");
+    auto a_value = parser.getValue<geometry_msgs::msg::Pose>("a");
     if (a_value) {
-      std::cout << "a.x = " << a_value.get().x << std::endl;
-      std::cout << "a.y = " << a_value.get().y << std::endl;
-      std::cout << "a.z = " << a_value.get().z << std::endl;
-      std::cout << "a.w = " << a_value.get().w << std::endl;
+      std::cout << "a.x = " << a_value.get().position.x << std::endl;
+      std::cout << "a.y = " << a_value.get().position.y << std::endl;
+      std::cout << "a.z = " << a_value.get().position.z << std::endl;
     }
   }
 }

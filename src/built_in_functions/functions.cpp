@@ -67,6 +67,46 @@ boost::any Functions::constructDouble(std::shared_ptr<peg::Ast> ast)
   return boost::none;
 }
 
+boost::any Functions::constructPose(std::shared_ptr<peg::Ast> ast)
+{
+  geometry_msgs::msg::Pose pose;
+  try {
+    if (ast->name == "ARGUMENTS") {
+      if (ast->nodes[0]->name == "CALL") {
+        if (ast->nodes[0]->nodes[0]->name == "IDENTIFIER") {
+          boost::any val = evaluate(ast->nodes[0]->nodes[0]->token, ast->nodes[0]);
+          if (ast->nodes[0]->nodes[0]->token == "point") {
+            auto p = boost::any_cast<types::TypeBase<geometry_msgs::msg::Point>>(val).getValue();
+            pose.position = p;
+          } else if (ast->nodes[0]->nodes[0]->token == "quaternion") {
+            auto q =
+              boost::any_cast<types::TypeBase<geometry_msgs::msg::Quaternion>>(val).getValue();
+            pose.orientation = q;
+          }
+        }
+        if (ast->nodes[1]->nodes[0]->name == "IDENTIFIER") {
+          boost::any val = evaluate(ast->nodes[1]->nodes[0]->token, ast->nodes[1]);
+          if (ast->nodes[1]->nodes[0]->token == "point") {
+            auto p = boost::any_cast<types::TypeBase<geometry_msgs::msg::Point>>(val).getValue();
+            pose.position = p;
+          } else if (ast->nodes[1]->nodes[0]->token == "quaternion") {
+            auto q =
+              boost::any_cast<types::TypeBase<geometry_msgs::msg::Quaternion>>(val).getValue();
+            pose.orientation = q;
+          }
+        }
+      }
+    }
+    types::TypeBase<geometry_msgs::msg::Pose> pose_value;
+    pose_value.setValue(pose);
+    return pose_value;
+  } catch (boost::bad_any_cast) {
+    POLARIS_THROW_EVALUATION_ERROR(ast,
+      "failed to cast as double value in constructing quaternion, boost::bad_any_cast");
+  }
+  return boost::none;
+}
+
 boost::any Functions::constructPoint(std::shared_ptr<peg::Ast> ast)
 {
   geometry_msgs::msg::Point point;
@@ -115,7 +155,7 @@ boost::any Functions::constructPoint(std::shared_ptr<peg::Ast> ast)
       point_value.setValue(point);
       return point_value;
     } catch (boost::bad_any_cast) {
-      std::runtime_error(
+      POLARIS_THROW_EVALUATION_ERROR(ast,
         "failed to cast as double value in constructing quaternion, boost::bad_any_cast");
     }
   }
@@ -172,7 +212,7 @@ boost::any Functions::constructQuaternionFromRpy(std::shared_ptr<peg::Ast> ast)
       quat_value.setValue(quat);
       return quat_value;
     } catch (boost::bad_any_cast) {
-      std::runtime_error(
+      POLARIS_THROW_EVALUATION_ERROR(ast,
         "failed to cast as double value in constructing quaternion, boost::bad_any_cast");
     }
   }
@@ -240,7 +280,7 @@ boost::any Functions::constructQuaternion(std::shared_ptr<peg::Ast> ast)
       quat_value.setValue(quat);
       return quat_value;
     } catch (boost::bad_any_cast) {
-      std::runtime_error(
+      POLARIS_THROW_EVALUATION_ERROR(ast,
         "failed to cast as double value in constructing quaternion, boost::bad_any_cast");
     }
   }
