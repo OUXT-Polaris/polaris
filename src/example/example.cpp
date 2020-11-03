@@ -16,6 +16,7 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
 
 int main()
 {
@@ -41,12 +42,15 @@ int main()
     }
   }
   */
-  std::string code = R"(let a = string("test");)";
+  std::string code = R"(let a = [1,2,3];)";
   if (parser.evaluate(code)) {
     std::cout << "evaluate succeced" << std::endl;
-    auto a_value = parser.getValue<std::string>("a");
-    if (a_value) {
-      std::cout << "a = " << a_value.get() << std::endl;
+    auto a_values = parser.getValue<std::vector<int>>("a");
+    if (a_values) {
+      for (const auto & a_value : a_values.get()) {
+        std::cout << a_value << std::endl;
+      }
+      // std::cout << "a = " << a_value.get() << std::endl;
     }
   }
 }

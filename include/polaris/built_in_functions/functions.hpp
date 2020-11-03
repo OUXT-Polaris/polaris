@@ -53,6 +53,10 @@ public:
       std::bind(&Functions::constructString, this, std::placeholders::_1)));
     functions_.insert(std::make_pair("STRING",
       std::bind(&Functions::constructString, this, std::placeholders::_1)));
+    functions_.insert(std::make_pair("array",
+      std::bind(&Functions::constructArray, this, std::placeholders::_1)));
+    functions_.insert(std::make_pair("ARRAY",
+      std::bind(&Functions::constructArray, this, std::placeholders::_1)));
     functions_.insert(std::make_pair("quaternion",
       std::bind(&Functions::constructQuaternion, this, std::placeholders::_1)));
     functions_.insert(std::make_pair("rpy",
@@ -122,6 +126,7 @@ private:
   boost::any constructQuaternionFromRpy(std::shared_ptr<peg::Ast> ast);
   boost::any constructPoint(std::shared_ptr<peg::Ast> ast);
   boost::any constructPose(std::shared_ptr<peg::Ast> ast);
+  boost::any constructArray(std::shared_ptr<peg::Ast> ast);
   boost::any addition(std::shared_ptr<peg::Ast> ast);
   boost::any subtraction(std::shared_ptr<peg::Ast> ast);
   boost::any multiplication(std::shared_ptr<peg::Ast> ast);

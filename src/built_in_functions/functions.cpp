@@ -27,11 +27,65 @@
 #include <unordered_map>
 #include <memory>
 #include <string>
+#include <vector>
 
 namespace polaris
 {
 namespace built_in_functions
 {
+boost::any Functions::constructArray(std::shared_ptr<peg::Ast> ast)
+{
+  if (ast->nodes.size() == 0) {
+    POLARIS_THROW_EVALUATION_ERROR(ast,
+      "array is empty");
+  }
+  const auto first_value = evaluate(ast->nodes[0]->name, ast->nodes[0]);
+  const auto & value_type = first_value.type();
+  if (value_type == typeid(types::TypeBase<int>)) {
+    types::TypeBase<std::vector<int>> array;
+    std::vector<int> array_value;
+    for (const auto & node : ast->nodes) {
+      auto value = evaluate(node->name, node);
+      if (value.type() == typeid(types::TypeBase<int>)) {
+        array_value.emplace_back(boost::any_cast<types::TypeBase<int>>(value).getValue());
+      } else {
+        POLARIS_THROW_EVALUATION_ERROR(ast, "array value is not int");
+      }
+    }
+    array.setValue(array_value);
+    return array;
+  }
+  if (value_type == typeid(types::TypeBase<double>)) {
+    types::TypeBase<std::vector<double>> array;
+    std::vector<double> array_value;
+    for (const auto & node : ast->nodes) {
+      auto value = evaluate(node->name, node);
+      if (value.type() == typeid(types::TypeBase<double>)) {
+        array_value.emplace_back(boost::any_cast<types::TypeBase<double>>(value).getValue());
+      } else {
+        POLARIS_THROW_EVALUATION_ERROR(ast, "array value is not double");
+      }
+    }
+    array.setValue(array_value);
+    return array;
+  }
+  if (value_type == typeid(types::TypeBase<std::string>)) {
+    types::TypeBase<std::vector<std::string>> array;
+    std::vector<std::string> array_value;
+    for (const auto & node : ast->nodes) {
+      auto value = evaluate(node->name, node);
+      if (value.type() == typeid(types::TypeBase<std::string>)) {
+        array_value.emplace_back(boost::any_cast<types::TypeBase<std::string>>(value).getValue());
+      } else {
+        POLARIS_THROW_EVALUATION_ERROR(ast, "array value is not string");
+      }
+    }
+    array.setValue(array_value);
+    return array;
+  }
+  return boost::none;
+}
+
 boost::any Functions::constructString(std::shared_ptr<peg::Ast> ast)
 {
   if (ast->name == "STRING") {
