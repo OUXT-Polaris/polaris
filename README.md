@@ -30,4 +30,5 @@ int : integer type
 double : double type
 quaternion : quaternion type
 point : point type
+pose : pose type
 ```
