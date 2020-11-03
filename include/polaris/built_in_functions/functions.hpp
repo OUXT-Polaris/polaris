@@ -73,6 +73,8 @@ public:
       std::bind(&Functions::multiplication, this, std::placeholders::_1)));
     functions_.insert(std::make_pair("/",
       std::bind(&Functions::division, this, std::placeholders::_1)));
+    functions_.insert(std::make_pair("IDENTIFIER",
+      std::bind(&Functions::fetchVariable, this, std::placeholders::_1)));
   }
   boost::any evaluate(std::string function, std::shared_ptr<peg::Ast> ast)
   {
@@ -131,6 +133,7 @@ private:
   boost::any subtraction(std::shared_ptr<peg::Ast> ast);
   boost::any multiplication(std::shared_ptr<peg::Ast> ast);
   boost::any division(std::shared_ptr<peg::Ast> ast);
+  boost::any fetchVariable(std::shared_ptr<peg::Ast> ast);
 };
 }  // namespace built_in_functions
 }  // namespace polaris

@@ -33,6 +33,11 @@ namespace polaris
 {
 namespace built_in_functions
 {
+boost::any Functions::fetchVariable(std::shared_ptr<peg::Ast> ast)
+{
+  return variables_[ast->token];
+}
+
 boost::any Functions::constructArray(std::shared_ptr<peg::Ast> ast)
 {
   if (ast->nodes.size() == 0) {
@@ -299,7 +304,7 @@ boost::any Functions::constructPoint(std::shared_ptr<peg::Ast> ast)
       return point_value;
     } catch (boost::bad_any_cast) {
       POLARIS_THROW_EVALUATION_ERROR(ast,
-        "failed to cast as double value in constructing quaternion, boost::bad_any_cast");
+        "failed to cast as double value in constructing point, boost::bad_any_cast");
     }
   }
   return boost::none;

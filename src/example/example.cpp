@@ -42,7 +42,7 @@ int main()
     }
   }
   */
-  std::string code = R"(let a=[point(1,2,3), point(1,2,3)];)";
+  std::string code = R"(let p = point(1,2,3);let a=[p, point(1,2,5)];)";
   if (parser.evaluate(code)) {
     std::cout << "evaluate succeced" << std::endl;
     auto a_values = parser.getValue<std::vector<geometry_msgs::msg::Point>>("a");

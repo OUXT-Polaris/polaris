@@ -203,6 +203,22 @@ TEST(operator, array_3)
   ASSERT_DOUBLE_EQ(a.get()[1].z, 5.0);
 }
 
+TEST(operator, array_4)
+{
+  std::string code = R"(let p = point(1,2,3);let a=[p, point(1,2,5)];)";
+  polaris::Parser parser;
+  ASSERT_TRUE(parser.evaluate(code));
+  const auto a = parser.getValue<std::vector<geometry_msgs::msg::Point>>("a");
+  ASSERT_TRUE(a);
+  ASSERT_DOUBLE_EQ(a.get().size(), static_cast<size_t>(2));
+  ASSERT_DOUBLE_EQ(a.get()[0].x, 1.0);
+  ASSERT_DOUBLE_EQ(a.get()[0].y, 2.0);
+  ASSERT_DOUBLE_EQ(a.get()[0].z, 3.0);
+  ASSERT_DOUBLE_EQ(a.get()[1].x, 1.0);
+  ASSERT_DOUBLE_EQ(a.get()[1].y, 2.0);
+  ASSERT_DOUBLE_EQ(a.get()[1].z, 5.0);
+}
+
 int main(int argc, char ** argv)
 {
   testing::InitGoogleTest(&argc, argv);
