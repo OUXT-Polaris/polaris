@@ -87,6 +87,20 @@ boost::any Functions::constructPose(std::shared_ptr<peg::Ast> ast)
             "first argument shold be point type");
         }
       }
+    } else if (ast->nodes[0]->name == "IDENTIFIER") {
+      if (variables_.count(ast->nodes[0]->token) == 0) {
+        POLARIS_THROW_EVALUATION_ERROR(ast,
+          "variable " + ast->nodes[0]->token + " did not difined.");
+      }
+      if (variables_[ast->nodes[0]->token].type() ==
+        typeid(types::TypeBase<geometry_msgs::msg::Point>))
+      {
+        pose.position =
+          boost::any_cast<types::TypeBase<geometry_msgs::msg::Point>>(variables_[ast->nodes[0]->
+            token]).getValue();
+      }
+    } else {
+      POLARIS_THROW_EVALUATION_ERROR(ast, "name of the node is invalid");
     }
     if (ast->nodes[1]->name == "CALL") {
       if (ast->nodes[1]->nodes[0]->name == "IDENTIFIER") {
@@ -105,6 +119,20 @@ boost::any Functions::constructPose(std::shared_ptr<peg::Ast> ast)
             "second argument shold be quaternion type");
         }
       }
+    } else if (ast->nodes[1]->name == "IDENTIFIER") {
+      if (variables_.count(ast->nodes[1]->token) == 0) {
+        POLARIS_THROW_EVALUATION_ERROR(ast,
+          "variable " + ast->nodes[1]->token + " did not difined.");
+      }
+      if (variables_[ast->nodes[1]->token].type() ==
+        typeid(types::TypeBase<geometry_msgs::msg::Quaternion>))
+      {
+        pose.orientation =
+          boost::any_cast<types::TypeBase<geometry_msgs::msg::Quaternion>>(
+          variables_[ast->nodes[1]->token]).getValue();
+      }
+    } else {
+      POLARIS_THROW_EVALUATION_ERROR(ast, "name of the node is invalid");
     }
   }
   types::TypeBase<geometry_msgs::msg::Pose> pose_value;
