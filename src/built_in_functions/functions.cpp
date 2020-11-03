@@ -83,6 +83,51 @@ boost::any Functions::constructArray(std::shared_ptr<peg::Ast> ast)
     array.setValue(array_value);
     return array;
   }
+  if (value_type == typeid(types::TypeBase<geometry_msgs::msg::Quaternion>)) {
+    types::TypeBase<std::vector<geometry_msgs::msg::Quaternion>> array;
+    std::vector<geometry_msgs::msg::Quaternion> array_value;
+    for (const auto & node : ast->nodes) {
+      auto value = evaluate(node->name, node);
+      if (value.type() == typeid(types::TypeBase<geometry_msgs::msg::Quaternion>)) {
+        array_value.emplace_back(boost::any_cast<types::TypeBase<geometry_msgs::msg::Quaternion>>(
+            value).getValue());
+      } else {
+        POLARIS_THROW_EVALUATION_ERROR(ast, "array value is not quaternion");
+      }
+    }
+    array.setValue(array_value);
+    return array;
+  }
+  if (value_type == typeid(types::TypeBase<geometry_msgs::msg::Point>)) {
+    types::TypeBase<std::vector<geometry_msgs::msg::Point>> array;
+    std::vector<geometry_msgs::msg::Point> array_value;
+    for (const auto & node : ast->nodes) {
+      auto value = evaluate(node->name, node);
+      if (value.type() == typeid(types::TypeBase<geometry_msgs::msg::Point>)) {
+        array_value.emplace_back(boost::any_cast<types::TypeBase<geometry_msgs::msg::Point>>(
+            value).getValue());
+      } else {
+        POLARIS_THROW_EVALUATION_ERROR(ast, "array value is not point");
+      }
+    }
+    array.setValue(array_value);
+    return array;
+  }
+  if (value_type == typeid(types::TypeBase<geometry_msgs::msg::Pose>)) {
+    types::TypeBase<std::vector<geometry_msgs::msg::Pose>> array;
+    std::vector<geometry_msgs::msg::Pose> array_value;
+    for (const auto & node : ast->nodes) {
+      auto value = evaluate(node->name, node);
+      if (value.type() == typeid(types::TypeBase<geometry_msgs::msg::Pose>)) {
+        array_value.emplace_back(boost::any_cast<types::TypeBase<geometry_msgs::msg::Pose>>(
+            value).getValue());
+      } else {
+        POLARIS_THROW_EVALUATION_ERROR(ast, "array value is not pose");
+      }
+    }
+    array.setValue(array_value);
+    return array;
+  }
   return boost::none;
 }
 

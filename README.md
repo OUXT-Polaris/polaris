@@ -33,5 +33,5 @@ string : string type
 quaternion : quaternion type
 point : point type
 pose : pose type
-array type : integer/double/string array support
+array type : integer/double/string/quaternion/point/pose array support
 ```

@@ -42,13 +42,15 @@ int main()
     }
   }
   */
-  std::string code = R"(let a = [1,2,3];)";
+  std::string code = R"(let a=[point(1,2,3), point(1,2,3)];)";
   if (parser.evaluate(code)) {
     std::cout << "evaluate succeced" << std::endl;
-    auto a_values = parser.getValue<std::vector<int>>("a");
+    auto a_values = parser.getValue<std::vector<geometry_msgs::msg::Point>>("a");
     if (a_values) {
       for (const auto & a_value : a_values.get()) {
-        std::cout << a_value << std::endl;
+        std::cout << a_value.x << std::endl;
+        std::cout << a_value.y << std::endl;
+        std::cout << a_value.z << std::endl;
       }
       // std::cout << "a = " << a_value.get() << std::endl;
     }
