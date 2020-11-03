@@ -15,6 +15,7 @@
 #include <polaris/parser/parser.hpp>
 
 #include <iostream>
+#include <string>
 
 int main()
 {
@@ -40,13 +41,12 @@ int main()
     }
   }
   */
-  if (parser.evaluate("let p = point(1,2,3);let a = pose(p,quaternion(0,0,0,1));")) {
+  std::string code = R"(let a = string("test");)";
+  if (parser.evaluate(code)) {
     std::cout << "evaluate succeced" << std::endl;
-    auto a_value = parser.getValue<geometry_msgs::msg::Pose>("a");
+    auto a_value = parser.getValue<std::string>("a");
     if (a_value) {
-      std::cout << "a.x = " << a_value.get().position.x << std::endl;
-      std::cout << "a.y = " << a_value.get().position.y << std::endl;
-      std::cout << "a.z = " << a_value.get().position.z << std::endl;
+      std::cout << "a = " << a_value.get() << std::endl;
     }
   }
 }

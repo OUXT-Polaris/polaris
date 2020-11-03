@@ -49,6 +49,8 @@ public:
       std::bind(&Functions::constructDouble, this, std::placeholders::_1)));
     functions_.insert(std::make_pair("DOUBLE",
       std::bind(&Functions::constructDouble, this, std::placeholders::_1)));
+    functions_.insert(std::make_pair("string",
+      std::bind(&Functions::constructString, this, std::placeholders::_1)));
     functions_.insert(std::make_pair("STRING",
       std::bind(&Functions::constructString, this, std::placeholders::_1)));
     functions_.insert(std::make_pair("quaternion",
