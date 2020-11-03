@@ -1,0 +1,33 @@
+# POLARIS
+"Policy and Object map description Language for Automated Robot Intelligence with Semantic Behavior"
+
+
+## What it is
+DSL for behavior planning and object map description in robotics.
+
+## Purpose
+Create waypoint from described map and policy
+
+### Sample Code
+1. define variable and four arithmetic operations
+```
+let a = (1.0 * 3.0) / 4;
+```
+2. Construct pose from quaternion and point
+```
+let q = quaternion(0,0,0,1);
+let a = pose(point(1,2,3),q);
+```
+3. Calculate roration from two quaternions
+```
+let a = rpy(0,0,0)*quaternion(0.1,0,0.0,1);
+```
+rpy function construct quaternion type from RPY value
+
+### Build-In types
+```
+int : integer type
+double : double type
+quaternion : quaternion type
+point : point type
+```
