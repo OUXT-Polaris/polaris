@@ -80,6 +80,9 @@ boost::any Parser::evaluate(std::shared_ptr<peg::Ast> ast)
   if (ast->name == "STRING") {
     return functions_.evaluate("string", ast);
   }
+  if (ast->name == "ARRAY") {
+    return functions_.evaluate("array", ast);
+  }
   if (ast->name == "CALL") {
     auto ret = functions_.evaluate(ast->nodes[0]->token, ast->nodes[1]);
     if (ret.type() == typeid(boost::none)) {

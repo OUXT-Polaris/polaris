@@ -27,11 +27,115 @@
 #include <unordered_map>
 #include <memory>
 #include <string>
+#include <vector>
 
 namespace polaris
 {
 namespace built_in_functions
 {
+boost::any Functions::fetchVariable(std::shared_ptr<peg::Ast> ast)
+{
+  return variables_[ast->token];
+}
+
+boost::any Functions::constructArray(std::shared_ptr<peg::Ast> ast)
+{
+  if (ast->nodes.size() == 0) {
+    POLARIS_THROW_EVALUATION_ERROR(ast,
+      "array is empty");
+  }
+  const auto first_value = evaluate(ast->nodes[0]->name, ast->nodes[0]);
+  const auto & value_type = first_value.type();
+  if (value_type == typeid(types::TypeBase<int>)) {
+    types::TypeBase<std::vector<int>> array;
+    std::vector<int> array_value;
+    for (const auto & node : ast->nodes) {
+      auto value = evaluate(node->name, node);
+      if (value.type() == typeid(types::TypeBase<int>)) {
+        array_value.emplace_back(boost::any_cast<types::TypeBase<int>>(value).getValue());
+      } else {
+        POLARIS_THROW_EVALUATION_ERROR(ast, "array value is not int");
+      }
+    }
+    array.setValue(array_value);
+    return array;
+  }
+  if (value_type == typeid(types::TypeBase<double>)) {
+    types::TypeBase<std::vector<double>> array;
+    std::vector<double> array_value;
+    for (const auto & node : ast->nodes) {
+      auto value = evaluate(node->name, node);
+      if (value.type() == typeid(types::TypeBase<double>)) {
+        array_value.emplace_back(boost::any_cast<types::TypeBase<double>>(value).getValue());
+      } else {
+        POLARIS_THROW_EVALUATION_ERROR(ast, "array value is not double");
+      }
+    }
+    array.setValue(array_value);
+    return array;
+  }
+  if (value_type == typeid(types::TypeBase<std::string>)) {
+    types::TypeBase<std::vector<std::string>> array;
+    std::vector<std::string> array_value;
+    for (const auto & node : ast->nodes) {
+      auto value = evaluate(node->name, node);
+      if (value.type() == typeid(types::TypeBase<std::string>)) {
+        array_value.emplace_back(boost::any_cast<types::TypeBase<std::string>>(value).getValue());
+      } else {
+        POLARIS_THROW_EVALUATION_ERROR(ast, "array value is not string");
+      }
+    }
+    array.setValue(array_value);
+    return array;
+  }
+  if (value_type == typeid(types::TypeBase<geometry_msgs::msg::Quaternion>)) {
+    types::TypeBase<std::vector<geometry_msgs::msg::Quaternion>> array;
+    std::vector<geometry_msgs::msg::Quaternion> array_value;
+    for (const auto & node : ast->nodes) {
+      auto value = evaluate(node->name, node);
+      if (value.type() == typeid(types::TypeBase<geometry_msgs::msg::Quaternion>)) {
+        array_value.emplace_back(boost::any_cast<types::TypeBase<geometry_msgs::msg::Quaternion>>(
+            value).getValue());
+      } else {
+        POLARIS_THROW_EVALUATION_ERROR(ast, "array value is not quaternion");
+      }
+    }
+    array.setValue(array_value);
+    return array;
+  }
+  if (value_type == typeid(types::TypeBase<geometry_msgs::msg::Point>)) {
+    types::TypeBase<std::vector<geometry_msgs::msg::Point>> array;
+    std::vector<geometry_msgs::msg::Point> array_value;
+    for (const auto & node : ast->nodes) {
+      auto value = evaluate(node->name, node);
+      if (value.type() == typeid(types::TypeBase<geometry_msgs::msg::Point>)) {
+        array_value.emplace_back(boost::any_cast<types::TypeBase<geometry_msgs::msg::Point>>(
+            value).getValue());
+      } else {
+        POLARIS_THROW_EVALUATION_ERROR(ast, "array value is not point");
+      }
+    }
+    array.setValue(array_value);
+    return array;
+  }
+  if (value_type == typeid(types::TypeBase<geometry_msgs::msg::Pose>)) {
+    types::TypeBase<std::vector<geometry_msgs::msg::Pose>> array;
+    std::vector<geometry_msgs::msg::Pose> array_value;
+    for (const auto & node : ast->nodes) {
+      auto value = evaluate(node->name, node);
+      if (value.type() == typeid(types::TypeBase<geometry_msgs::msg::Pose>)) {
+        array_value.emplace_back(boost::any_cast<types::TypeBase<geometry_msgs::msg::Pose>>(
+            value).getValue());
+      } else {
+        POLARIS_THROW_EVALUATION_ERROR(ast, "array value is not pose");
+      }
+    }
+    array.setValue(array_value);
+    return array;
+  }
+  return boost::none;
+}
+
 boost::any Functions::constructString(std::shared_ptr<peg::Ast> ast)
 {
   if (ast->name == "STRING") {
@@ -200,7 +304,7 @@ boost::any Functions::constructPoint(std::shared_ptr<peg::Ast> ast)
       return point_value;
     } catch (boost::bad_any_cast) {
       POLARIS_THROW_EVALUATION_ERROR(ast,
-        "failed to cast as double value in constructing quaternion, boost::bad_any_cast");
+        "failed to cast as double value in constructing point, boost::bad_any_cast");
     }
   }
   return boost::none;

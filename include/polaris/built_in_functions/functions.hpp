@@ -53,6 +53,10 @@ public:
       std::bind(&Functions::constructString, this, std::placeholders::_1)));
     functions_.insert(std::make_pair("STRING",
       std::bind(&Functions::constructString, this, std::placeholders::_1)));
+    functions_.insert(std::make_pair("array",
+      std::bind(&Functions::constructArray, this, std::placeholders::_1)));
+    functions_.insert(std::make_pair("ARRAY",
+      std::bind(&Functions::constructArray, this, std::placeholders::_1)));
     functions_.insert(std::make_pair("quaternion",
       std::bind(&Functions::constructQuaternion, this, std::placeholders::_1)));
     functions_.insert(std::make_pair("rpy",
@@ -69,6 +73,8 @@ public:
       std::bind(&Functions::multiplication, this, std::placeholders::_1)));
     functions_.insert(std::make_pair("/",
       std::bind(&Functions::division, this, std::placeholders::_1)));
+    functions_.insert(std::make_pair("IDENTIFIER",
+      std::bind(&Functions::fetchVariable, this, std::placeholders::_1)));
   }
   boost::any evaluate(std::string function, std::shared_ptr<peg::Ast> ast)
   {
@@ -122,10 +128,12 @@ private:
   boost::any constructQuaternionFromRpy(std::shared_ptr<peg::Ast> ast);
   boost::any constructPoint(std::shared_ptr<peg::Ast> ast);
   boost::any constructPose(std::shared_ptr<peg::Ast> ast);
+  boost::any constructArray(std::shared_ptr<peg::Ast> ast);
   boost::any addition(std::shared_ptr<peg::Ast> ast);
   boost::any subtraction(std::shared_ptr<peg::Ast> ast);
   boost::any multiplication(std::shared_ptr<peg::Ast> ast);
   boost::any division(std::shared_ptr<peg::Ast> ast);
+  boost::any fetchVariable(std::shared_ptr<peg::Ast> ast);
 };
 }  // namespace built_in_functions
 }  // namespace polaris

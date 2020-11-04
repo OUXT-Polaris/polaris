@@ -16,6 +16,7 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
 
 int main()
 {
@@ -41,12 +42,17 @@ int main()
     }
   }
   */
-  std::string code = R"(let a = string("test");)";
+  std::string code = R"(let p = point(1,2,3);let a=[p, point(1,2,5)];)";
   if (parser.evaluate(code)) {
     std::cout << "evaluate succeced" << std::endl;
-    auto a_value = parser.getValue<std::string>("a");
-    if (a_value) {
-      std::cout << "a = " << a_value.get() << std::endl;
+    auto a_values = parser.getValue<std::vector<geometry_msgs::msg::Point>>("a");
+    if (a_values) {
+      for (const auto & a_value : a_values.get()) {
+        std::cout << a_value.x << std::endl;
+        std::cout << a_value.y << std::endl;
+        std::cout << a_value.z << std::endl;
+      }
+      // std::cout << "a = " << a_value.get() << std::endl;
     }
   }
 }
