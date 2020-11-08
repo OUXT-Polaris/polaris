@@ -29,9 +29,11 @@ rpy function construct quaternion type from RPY value
 ```
 int : integer type
 double : double type
-string : string type 
+string : string type
+bool : boolean type
 quaternion : quaternion type
 point : point type
 pose : pose type
-array type : integer/double/string/quaternion/point/pose array support
+entity : entity(field objects) type
+array type : integer/double/string/quaternion/point/pose/boolean/entity array support
 ```
