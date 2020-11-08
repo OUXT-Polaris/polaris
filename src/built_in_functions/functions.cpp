@@ -40,6 +40,7 @@ boost::any Functions::fetchVariable(std::shared_ptr<peg::Ast> ast)
 
 boost::any Functions::constructEntity(std::shared_ptr<peg::Ast> ast)
 {
+
   auto pose_value = evaluate(ast->nodes[0]->name, ast->nodes[0]);
   geometry_msgs::msg::Pose pose;
   if (pose_value.type() == typeid(types::TypeBase<geometry_msgs::msg::Pose>)) {
@@ -67,10 +68,11 @@ boost::any Functions::constructEntity(std::shared_ptr<peg::Ast> ast)
     POLARIS_THROW_EVALUATION_ERROR(ast->nodes[2], "failed to parse polygon");
   }
   if (types.size() == 0) {
-    return polaris::types::Entity(pose, type, polygon);
+    return types::TypeBase<polaris::types::Entity>(polaris::types::Entity(pose, type, polygon));
   } else {
-    return polaris::types::Entity(pose, types, polygon);
+    return types::TypeBase<polaris::types::Entity>(polaris::types::Entity(pose, types, polygon));
   }
+  return boost::none;
 }
 
 boost::any Functions::constructArray(std::shared_ptr<peg::Ast> ast)

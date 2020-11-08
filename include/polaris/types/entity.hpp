@@ -27,19 +27,26 @@ namespace types
 class Entity
 {
 public:
-  Entity(
+  Entity() {}
+  explicit Entity(
     geometry_msgs::msg::Pose pose, std::vector<std::string> type,
     std::vector<geometry_msgs::msg::Point> polygon)
-  : pose(pose), type(type), polygon(polygon)
-  {}
-  Entity(
+  {
+    this->pose = pose;
+    this->type = type;
+    this->polygon = polygon;
+  }
+  explicit Entity(
     geometry_msgs::msg::Pose pose, std::string type,
     std::vector<geometry_msgs::msg::Point> polygon)
-  : pose(pose), type({type}), polygon(polygon)
-  {}
-  const geometry_msgs::msg::Pose pose;
-  const std::vector<std::string> type;
-  const std::vector<geometry_msgs::msg::Point> polygon;
+  {
+    this->pose = pose;
+    this->type = {type};
+    this->polygon = polygon;
+  }
+  geometry_msgs::msg::Pose pose;
+  std::vector<std::string> type;
+  std::vector<geometry_msgs::msg::Point> polygon;
 };
 }  // namespace types
 }  // namespace polaris
