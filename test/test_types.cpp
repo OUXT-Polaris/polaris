@@ -309,6 +309,18 @@ TEST(types, array_5)
   ASSERT_DOUBLE_EQ(a.get().polygon[2].z, 3);
 }
 
+TEST(types, array_6)
+{
+  std::string code = R"(let a=[true, false];)";
+  polaris::Parser parser;
+  ASSERT_TRUE(parser.evaluate(code));
+  const auto a = parser.getValue<std::vector<bool>>("a");
+  ASSERT_TRUE(a);
+  ASSERT_EQ(a.get().size(), static_cast<size_t>(2));
+  ASSERT_EQ(a.get()[0], true);
+  ASSERT_EQ(a.get()[1], false);
+}
+
 int main(int argc, char ** argv)
 {
   testing::InitGoogleTest(&argc, argv);

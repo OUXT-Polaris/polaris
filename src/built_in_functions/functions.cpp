@@ -144,6 +144,20 @@ boost::any Functions::constructArray(std::shared_ptr<peg::Ast> ast)
     array.setValue(array_value);
     return array;
   }
+  if (value_type == typeid(types::TypeBase<bool>)) {
+    types::TypeBase<std::vector<bool>> array;
+    std::vector<bool> array_value;
+    for (const auto & node : ast->nodes) {
+      auto value = evaluate(node->name, node);
+      if (value.type() == typeid(types::TypeBase<bool>)) {
+        array_value.emplace_back(boost::any_cast<types::TypeBase<bool>>(value).getValue());
+      } else {
+        POLARIS_THROW_EVALUATION_ERROR(ast, "array value is not bool");
+      }
+    }
+    array.setValue(array_value);
+    return array;
+  }
   if (value_type == typeid(types::TypeBase<geometry_msgs::msg::Quaternion>)) {
     types::TypeBase<std::vector<geometry_msgs::msg::Quaternion>> array;
     std::vector<geometry_msgs::msg::Quaternion> array_value;
