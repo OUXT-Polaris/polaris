@@ -158,6 +158,26 @@ TEST(types, bool_0)
   ASSERT_EQ(a.get(), true);
 }
 
+TEST(types, bool_1)
+{
+  std::string code = R"(let a = false;)";
+  polaris::Parser parser;
+  ASSERT_TRUE(parser.evaluate(code));
+  const auto a = parser.getValue<bool>("a");
+  ASSERT_TRUE(a);
+  ASSERT_EQ(a.get(), false);
+}
+
+TEST(types, bool_2)
+{
+  std::string code = R"(let a = bool(true);)";
+  polaris::Parser parser;
+  ASSERT_TRUE(parser.evaluate(code));
+  const auto a = parser.getValue<bool>("a");
+  ASSERT_TRUE(a);
+  ASSERT_EQ(a.get(), true);
+}
+
 TEST(types, entity_0)
 {
   std::string code =
