@@ -35,7 +35,47 @@ namespace built_in_functions
 {
 boost::any Functions::fetchVariable(std::shared_ptr<peg::Ast> ast)
 {
+  if (variables_.count(ast->token) == 0) {
+    POLARIS_THROW_EVALUATION_ERROR(ast->nodes[0],
+      "variable " + ast->token + " did not defined yet.");
+  }
   return variables_[ast->token];
+}
+
+boost::any Functions::constructEntity(std::shared_ptr<peg::Ast> ast)
+{
+  auto pose_value = evaluate(ast->nodes[0]->name, ast->nodes[0]);
+  geometry_msgs::msg::Pose pose;
+  if (pose_value.type() == typeid(types::TypeBase<geometry_msgs::msg::Pose>)) {
+    pose = boost::any_cast<types::TypeBase<geometry_msgs::msg::Pose>>(pose_value).getValue();
+  } else {
+    POLARIS_THROW_EVALUATION_ERROR(ast->nodes[0], "failed to parse pose");
+  }
+  auto type_value = evaluate(ast->nodes[1]->name, ast->nodes[1]);
+  std::string type;
+  std::vector<std::string> types;
+  if (type_value.type() == typeid(types::TypeBase<std::string>)) {
+    type = boost::any_cast<types::TypeBase<std::string>>(type_value).getValue();
+  } else if (type_value.type() == typeid(types::TypeBase<std::vector<std::string>>)) {
+    types = boost::any_cast<types::TypeBase<std::vector<std::string>>>(type_value).getValue();
+  } else {
+    POLARIS_THROW_EVALUATION_ERROR(ast->nodes[1], "failed to parse types");
+  }
+  auto polygon_value = evaluate(ast->nodes[2]->name, ast->nodes[2]);
+  std::vector<geometry_msgs::msg::Point> polygon;
+  if (polygon_value.type() == typeid(types::TypeBase<std::vector<geometry_msgs::msg::Point>>)) {
+    polygon =
+      boost::any_cast<types::TypeBase<std::vector<geometry_msgs::msg::Point>>>(polygon_value).
+      getValue();
+  } else {
+    POLARIS_THROW_EVALUATION_ERROR(ast->nodes[2], "failed to parse polygon");
+  }
+  if (types.size() == 0) {
+    return types::TypeBase<polaris::types::Entity>(polaris::types::Entity(pose, type, polygon));
+  } else {
+    return types::TypeBase<polaris::types::Entity>(polaris::types::Entity(pose, types, polygon));
+  }
+  return boost::none;
 }
 
 boost::any Functions::constructArray(std::shared_ptr<peg::Ast> ast)
@@ -125,6 +165,21 @@ boost::any Functions::constructArray(std::shared_ptr<peg::Ast> ast)
       auto value = evaluate(node->name, node);
       if (value.type() == typeid(types::TypeBase<geometry_msgs::msg::Pose>)) {
         array_value.emplace_back(boost::any_cast<types::TypeBase<geometry_msgs::msg::Pose>>(
+            value).getValue());
+      } else {
+        POLARIS_THROW_EVALUATION_ERROR(ast, "array value is not pose");
+      }
+    }
+    array.setValue(array_value);
+    return array;
+  }
+  if (value_type == typeid(types::TypeBase<types::Entity>)) {
+    types::TypeBase<std::vector<types::Entity>> array;
+    std::vector<types::Entity> array_value;
+    for (const auto & node : ast->nodes) {
+      auto value = evaluate(node->name, node);
+      if (value.type() == typeid(types::TypeBase<types::Entity>)) {
+        array_value.emplace_back(boost::any_cast<types::TypeBase<types::Entity>>(
             value).getValue());
       } else {
         POLARIS_THROW_EVALUATION_ERROR(ast, "array value is not pose");

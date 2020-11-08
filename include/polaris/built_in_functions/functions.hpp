@@ -17,6 +17,7 @@
 
 #include <polaris/exception.hpp>
 #include <polaris/types/type_base.hpp>
+#include <polaris/types/entity.hpp>
 
 #include <peglib.h>
 
@@ -65,6 +66,8 @@ public:
       std::bind(&Functions::constructPoint, this, std::placeholders::_1)));
     functions_.insert(std::make_pair("pose",
       std::bind(&Functions::constructPose, this, std::placeholders::_1)));
+    functions_.insert(std::make_pair("entity",
+      std::bind(&Functions::constructEntity, this, std::placeholders::_1)));
     functions_.insert(std::make_pair("+",
       std::bind(&Functions::addition, this, std::placeholders::_1)));
     functions_.insert(std::make_pair("-",
@@ -129,6 +132,7 @@ private:
   boost::any constructPoint(std::shared_ptr<peg::Ast> ast);
   boost::any constructPose(std::shared_ptr<peg::Ast> ast);
   boost::any constructArray(std::shared_ptr<peg::Ast> ast);
+  boost::any constructEntity(std::shared_ptr<peg::Ast> ast);
   boost::any addition(std::shared_ptr<peg::Ast> ast);
   boost::any subtraction(std::shared_ptr<peg::Ast> ast);
   boost::any multiplication(std::shared_ptr<peg::Ast> ast);

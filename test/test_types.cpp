@@ -148,7 +148,33 @@ TEST(types, string_1)
   ASSERT_STREQ(a.get().c_str(), "test");
 }
 
-TEST(operator, array_0)
+TEST(types, entity_0)
+{
+  std::string code =
+    R"(let a = entity(pose(point(1,2,3),quaternion(0,0,0,1)), 
+    ["bouy"], [point(0,1,2), point(2,3,4), point(3,2,3)]);)";
+  polaris::Parser parser;
+  ASSERT_TRUE(parser.evaluate(code));
+  const auto a = parser.getValue<polaris::types::Entity>("a");
+  ASSERT_TRUE(a);
+  ASSERT_DOUBLE_EQ(a.get().pose.position.x, 1);
+  ASSERT_DOUBLE_EQ(a.get().pose.position.y, 2);
+  ASSERT_DOUBLE_EQ(a.get().pose.position.z, 3);
+  ASSERT_EQ(a.get().type.size(), static_cast<size_t>(1));
+  ASSERT_STREQ(a.get().type[0].c_str(), "bouy");
+  ASSERT_EQ(a.get().polygon.size(), static_cast<size_t>(3));
+  ASSERT_DOUBLE_EQ(a.get().polygon[0].x, 0);
+  ASSERT_DOUBLE_EQ(a.get().polygon[0].y, 1);
+  ASSERT_DOUBLE_EQ(a.get().polygon[0].z, 2);
+  ASSERT_DOUBLE_EQ(a.get().polygon[1].x, 2);
+  ASSERT_DOUBLE_EQ(a.get().polygon[1].y, 3);
+  ASSERT_DOUBLE_EQ(a.get().polygon[1].z, 4);
+  ASSERT_DOUBLE_EQ(a.get().polygon[2].x, 3);
+  ASSERT_DOUBLE_EQ(a.get().polygon[2].y, 2);
+  ASSERT_DOUBLE_EQ(a.get().polygon[2].z, 3);
+}
+
+TEST(types, array_0)
 {
   std::string code = R"(let a = [1,2,3];)";
   polaris::Parser parser;
@@ -161,7 +187,7 @@ TEST(operator, array_0)
   ASSERT_EQ(a.get()[2], 3);
 }
 
-TEST(operator, array_1)
+TEST(types, array_1)
 {
   std::string code = R"(let a = [1.0,2.9,3.0,12.0];)";
   polaris::Parser parser;
@@ -175,7 +201,7 @@ TEST(operator, array_1)
   ASSERT_DOUBLE_EQ(a.get()[3], 12.0);
 }
 
-TEST(operator, array_2)
+TEST(types, array_2)
 {
   std::string code = R"(let a = ["a","b"];)";
   polaris::Parser parser;
@@ -187,14 +213,14 @@ TEST(operator, array_2)
   ASSERT_STREQ(a.get()[1].c_str(), "b");
 }
 
-TEST(operator, array_3)
+TEST(types, array_3)
 {
   std::string code = R"(let a=[point(1,2,3), point(1,2,5)];)";
   polaris::Parser parser;
   ASSERT_TRUE(parser.evaluate(code));
   const auto a = parser.getValue<std::vector<geometry_msgs::msg::Point>>("a");
   ASSERT_TRUE(a);
-  ASSERT_DOUBLE_EQ(a.get().size(), static_cast<size_t>(2));
+  ASSERT_EQ(a.get().size(), static_cast<size_t>(2));
   ASSERT_DOUBLE_EQ(a.get()[0].x, 1.0);
   ASSERT_DOUBLE_EQ(a.get()[0].y, 2.0);
   ASSERT_DOUBLE_EQ(a.get()[0].z, 3.0);
@@ -203,20 +229,54 @@ TEST(operator, array_3)
   ASSERT_DOUBLE_EQ(a.get()[1].z, 5.0);
 }
 
-TEST(operator, array_4)
+TEST(types, array_4)
 {
   std::string code = R"(let p = point(1,2,3);let a=[p, point(1,2,5)];)";
   polaris::Parser parser;
   ASSERT_TRUE(parser.evaluate(code));
   const auto a = parser.getValue<std::vector<geometry_msgs::msg::Point>>("a");
   ASSERT_TRUE(a);
-  ASSERT_DOUBLE_EQ(a.get().size(), static_cast<size_t>(2));
+  ASSERT_EQ(a.get().size(), static_cast<size_t>(2));
   ASSERT_DOUBLE_EQ(a.get()[0].x, 1.0);
   ASSERT_DOUBLE_EQ(a.get()[0].y, 2.0);
   ASSERT_DOUBLE_EQ(a.get()[0].z, 3.0);
   ASSERT_DOUBLE_EQ(a.get()[1].x, 1.0);
   ASSERT_DOUBLE_EQ(a.get()[1].y, 2.0);
   ASSERT_DOUBLE_EQ(a.get()[1].z, 5.0);
+}
+
+TEST(types, array_5)
+{
+  std::string code =
+    R"(
+      let a = entity(pose(point(1,2,3),quaternion(0,0,0,1)),
+      ["bouy"], [point(0,1,2), point(2,3,4), point(3,2,3)]);
+      let b = entity(pose(point(1,2,3),quaternion(0,0,0,1)), 
+      ["bouy"], [point(0,1,2), point(2,3,4), point(3,2,3)]);
+      let c = [a,b];
+    )";
+  polaris::Parser parser;
+  ASSERT_TRUE(parser.evaluate(code));
+  const auto c = parser.getValue<std::vector<polaris::types::Entity>>("c");
+  ASSERT_TRUE(c);
+  ASSERT_EQ(c.get().size(), static_cast<size_t>(2));
+  const auto a = parser.getValue<polaris::types::Entity>("a");
+  ASSERT_TRUE(a);
+  ASSERT_DOUBLE_EQ(a.get().pose.position.x, 1);
+  ASSERT_DOUBLE_EQ(a.get().pose.position.y, 2);
+  ASSERT_DOUBLE_EQ(a.get().pose.position.z, 3);
+  ASSERT_EQ(a.get().type.size(), static_cast<size_t>(1));
+  ASSERT_STREQ(a.get().type[0].c_str(), "bouy");
+  ASSERT_EQ(a.get().polygon.size(), static_cast<size_t>(3));
+  ASSERT_DOUBLE_EQ(a.get().polygon[0].x, 0);
+  ASSERT_DOUBLE_EQ(a.get().polygon[0].y, 1);
+  ASSERT_DOUBLE_EQ(a.get().polygon[0].z, 2);
+  ASSERT_DOUBLE_EQ(a.get().polygon[1].x, 2);
+  ASSERT_DOUBLE_EQ(a.get().polygon[1].y, 3);
+  ASSERT_DOUBLE_EQ(a.get().polygon[1].z, 4);
+  ASSERT_DOUBLE_EQ(a.get().polygon[2].x, 3);
+  ASSERT_DOUBLE_EQ(a.get().polygon[2].y, 2);
+  ASSERT_DOUBLE_EQ(a.get().polygon[2].z, 3);
 }
 
 int main(int argc, char ** argv)
