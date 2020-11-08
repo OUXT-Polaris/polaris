@@ -42,6 +42,22 @@ boost::any Functions::fetchVariable(std::shared_ptr<peg::Ast> ast)
   return variables_[ast->token];
 }
 
+boost::any Functions::constructBoolean(std::shared_ptr<peg::Ast> ast)
+{
+  if (ast->name == "BOOLEAN") {
+    types::TypeBase<bool> bool_value;
+    if (ast->token == "true") {
+      bool_value.setValue(true);
+    } else if (ast->token == "false") {
+      bool_value.setValue(false);
+    } else {
+      POLARIS_THROW_EVALUATION_ERROR(ast, "bool value should be true or false");
+    }
+    return bool_value;
+  }
+  return boost::none;
+}
+
 boost::any Functions::constructEntity(std::shared_ptr<peg::Ast> ast)
 {
   auto pose_value = evaluate(ast->nodes[0]->name, ast->nodes[0]);
@@ -123,6 +139,20 @@ boost::any Functions::constructArray(std::shared_ptr<peg::Ast> ast)
         array_value.emplace_back(boost::any_cast<types::TypeBase<std::string>>(value).getValue());
       } else {
         POLARIS_THROW_EVALUATION_ERROR(ast, "array value is not string");
+      }
+    }
+    array.setValue(array_value);
+    return array;
+  }
+  if (value_type == typeid(types::TypeBase<bool>)) {
+    types::TypeBase<std::vector<bool>> array;
+    std::vector<bool> array_value;
+    for (const auto & node : ast->nodes) {
+      auto value = evaluate(node->name, node);
+      if (value.type() == typeid(types::TypeBase<bool>)) {
+        array_value.emplace_back(boost::any_cast<types::TypeBase<bool>>(value).getValue());
+      } else {
+        POLARIS_THROW_EVALUATION_ERROR(ast, "array value is not bool");
       }
     }
     array.setValue(array_value);

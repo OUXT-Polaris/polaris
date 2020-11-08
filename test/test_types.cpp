@@ -148,6 +148,36 @@ TEST(types, string_1)
   ASSERT_STREQ(a.get().c_str(), "test");
 }
 
+TEST(types, bool_0)
+{
+  std::string code = R"(let a = true;)";
+  polaris::Parser parser;
+  ASSERT_TRUE(parser.evaluate(code));
+  const auto a = parser.getValue<bool>("a");
+  ASSERT_TRUE(a);
+  ASSERT_EQ(a.get(), true);
+}
+
+TEST(types, bool_1)
+{
+  std::string code = R"(let a = false;)";
+  polaris::Parser parser;
+  ASSERT_TRUE(parser.evaluate(code));
+  const auto a = parser.getValue<bool>("a");
+  ASSERT_TRUE(a);
+  ASSERT_EQ(a.get(), false);
+}
+
+TEST(types, bool_2)
+{
+  std::string code = R"(let a = bool(true);)";
+  polaris::Parser parser;
+  ASSERT_TRUE(parser.evaluate(code));
+  const auto a = parser.getValue<bool>("a");
+  ASSERT_TRUE(a);
+  ASSERT_EQ(a.get(), true);
+}
+
 TEST(types, entity_0)
 {
   std::string code =
@@ -277,6 +307,18 @@ TEST(types, array_5)
   ASSERT_DOUBLE_EQ(a.get().polygon[2].x, 3);
   ASSERT_DOUBLE_EQ(a.get().polygon[2].y, 2);
   ASSERT_DOUBLE_EQ(a.get().polygon[2].z, 3);
+}
+
+TEST(types, array_6)
+{
+  std::string code = R"(let a=[true, false];)";
+  polaris::Parser parser;
+  ASSERT_TRUE(parser.evaluate(code));
+  const auto a = parser.getValue<std::vector<bool>>("a");
+  ASSERT_TRUE(a);
+  ASSERT_EQ(a.get().size(), static_cast<size_t>(2));
+  ASSERT_EQ(a.get()[0], true);
+  ASSERT_EQ(a.get()[1], false);
 }
 
 int main(int argc, char ** argv)

@@ -52,6 +52,12 @@ public:
       std::bind(&Functions::constructDouble, this, std::placeholders::_1)));
     functions_.insert(std::make_pair("string",
       std::bind(&Functions::constructString, this, std::placeholders::_1)));
+    functions_.insert(std::make_pair("bool",
+      std::bind(&Functions::constructBoolean, this, std::placeholders::_1)));
+    functions_.insert(std::make_pair("boolean",
+      std::bind(&Functions::constructBoolean, this, std::placeholders::_1)));
+    functions_.insert(std::make_pair("BOOLEAN",
+      std::bind(&Functions::constructBoolean, this, std::placeholders::_1)));
     functions_.insert(std::make_pair("STRING",
       std::bind(&Functions::constructString, this, std::placeholders::_1)));
     functions_.insert(std::make_pair("array",
@@ -124,6 +130,7 @@ private:
   std::unordered_map<std::string, boost::any> variables_;
   std::unordered_map<std::string,
     std::function<boost::any(std::shared_ptr<peg::Ast> ast)>> functions_;
+  boost::any constructBoolean(std::shared_ptr<peg::Ast> ast);
   boost::any constructString(std::shared_ptr<peg::Ast> ast);
   boost::any constructInteger(std::shared_ptr<peg::Ast> ast);
   boost::any constructDouble(std::shared_ptr<peg::Ast> ast);
