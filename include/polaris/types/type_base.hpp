@@ -28,7 +28,8 @@ class TypeBase
 {
 public:
   TypeBase() {}
-  explicit TypeBase(const T & v) : value(v) {}
+  explicit TypeBase(const T & v)
+  : value(v) {}
   T getValue() const {return value;}
   void setValue(const T & v) {value = v;}
   bool matchValueType(const std::type_info & type) const

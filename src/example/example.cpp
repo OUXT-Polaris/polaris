@@ -43,8 +43,11 @@ int main()
   }
   */
   std::string code =
-    R"(let a = entity(pose(point(1,2,3),quaternion(0,0,0,1)), 
-    ["bouy"], [point(0,1,2), point(2,3,4), point(3,2,3)]);)";
+    R"(let a = entity(pose(point(1,2,3),quaternion(0,0,0,1)),
+      ["bouy"], [point(0,1,2), point(2,3,4), point(3,2,3)]);
+      let b = entity(pose(point(1,2,3),quaternion(0,0,0,1)), 
+      ["bouy"], [point(0,1,2), point(2,3,4), point(3,2,3)]);
+      let c = [a,b];)";
   if (parser.evaluate(code)) {
     std::cout << "evaluate succeced" << std::endl;
     auto a_value = parser.getValue<polaris::types::Entity>("a");
@@ -52,6 +55,10 @@ int main()
       std::cout << a_value->pose.position.x << std::endl;
       std::cout << a_value->pose.position.y << std::endl;
       std::cout << a_value->pose.position.z << std::endl;
+    }
+    auto c_value = parser.getValue<std::vector<polaris::types::Entity>>("c");
+    if (c_value) {
+      std::cout << c_value->size() << std::endl;
     }
   }
 }

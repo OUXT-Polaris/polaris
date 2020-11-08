@@ -35,12 +35,15 @@ namespace built_in_functions
 {
 boost::any Functions::fetchVariable(std::shared_ptr<peg::Ast> ast)
 {
+  if (variables_.count(ast->token) == 0) {
+    POLARIS_THROW_EVALUATION_ERROR(ast->nodes[0],
+      "variable " + ast->token + " did not defined yet.");
+  }
   return variables_[ast->token];
 }
 
 boost::any Functions::constructEntity(std::shared_ptr<peg::Ast> ast)
 {
-
   auto pose_value = evaluate(ast->nodes[0]->name, ast->nodes[0]);
   geometry_msgs::msg::Pose pose;
   if (pose_value.type() == typeid(types::TypeBase<geometry_msgs::msg::Pose>)) {
@@ -162,6 +165,21 @@ boost::any Functions::constructArray(std::shared_ptr<peg::Ast> ast)
       auto value = evaluate(node->name, node);
       if (value.type() == typeid(types::TypeBase<geometry_msgs::msg::Pose>)) {
         array_value.emplace_back(boost::any_cast<types::TypeBase<geometry_msgs::msg::Pose>>(
+            value).getValue());
+      } else {
+        POLARIS_THROW_EVALUATION_ERROR(ast, "array value is not pose");
+      }
+    }
+    array.setValue(array_value);
+    return array;
+  }
+  if (value_type == typeid(types::TypeBase<types::Entity>)) {
+    types::TypeBase<std::vector<types::Entity>> array;
+    std::vector<types::Entity> array_value;
+    for (const auto & node : ast->nodes) {
+      auto value = evaluate(node->name, node);
+      if (value.type() == typeid(types::TypeBase<types::Entity>)) {
+        array_value.emplace_back(boost::any_cast<types::TypeBase<types::Entity>>(
             value).getValue());
       } else {
         POLARIS_THROW_EVALUATION_ERROR(ast, "array value is not pose");
