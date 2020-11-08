@@ -148,6 +148,16 @@ TEST(types, string_1)
   ASSERT_STREQ(a.get().c_str(), "test");
 }
 
+TEST(types, bool_0)
+{
+  std::string code = R"(let a = true;)";
+  polaris::Parser parser;
+  ASSERT_TRUE(parser.evaluate(code));
+  const auto a = parser.getValue<bool>("a");
+  ASSERT_TRUE(a);
+  ASSERT_EQ(a.get(), true);
+}
+
 TEST(types, entity_0)
 {
   std::string code =

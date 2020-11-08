@@ -20,7 +20,7 @@
 
 int main()
 {
-  polaris::Parser parser(false);
+  polaris::Parser parser(true);
   /*
   if (parser.evaluate("let a = 1.0;")) {
     std::cout << "evaluate succeced" << std::endl;
@@ -41,11 +41,10 @@ int main()
       std::cout << "a.w = " << a_value.get().w << std::endl;
     }
   }
-  */
   std::string code =
     R"(let a = entity(pose(point(1,2,3),quaternion(0,0,0,1)),
       ["bouy"], [point(0,1,2), point(2,3,4), point(3,2,3)]);
-      let b = entity(pose(point(1,2,3),quaternion(0,0,0,1)), 
+      let b = entity(pose(point(1,2,3),quaternion(0,0,0,1)),
       ["bouy"], [point(0,1,2), point(2,3,4), point(3,2,3)]);
       let c = [a,b];)";
   if (parser.evaluate(code)) {
@@ -59,6 +58,17 @@ int main()
     auto c_value = parser.getValue<std::vector<polaris::types::Entity>>("c");
     if (c_value) {
       std::cout << c_value->size() << std::endl;
+    }
+  }
+  */
+  std::string code = R"(let a = true;)";
+  parser.evaluate(code);
+  const auto a = parser.getValue<bool>("a");
+  if (a) {
+    if (a.get()) {
+      std::cout << "true" << std::endl;
+    } else {
+      std::cout << "false" << std::endl;
     }
   }
 }

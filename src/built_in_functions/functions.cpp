@@ -42,6 +42,22 @@ boost::any Functions::fetchVariable(std::shared_ptr<peg::Ast> ast)
   return variables_[ast->token];
 }
 
+boost::any Functions::constructBoolean(std::shared_ptr<peg::Ast> ast)
+{
+  if (ast->name == "BOOLEAN") {
+    types::TypeBase<bool> bool_value;
+    if (ast->token == "true") {
+      bool_value.setValue(true);
+    } else if (ast->token == "false") {
+      bool_value.setValue(false);
+    } else {
+      POLARIS_THROW_EVALUATION_ERROR(ast, "bool value should be true or false");
+    }
+    return bool_value;
+  }
+  return boost::none;
+}
+
 boost::any Functions::constructEntity(std::shared_ptr<peg::Ast> ast)
 {
   auto pose_value = evaluate(ast->nodes[0]->name, ast->nodes[0]);

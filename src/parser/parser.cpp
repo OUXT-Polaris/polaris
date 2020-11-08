@@ -80,6 +80,9 @@ boost::any Parser::evaluate(std::shared_ptr<peg::Ast> ast)
   if (ast->name == "STRING") {
     return functions_.evaluate("string", ast);
   }
+  if (ast->name == "BOOLEAN") {
+    return functions_.evaluate("bool", ast);
+  }
   if (ast->name == "ARRAY") {
     return functions_.evaluate("array", ast);
   }
