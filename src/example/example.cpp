@@ -42,9 +42,12 @@ int main()
     }
   }
   */
-  std::string code = R"(let p = point(1,2,3);let a=[p, point(1,2,5)];)";
+  std::string code =
+    R"(let a = entity(pose(point(1,2,3),quaternion(0,0,0,1)), 
+    ["bouy"], [point(0,1,2), point(2,3,4), point(3,2,3)]);)";
   if (parser.evaluate(code)) {
     std::cout << "evaluate succeced" << std::endl;
+    /*
     auto a_values = parser.getValue<std::vector<geometry_msgs::msg::Point>>("a");
     if (a_values) {
       for (const auto & a_value : a_values.get()) {
@@ -53,6 +56,6 @@ int main()
         std::cout << a_value.z << std::endl;
       }
       // std::cout << "a = " << a_value.get() << std::endl;
-    }
+    }*/
   }
 }
