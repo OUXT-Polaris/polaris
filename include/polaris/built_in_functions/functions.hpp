@@ -18,6 +18,7 @@
 #include <polaris/exception.hpp>
 #include <polaris/types/type_base.hpp>
 #include <polaris/types/entity.hpp>
+#include <polaris/types/task.hpp>
 
 #include <peglib.h>
 
