@@ -31,6 +31,7 @@ add_library(polaris SHARED
   src/parser/parser.cpp
   src/built_in_functions/functions.cpp
   src/types/task/task.cpp
+  src/types/task/state_machine.cpp
 )
 ament_target_dependencies(polaris
   geometry_msgs

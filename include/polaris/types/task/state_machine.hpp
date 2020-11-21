@@ -29,6 +29,10 @@
 #include <string>
 #include <vector>
 
+namespace polaris
+{
+namespace types
+{
 /**
  * @brief State Transition Property for State Machine Class
  *
@@ -75,27 +79,27 @@ typedef boost::graph_traits<graph_t>::out_edge_iterator out_edge_iterator_t;
 struct StateInfo
 {
   /**
-   * @brief Possibe Transition States from the Current State
-   *
-   */
-  const std::vector<std::string> possibe_transition_states;
-  /**
-   * @brief Possibe Transitions from the Current State
-   *
-   */
-  const std::vector<std::string> possibe_transitions;
-  /**
    * @brief Current State
    *
    */
   const std::string current_state;
+  /**
+   * @brief Possibe Transition States from the Current State
+   *
+   */
+  const std::vector<std::string> possible_transition_states;
+  /**
+   * @brief Possibe Transitions from the Current State
+   *
+   */
+  const std::vector<std::string> possible_transitions;
   StateInfo(
     std::string current_state_,
-    std::vector<std::string> possibe_transition_states_,
-    std::vector<std::string> possibe_transitions_)
+    std::vector<std::string> possible_transition_states_,
+    std::vector<std::string> possible_transitions_)
   : current_state(current_state_),
-    possibe_transition_states(possibe_transition_states_),
-    possibe_transitions(possibe_transitions_) {}
+    possible_transition_states(possible_transition_states_),
+    possible_transitions(possible_transitions_) {}
 };
 
 /**
@@ -112,9 +116,8 @@ public:
   std::vector<std::string> getPossibeTransitions();
   std::string getCurrentState();
   StateInfo getStateInfo();
-  void drawStateMachine(std::string dot_filename);
-  std::string getDotString();
   std::string getName();
+
 private:
   void addTransition(
     std::string from_state_name, std::string to_state_name,
@@ -123,12 +126,7 @@ private:
   graph_t state_graph_;
   vertex_t current_state_;
   std::string name_;
-  template<typename Map>
-  NodeWriter<Map> node_writer_(Map & map, std::string current_state)
-  {
-    return NodeWriter<Map>(map, current_state);
-  }
-  template<typename Map>
-  EdgeWriter<Map> edge_writer_(Map & map) {return EdgeWriter<Map>(map);}
 };
+}  // namespace types
+}  // namespace polaris
 #endif  // POLARIS__TYPES__TASK__STATE_MACHINE_HPP_
