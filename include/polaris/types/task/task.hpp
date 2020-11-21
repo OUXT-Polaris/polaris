@@ -15,12 +15,31 @@
 #ifndef POLARIS__TYPES__TASK__TASK_HPP_
 #define POLARIS__TYPES__TASK__TASK_HPP_
 
+#include <polaris/types/task/state_machine.hpp>
+
 #include <vector>
+#include <string>
+#include <memory>
 
 namespace polaris
 {
 namespace types
 {
+const char task_state_description[] =
+  R"(
+<state_machine>
+  <init_state name="initialize"/>
+  <state_machine_name name="task_state_machine"/>
+
+  <transition from = "initialize" to="running" name="start"/>
+  <transition from = "running" to="succeed" name="success"/>
+  <transition from = "running" to="failed" name="failure"/>
+  <transition from = "running" to="yield" name="yield"/>
+  <transition from = "initialize" to="yield" name="yield"/>
+  <transition from = "yield" to="initialize" name="initialized"/>
+</state_machine>
+)";
+
 class Task
 {
 public:
@@ -31,6 +50,7 @@ private:
   std::vector<Task> depends_;
   double time_;
   double reward_;
+  std::shared_ptr<StateMachine> state_machine_ptr_;
 };
 }  // namespace types
 }  // namespace polaris
