@@ -12,8 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#ifndef POLARIS__TYPES__TASK_HPP_
-#define POLARIS__TYPES__TASK_HPP_
+#include <polaris/types/task/task.hpp>
 
 #include <vector>
 
@@ -21,16 +20,13 @@ namespace polaris
 {
 namespace types
 {
-class Task
-{
-public:
-  Task();
-  explicit Task(std::vector<Task> depends);
+Task::Task() {}
 
-private:
-  std::vector<Task> depends_;
-};
+Task::Task(std::vector<Task> depends, double time, double reward)
+{
+  depends_ = depends;
+  time_ = time;
+  reward_ = reward;
+}
 }  // namespace types
 }  // namespace polaris
-
-#endif  // POLARIS__TYPES__TASK_HPP_
