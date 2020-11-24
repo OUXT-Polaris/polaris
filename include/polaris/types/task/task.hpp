@@ -16,6 +16,7 @@
 #define POLARIS__TYPES__TASK__TASK_HPP_
 
 #include <polaris/types/task/state_machine.hpp>
+#include <polaris/types/entity.hpp>
 
 #include <vector>
 #include <string>
@@ -44,13 +45,18 @@ class Task
 {
 public:
   Task();
-  explicit Task(std::vector<Task> depends, double time, double reward);
+  explicit Task(
+    std::vector<Task> depends,
+    std::vector<Entity> entities,
+    double time,
+    double reward);
 
 private:
   std::vector<Task> depends_;
   double time_;
   double reward_;
   std::shared_ptr<StateMachine> state_machine_ptr_;
+  std::vector<Entity> entities_;
 };
 }  // namespace types
 }  // namespace polaris

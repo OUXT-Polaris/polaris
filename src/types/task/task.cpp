@@ -22,13 +22,18 @@ namespace types
 {
 Task::Task() {}
 
-Task::Task(std::vector<Task> depends, double time, double reward)
+Task::Task(
+  std::vector<Task> depends,
+  std::vector<Entity> entities,
+  double time,
+  double reward)
 {
   depends_ = depends;
   time_ = time;
   reward_ = reward;
   std::string description = task_state_description;
   state_machine_ptr_ = std::make_shared<StateMachine>(description);
+  entities_ = entities;
 }
 }  // namespace types
 }  // namespace polaris
