@@ -1,10 +1,7 @@
 repo_url: https://github.com/OUXT-Polaris/polaris.git
-site_name: Polaris Documentation.
+site_name: Polaris Documentation
 site_description: Documentation of Polaris, "Policy and Object map description Language for Automated Robot Intelligence with Semantic Behavior"
 site_author: Masaya Kataoka
-markdown_extensions:
-  - toc:
-      permalink: '#'
 theme: 
   name: material
   feature:
@@ -16,7 +13,25 @@ theme:
   icon:
     logo: material/robot
     repo: fontawesome/brands/github
+copyright: 'Copyright &copy; 2020- OUXT Polaris'
+markdown_extensions:
+    - pymdownx.highlight
+    - pymdownx.superfences
+    - mdx_unimoji
+    - fontawesome_markdown
+    - pymdownx.arithmatex
+    - pymdownx.emoji :
+        emoji_generator: !!python/name:pymdownx.emoji.to_svg
+    - codehilite:
+        guess_lang: false
+    - mdx_math
+    - plantuml_markdown:
+        server: http://www.plantuml.com/plantuml
+extra_css:
+    - "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"
+extra_javascript: 
+  - http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 plugins:
   - search
-nav:
-  - Home: HOME.md
+#nav:
+#  - Home: HOME.md

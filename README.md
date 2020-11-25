@@ -1,10 +1,10 @@
 # POLARIS
-"Policy and Object map description Language for Automated Robot Intelligence with Semantic Behavior"
+"Policy and Object description Language for Automated Robot Intelligence with Semantic Behavior"
 
 ![ROS2-Eloquent](https://github.com/OUXT-Polaris/polaris/workflows/ROS2-Eloquent/badge.svg)
 
 ## What it is
-DSL for behavior planning and object map description in robotics.
+DSL for behavior planning and object description in robotics.
 
 ## Purpose
 Create waypoint from described map and policy
