@@ -18,3 +18,5 @@ theme:
     repo: fontawesome/brands/github
 plugins:
   - search
+nav:
+  - Home: HOME.md
