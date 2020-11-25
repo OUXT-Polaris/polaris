@@ -10,8 +10,9 @@ theme:
   feature:
     tabs: true
   palette:
-    primary: green
+    primary: blue
     accent: lime
+    scheme: slate
   icon:
     logo: material/robot
     repo: fontawesome/brands/github
