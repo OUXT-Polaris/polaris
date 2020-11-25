@@ -1,10 +1,11 @@
 repo_url: https://github.com/OUXT-Polaris/polaris.git
+site_name: Polaris Documentation.
 site_description: Documentation of Polaris, "Policy and Object map description Language for Automated Robot Intelligence with Semantic Behavior"
 site_author: Masaya Kataoka
 theme:
   name: yeti
 markdown_extensions:
-    - toc:
-        permalink: '#'
+  - toc:
+    permalink: '#'
 plugins:
-    - search
+  - search
