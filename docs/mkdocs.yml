@@ -31,7 +31,13 @@ extra_css:
     - "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"
 extra_javascript: 
   - http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+extra:
+  font:
+    text: "Noto Sans JP"
+    code: "Consolas"
+  search:
+    language: en
 plugins:
-  - search
+    - search
 #nav:
 #  - Home: HOME.md
