@@ -6,6 +6,6 @@ theme:
   name: yeti
 markdown_extensions:
   - toc:
-    permalink: '#'
+      permalink: '#'
 plugins:
   - search
