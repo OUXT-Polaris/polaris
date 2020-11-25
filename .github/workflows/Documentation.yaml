@@ -16,7 +16,9 @@ jobs:
           with:
             python-version: '3.6.12'
         - name: Install 
-          run: pip3 install mkdocs mkdocs-bootswatch pymdown-extensions mdx_unimoji fontawesome_markdown markdown python-markdown-math plantuml-markdown
+          run: |
+            cd docs
+            pip3 install -r requirements.txt
         # - name: Install doxygen/depends of doxybook
         #  run: sudo apt install -y doxygen wget
         #- name: Wget package
