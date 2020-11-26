@@ -244,11 +244,32 @@
                   </a>
                 
                 
-                <h1 id="what-is-polaris">What is POLARIS</h1>
+                <h1 id="what-is-polaris">What is POLARIS<a class="headerlink" href="#what-is-polaris" title="Permanent link">#</a></h1>
 <p><strong>"<font color="MediumSeaGreen">P</font>olicy and <font color="MediumSeaGreen">O</font>bject map description
 <font color="MediumSeaGreen">L</font>anguage for <font color="MediumSeaGreen">A</font>utomated
 <font color="MediumSeaGreen">R</font>obot <font color="MediumSeaGreen">I</font>ntelligence with
 <font color="MediumSeaGreen">S</font>emantic behavior"</strong>  </p>
+<h1 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">#</a></h1>
+<h2 id="describe-robotic-behavior-much-more-easilly">Describe robotic behavior much more easilly.<a class="headerlink" href="#describe-robotic-behavior-much-more-easilly" title="Permanent link">#</a></h2>
+<p>Describing robotic behacior is very very hard task.<br />
+We usually use algorithums such as behavior tree, PDDL (Planning Domain Definition Language) model etc...<br />
+We try this problem by developing Domain Specific Language.  </p>
+<p>Example of PDDL in robot navigation.
+<div class="highlight"><pre><span></span><code>(:action navigate
+:parameters (?r – rover ?x ?y - waypoint)
+:precondition (and (available ?r)
+(at ?r ?x)
+(visible ?x ?y)
+(&gt;= (energy ?r) 8))
+:effect (and
+(decrease (energy ?r) 8)
+(not (at ?r ?x ))
+(at ?r ?y)))
+</code></pre></div></p>
+<p>Example of behavior tree in robot navigation.<br />
+<a href="https://vimeo.com/304651183"><img alt="MOOD2Be" src="image/video_MOOD2Be.png" /></a></p>
+<h2 id="describe-semantic-behavior-clearly">Describe semantic behavior clearly.<a class="headerlink" href="#describe-semantic-behavior-clearly" title="Permanent link">#</a></h2>
+<p>By using POLARIS language, we can describe robotic behacior cleary such as "Go to in front of the white bouy and stop.", "Turn the red handle."</p>
                 
               
               
