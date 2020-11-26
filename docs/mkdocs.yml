@@ -43,5 +43,6 @@ extra:
     language: en
 plugins:
     - search
-#nav:
-#  - Home: HOME.md
+nav:
+  - Home: index.md
+  - Detailed Documenation: detailed_documentation.md
