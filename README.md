@@ -1,5 +1,5 @@
 # POLARIS
-"Policy and Object map description Language for Automated Robot Intelligence with Semantic Behavior"
+"Policy and Object map description Language for Automated Robot Intelligence with Semantic behavior"
 
 ![ROS2-Eloquent](https://github.com/OUXT-Polaris/polaris/workflows/ROS2-Eloquent/badge.svg)
 
