@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classpolaris_1_1EvaluationError" kind="class" language="C++" prot="public">
+    <compoundname>polaris::EvaluationError</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">runtime_error</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classpolaris_1_1EvaluationError_1a8c439f05456826cf6296b23eb313f867" prot="public" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string polaris::EvaluationError::ast_string</definition>
+        <argsstring></argsstring>
+        <name>ast_string</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/exception.hpp" line="41" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/exception.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpolaris_1_1EvaluationError_1a3cbd3b564c83edcc7b5213996d34e3e9" prot="public" static="no" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string polaris::EvaluationError::description</definition>
+        <argsstring></argsstring>
+        <name>description</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/exception.hpp" line="42" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/exception.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpolaris_1_1EvaluationError_1aa7543a6ca896b0cfefd848434fddb7a6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>polaris::EvaluationError::EvaluationError</definition>
+        <argsstring>(std::shared_ptr&lt; peg::Ast &gt; ast, std::string description, const char *file, int line)</argsstring>
+        <name>EvaluationError</name>
+        <param>
+          <type>std::shared_ptr&lt; peg::Ast &gt;</type>
+          <declname>ast</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>description</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/exception.hpp" line="31" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/exception.hpp" bodystart="31" bodyend="40"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>polaris::EvaluationError</label>
+        <link refid="classpolaris_1_1EvaluationError"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::runtime_error</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>polaris::EvaluationError</label>
+        <link refid="classpolaris_1_1EvaluationError"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>std::runtime_error</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/polaris/polaris/include/polaris/exception.hpp" line="29" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/exception.hpp" bodystart="28" bodyend="43"/>
+    <listofallmembers>
+      <member refid="classpolaris_1_1EvaluationError_1a8c439f05456826cf6296b23eb313f867" prot="public" virt="non-virtual"><scope>polaris::EvaluationError</scope><name>ast_string</name></member>
+      <member refid="classpolaris_1_1EvaluationError_1a3cbd3b564c83edcc7b5213996d34e3e9" prot="public" virt="non-virtual"><scope>polaris::EvaluationError</scope><name>description</name></member>
+      <member refid="classpolaris_1_1EvaluationError_1aa7543a6ca896b0cfefd848434fddb7a6" prot="public" virt="non-virtual"><scope>polaris::EvaluationError</scope><name>EvaluationError</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

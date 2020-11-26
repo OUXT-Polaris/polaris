@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classpolaris_1_1Parser" kind="class" language="C++" prot="public">
+    <compoundname>polaris::Parser</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classpolaris_1_1Parser_1a11a3fde121ecb8cbf08b24865c3958fc" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; peg::parser &gt;</type>
+        <definition>std::unique_ptr&lt;peg::parser&gt; polaris::Parser::parser_ptr_</definition>
+        <argsstring></argsstring>
+        <name>parser_ptr_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/parser/parser.hpp" line="56" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/parser/parser.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpolaris_1_1Parser_1a9286a3ee285541b8c2fa14cbc31a1856" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, boost::any &gt;</type>
+        <definition>std::unordered_map&lt;std::string, boost::any&gt; polaris::Parser::variables_</definition>
+        <argsstring></argsstring>
+        <name>variables_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/parser/parser.hpp" line="57" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/parser/parser.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpolaris_1_1Parser_1a0cb0d5f16010d31f077bc6a164c1d00a" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool polaris::Parser::verbose_</definition>
+        <argsstring></argsstring>
+        <name>verbose_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/parser/parser.hpp" line="58" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/parser/parser.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpolaris_1_1Parser_1ac347c322ec74e983dd5e0377b9d61ca6" prot="private" static="no" mutable="no">
+        <type><ref refid="classpolaris_1_1built__in__functions_1_1Functions" kindref="compound">built_in_functions::Functions</ref></type>
+        <definition>built_in_functions::Functions polaris::Parser::functions_</definition>
+        <argsstring></argsstring>
+        <name>functions_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/parser/parser.hpp" line="59" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/parser/parser.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpolaris_1_1Parser_1ab1473e3621465e6dc853084ef3ca2454" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>polaris::Parser::Parser</definition>
+        <argsstring>(bool verbose=true)</argsstring>
+        <name>Parser</name>
+        <param>
+          <type>bool</type>
+          <declname>verbose</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/parser/parser.hpp" line="36" column="1" bodyfile="/home/runner/work/polaris/polaris/src/parser/parser.cpp" bodystart="31" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classpolaris_1_1Parser_1a294cc2f2a5c6f51bf4c938f294d15eee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool polaris::Parser::evaluate</definition>
+        <argsstring>(std::string line)</argsstring>
+        <name>evaluate</name>
+        <param>
+          <type>std::string</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/parser/parser.hpp" line="37" column="1" bodyfile="/home/runner/work/polaris/polaris/src/parser/parser.cpp" bodystart="39" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classpolaris_1_1Parser_1a3da0f65ba0bab1f02cd9d5268eb5aba8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>const boost::optional&lt; T &gt;</type>
+        <definition>const boost::optional&lt;T&gt; polaris::Parser::getValue</definition>
+        <argsstring>(std::string name) const</argsstring>
+        <name>getValue</name>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/parser/parser.hpp" line="39" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/parser/parser.hpp" bodystart="39" bodyend="52"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classpolaris_1_1Parser_1a7af5f7c6586127ad4b401c9d7a0d6c58" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>boost::any</type>
+        <definition>boost::any polaris::Parser::evaluate</definition>
+        <argsstring>(std::shared_ptr&lt; peg::Ast &gt; ast)</argsstring>
+        <name>evaluate</name>
+        <param>
+          <type>std::shared_ptr&lt; peg::Ast &gt;</type>
+          <declname>ast</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/parser/parser.hpp" line="55" column="1" bodyfile="/home/runner/work/polaris/polaris/src/parser/parser.cpp" bodystart="52" bodyend="100"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/polaris/polaris/include/polaris/parser/parser.hpp" line="34" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/parser/parser.hpp" bodystart="33" bodyend="60"/>
+    <listofallmembers>
+      <member refid="classpolaris_1_1Parser_1a294cc2f2a5c6f51bf4c938f294d15eee" prot="public" virt="non-virtual"><scope>polaris::Parser</scope><name>evaluate</name></member>
+      <member refid="classpolaris_1_1Parser_1a7af5f7c6586127ad4b401c9d7a0d6c58" prot="private" virt="non-virtual"><scope>polaris::Parser</scope><name>evaluate</name></member>
+      <member refid="classpolaris_1_1Parser_1ac347c322ec74e983dd5e0377b9d61ca6" prot="private" virt="non-virtual"><scope>polaris::Parser</scope><name>functions_</name></member>
+      <member refid="classpolaris_1_1Parser_1a3da0f65ba0bab1f02cd9d5268eb5aba8" prot="public" virt="non-virtual"><scope>polaris::Parser</scope><name>getValue</name></member>
+      <member refid="classpolaris_1_1Parser_1ab1473e3621465e6dc853084ef3ca2454" prot="public" virt="non-virtual"><scope>polaris::Parser</scope><name>Parser</name></member>
+      <member refid="classpolaris_1_1Parser_1a11a3fde121ecb8cbf08b24865c3958fc" prot="private" virt="non-virtual"><scope>polaris::Parser</scope><name>parser_ptr_</name></member>
+      <member refid="classpolaris_1_1Parser_1a9286a3ee285541b8c2fa14cbc31a1856" prot="private" virt="non-virtual"><scope>polaris::Parser</scope><name>variables_</name></member>
+      <member refid="classpolaris_1_1Parser_1a0cb0d5f16010d31f077bc6a164c1d00a" prot="private" virt="non-virtual"><scope>polaris::Parser</scope><name>verbose_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

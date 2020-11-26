@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_3c0cdd5ad5fc4808e48eb43a5dc064cf" kind="dir">
+    <compoundname>/home/runner/work/polaris/polaris/src/built_in_functions</compoundname>
+    <innerfile refid="functions_8cpp">functions.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/polaris/polaris/src/built_in_functions/"/>
+  </compounddef>
+</doxygen>

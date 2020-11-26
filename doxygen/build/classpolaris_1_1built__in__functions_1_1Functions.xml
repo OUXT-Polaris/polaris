@@ -1,0 +1,371 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classpolaris_1_1built__in__functions_1_1Functions" kind="class" language="C++" prot="public">
+    <compoundname>polaris::built_in_functions::Functions</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classpolaris_1_1built__in__functions_1_1Functions_1ab614e0b5e1d0bbc9dae91d4cc233f69c" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, boost::any &gt;</type>
+        <definition>std::unordered_map&lt;std::string, boost::any&gt; polaris::built_in_functions::Functions::variables_</definition>
+        <argsstring></argsstring>
+        <name>variables_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="130" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpolaris_1_1built__in__functions_1_1Functions_1ae777b8b04a23c3ea85f256be0fd7d010" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, std::function&lt; boost::any(std::shared_ptr&lt; peg::Ast &gt; ast)&gt; &gt;</type>
+        <definition>std::unordered_map&lt;std::string, std::function&lt;boost::any(std::shared_ptr&lt;peg::Ast&gt; ast)&gt; &gt; polaris::built_in_functions::Functions::functions_</definition>
+        <argsstring></argsstring>
+        <name>functions_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="132" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpolaris_1_1built__in__functions_1_1Functions_1a678c7906827b42488725c89f66a47edc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>polaris::built_in_functions::Functions::Functions</definition>
+        <argsstring>()</argsstring>
+        <name>Functions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="43" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" bodystart="43" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classpolaris_1_1built__in__functions_1_1Functions_1a69a8006955409fc824a3b0feb75677c0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boost::any</type>
+        <definition>boost::any polaris::built_in_functions::Functions::evaluate</definition>
+        <argsstring>(std::string function, std::shared_ptr&lt; peg::Ast &gt; ast)</argsstring>
+        <name>evaluate</name>
+        <param>
+          <type>std::string</type>
+          <declname>function</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; peg::Ast &gt;</type>
+          <declname>ast</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="88" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" bodystart="88" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="classpolaris_1_1built__in__functions_1_1Functions_1acb64df236e3c30ce140419acc7df46d7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void polaris::built_in_functions::Functions::setVariables</definition>
+        <argsstring>(std::unordered_map&lt; std::string, boost::any &gt; variables)</argsstring>
+        <name>setVariables</name>
+        <param>
+          <type>std::unordered_map&lt; std::string, boost::any &gt;</type>
+          <declname>variables</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="124" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" bodystart="124" bodyend="127"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classpolaris_1_1built__in__functions_1_1Functions_1a542326a0c926a105ef785598a439c44c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>boost::any</type>
+        <definition>boost::any polaris::built_in_functions::Functions::constructBoolean</definition>
+        <argsstring>(std::shared_ptr&lt; peg::Ast &gt; ast)</argsstring>
+        <name>constructBoolean</name>
+        <param>
+          <type>std::shared_ptr&lt; peg::Ast &gt;</type>
+          <declname>ast</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="133" column="1" bodyfile="/home/runner/work/polaris/polaris/src/built_in_functions/functions.cpp" bodystart="45" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classpolaris_1_1built__in__functions_1_1Functions_1a88c98143a64f4368ae892970fa636477" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>boost::any</type>
+        <definition>boost::any polaris::built_in_functions::Functions::constructString</definition>
+        <argsstring>(std::shared_ptr&lt; peg::Ast &gt; ast)</argsstring>
+        <name>constructString</name>
+        <param>
+          <type>std::shared_ptr&lt; peg::Ast &gt;</type>
+          <declname>ast</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="134" column="1" bodyfile="/home/runner/work/polaris/polaris/src/built_in_functions/functions.cpp" bodystart="224" bodyend="232"/>
+      </memberdef>
+      <memberdef kind="function" id="classpolaris_1_1built__in__functions_1_1Functions_1a7b4d8f42a30af49c464d6b5be9f45f10" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>boost::any</type>
+        <definition>boost::any polaris::built_in_functions::Functions::constructInteger</definition>
+        <argsstring>(std::shared_ptr&lt; peg::Ast &gt; ast)</argsstring>
+        <name>constructInteger</name>
+        <param>
+          <type>std::shared_ptr&lt; peg::Ast &gt;</type>
+          <declname>ast</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="135" column="1" bodyfile="/home/runner/work/polaris/polaris/src/built_in_functions/functions.cpp" bodystart="234" bodyend="250"/>
+      </memberdef>
+      <memberdef kind="function" id="classpolaris_1_1built__in__functions_1_1Functions_1a94c706c258856dbbd147ce4320e7b192" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>boost::any</type>
+        <definition>boost::any polaris::built_in_functions::Functions::constructDouble</definition>
+        <argsstring>(std::shared_ptr&lt; peg::Ast &gt; ast)</argsstring>
+        <name>constructDouble</name>
+        <param>
+          <type>std::shared_ptr&lt; peg::Ast &gt;</type>
+          <declname>ast</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="136" column="1" bodyfile="/home/runner/work/polaris/polaris/src/built_in_functions/functions.cpp" bodystart="252" bodyend="268"/>
+      </memberdef>
+      <memberdef kind="function" id="classpolaris_1_1built__in__functions_1_1Functions_1aa995e82a1d5b19dc5bce3a8eb1a00a15" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>boost::any</type>
+        <definition>boost::any polaris::built_in_functions::Functions::constructQuaternion</definition>
+        <argsstring>(std::shared_ptr&lt; peg::Ast &gt; ast)</argsstring>
+        <name>constructQuaternion</name>
+        <param>
+          <type>std::shared_ptr&lt; peg::Ast &gt;</type>
+          <declname>ast</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="137" column="1" bodyfile="/home/runner/work/polaris/polaris/src/built_in_functions/functions.cpp" bodystart="455" bodyend="521"/>
+      </memberdef>
+      <memberdef kind="function" id="classpolaris_1_1built__in__functions_1_1Functions_1aae8d84ec09234916e9fcc6a98e4c6bba" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>boost::any</type>
+        <definition>boost::any polaris::built_in_functions::Functions::constructQuaternionFromRpy</definition>
+        <argsstring>(std::shared_ptr&lt; peg::Ast &gt; ast)</argsstring>
+        <name>constructQuaternionFromRpy</name>
+        <param>
+          <type>std::shared_ptr&lt; peg::Ast &gt;</type>
+          <declname>ast</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="138" column="1" bodyfile="/home/runner/work/polaris/polaris/src/built_in_functions/functions.cpp" bodystart="398" bodyend="453"/>
+      </memberdef>
+      <memberdef kind="function" id="classpolaris_1_1built__in__functions_1_1Functions_1a1d66869d0e3bed01e8ba2217eab01ced" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>boost::any</type>
+        <definition>boost::any polaris::built_in_functions::Functions::constructPoint</definition>
+        <argsstring>(std::shared_ptr&lt; peg::Ast &gt; ast)</argsstring>
+        <name>constructPoint</name>
+        <param>
+          <type>std::shared_ptr&lt; peg::Ast &gt;</type>
+          <declname>ast</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="139" column="1" bodyfile="/home/runner/work/polaris/polaris/src/built_in_functions/functions.cpp" bodystart="343" bodyend="396"/>
+      </memberdef>
+      <memberdef kind="function" id="classpolaris_1_1built__in__functions_1_1Functions_1a48111da2b965f645cd6e2b339c1ad9df" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>boost::any</type>
+        <definition>boost::any polaris::built_in_functions::Functions::constructPose</definition>
+        <argsstring>(std::shared_ptr&lt; peg::Ast &gt; ast)</argsstring>
+        <name>constructPose</name>
+        <param>
+          <type>std::shared_ptr&lt; peg::Ast &gt;</type>
+          <declname>ast</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="140" column="1" bodyfile="/home/runner/work/polaris/polaris/src/built_in_functions/functions.cpp" bodystart="270" bodyend="341"/>
+      </memberdef>
+      <memberdef kind="function" id="classpolaris_1_1built__in__functions_1_1Functions_1af39db38b69e2bfc9c78fae41314edaec" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>boost::any</type>
+        <definition>boost::any polaris::built_in_functions::Functions::constructArray</definition>
+        <argsstring>(std::shared_ptr&lt; peg::Ast &gt; ast)</argsstring>
+        <name>constructArray</name>
+        <param>
+          <type>std::shared_ptr&lt; peg::Ast &gt;</type>
+          <declname>ast</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="141" column="1" bodyfile="/home/runner/work/polaris/polaris/src/built_in_functions/functions.cpp" bodystart="97" bodyend="222"/>
+      </memberdef>
+      <memberdef kind="function" id="classpolaris_1_1built__in__functions_1_1Functions_1a6928f927ec04e4e9004ca1cc6ac54aa4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>boost::any</type>
+        <definition>boost::any polaris::built_in_functions::Functions::constructEntity</definition>
+        <argsstring>(std::shared_ptr&lt; peg::Ast &gt; ast)</argsstring>
+        <name>constructEntity</name>
+        <param>
+          <type>std::shared_ptr&lt; peg::Ast &gt;</type>
+          <declname>ast</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="142" column="1" bodyfile="/home/runner/work/polaris/polaris/src/built_in_functions/functions.cpp" bodystart="61" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classpolaris_1_1built__in__functions_1_1Functions_1a8a59349806d2ec80d693b122cdcf8487" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>boost::any</type>
+        <definition>boost::any polaris::built_in_functions::Functions::addition</definition>
+        <argsstring>(std::shared_ptr&lt; peg::Ast &gt; ast)</argsstring>
+        <name>addition</name>
+        <param>
+          <type>std::shared_ptr&lt; peg::Ast &gt;</type>
+          <declname>ast</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="143" column="1" bodyfile="/home/runner/work/polaris/polaris/src/built_in_functions/functions.cpp" bodystart="661" bodyend="702"/>
+      </memberdef>
+      <memberdef kind="function" id="classpolaris_1_1built__in__functions_1_1Functions_1a8a9522d03f3bfcdb0148691ce52a2517" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>boost::any</type>
+        <definition>boost::any polaris::built_in_functions::Functions::subtraction</definition>
+        <argsstring>(std::shared_ptr&lt; peg::Ast &gt; ast)</argsstring>
+        <name>subtraction</name>
+        <param>
+          <type>std::shared_ptr&lt; peg::Ast &gt;</type>
+          <declname>ast</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="144" column="1" bodyfile="/home/runner/work/polaris/polaris/src/built_in_functions/functions.cpp" bodystart="618" bodyend="659"/>
+      </memberdef>
+      <memberdef kind="function" id="classpolaris_1_1built__in__functions_1_1Functions_1a02b4c002c6e0e29d4c97c5a2d1da3ce2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>boost::any</type>
+        <definition>boost::any polaris::built_in_functions::Functions::multiplication</definition>
+        <argsstring>(std::shared_ptr&lt; peg::Ast &gt; ast)</argsstring>
+        <name>multiplication</name>
+        <param>
+          <type>std::shared_ptr&lt; peg::Ast &gt;</type>
+          <declname>ast</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="145" column="1" bodyfile="/home/runner/work/polaris/polaris/src/built_in_functions/functions.cpp" bodystart="523" bodyend="573"/>
+      </memberdef>
+      <memberdef kind="function" id="classpolaris_1_1built__in__functions_1_1Functions_1a02e2e26c7a8b551b60e985acef5b7187" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>boost::any</type>
+        <definition>boost::any polaris::built_in_functions::Functions::division</definition>
+        <argsstring>(std::shared_ptr&lt; peg::Ast &gt; ast)</argsstring>
+        <name>division</name>
+        <param>
+          <type>std::shared_ptr&lt; peg::Ast &gt;</type>
+          <declname>ast</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="146" column="1" bodyfile="/home/runner/work/polaris/polaris/src/built_in_functions/functions.cpp" bodystart="575" bodyend="616"/>
+      </memberdef>
+      <memberdef kind="function" id="classpolaris_1_1built__in__functions_1_1Functions_1a32875f3dae0be1eac25d4a7ea0a30d52" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>boost::any</type>
+        <definition>boost::any polaris::built_in_functions::Functions::fetchVariable</definition>
+        <argsstring>(std::shared_ptr&lt; peg::Ast &gt; ast)</argsstring>
+        <name>fetchVariable</name>
+        <param>
+          <type>std::shared_ptr&lt; peg::Ast &gt;</type>
+          <declname>ast</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="147" column="1" bodyfile="/home/runner/work/polaris/polaris/src/built_in_functions/functions.cpp" bodystart="36" bodyend="43"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="41" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" bodystart="40" bodyend="148"/>
+    <listofallmembers>
+      <member refid="classpolaris_1_1built__in__functions_1_1Functions_1a8a59349806d2ec80d693b122cdcf8487" prot="private" virt="non-virtual"><scope>polaris::built_in_functions::Functions</scope><name>addition</name></member>
+      <member refid="classpolaris_1_1built__in__functions_1_1Functions_1af39db38b69e2bfc9c78fae41314edaec" prot="private" virt="non-virtual"><scope>polaris::built_in_functions::Functions</scope><name>constructArray</name></member>
+      <member refid="classpolaris_1_1built__in__functions_1_1Functions_1a542326a0c926a105ef785598a439c44c" prot="private" virt="non-virtual"><scope>polaris::built_in_functions::Functions</scope><name>constructBoolean</name></member>
+      <member refid="classpolaris_1_1built__in__functions_1_1Functions_1a94c706c258856dbbd147ce4320e7b192" prot="private" virt="non-virtual"><scope>polaris::built_in_functions::Functions</scope><name>constructDouble</name></member>
+      <member refid="classpolaris_1_1built__in__functions_1_1Functions_1a6928f927ec04e4e9004ca1cc6ac54aa4" prot="private" virt="non-virtual"><scope>polaris::built_in_functions::Functions</scope><name>constructEntity</name></member>
+      <member refid="classpolaris_1_1built__in__functions_1_1Functions_1a7b4d8f42a30af49c464d6b5be9f45f10" prot="private" virt="non-virtual"><scope>polaris::built_in_functions::Functions</scope><name>constructInteger</name></member>
+      <member refid="classpolaris_1_1built__in__functions_1_1Functions_1a1d66869d0e3bed01e8ba2217eab01ced" prot="private" virt="non-virtual"><scope>polaris::built_in_functions::Functions</scope><name>constructPoint</name></member>
+      <member refid="classpolaris_1_1built__in__functions_1_1Functions_1a48111da2b965f645cd6e2b339c1ad9df" prot="private" virt="non-virtual"><scope>polaris::built_in_functions::Functions</scope><name>constructPose</name></member>
+      <member refid="classpolaris_1_1built__in__functions_1_1Functions_1aa995e82a1d5b19dc5bce3a8eb1a00a15" prot="private" virt="non-virtual"><scope>polaris::built_in_functions::Functions</scope><name>constructQuaternion</name></member>
+      <member refid="classpolaris_1_1built__in__functions_1_1Functions_1aae8d84ec09234916e9fcc6a98e4c6bba" prot="private" virt="non-virtual"><scope>polaris::built_in_functions::Functions</scope><name>constructQuaternionFromRpy</name></member>
+      <member refid="classpolaris_1_1built__in__functions_1_1Functions_1a88c98143a64f4368ae892970fa636477" prot="private" virt="non-virtual"><scope>polaris::built_in_functions::Functions</scope><name>constructString</name></member>
+      <member refid="classpolaris_1_1built__in__functions_1_1Functions_1a02e2e26c7a8b551b60e985acef5b7187" prot="private" virt="non-virtual"><scope>polaris::built_in_functions::Functions</scope><name>division</name></member>
+      <member refid="classpolaris_1_1built__in__functions_1_1Functions_1a69a8006955409fc824a3b0feb75677c0" prot="public" virt="non-virtual"><scope>polaris::built_in_functions::Functions</scope><name>evaluate</name></member>
+      <member refid="classpolaris_1_1built__in__functions_1_1Functions_1a32875f3dae0be1eac25d4a7ea0a30d52" prot="private" virt="non-virtual"><scope>polaris::built_in_functions::Functions</scope><name>fetchVariable</name></member>
+      <member refid="classpolaris_1_1built__in__functions_1_1Functions_1a678c7906827b42488725c89f66a47edc" prot="public" virt="non-virtual"><scope>polaris::built_in_functions::Functions</scope><name>Functions</name></member>
+      <member refid="classpolaris_1_1built__in__functions_1_1Functions_1ae777b8b04a23c3ea85f256be0fd7d010" prot="private" virt="non-virtual"><scope>polaris::built_in_functions::Functions</scope><name>functions_</name></member>
+      <member refid="classpolaris_1_1built__in__functions_1_1Functions_1a02b4c002c6e0e29d4c97c5a2d1da3ce2" prot="private" virt="non-virtual"><scope>polaris::built_in_functions::Functions</scope><name>multiplication</name></member>
+      <member refid="classpolaris_1_1built__in__functions_1_1Functions_1acb64df236e3c30ce140419acc7df46d7" prot="public" virt="non-virtual"><scope>polaris::built_in_functions::Functions</scope><name>setVariables</name></member>
+      <member refid="classpolaris_1_1built__in__functions_1_1Functions_1a8a9522d03f3bfcdb0148691ce52a2517" prot="private" virt="non-virtual"><scope>polaris::built_in_functions::Functions</scope><name>subtraction</name></member>
+      <member refid="classpolaris_1_1built__in__functions_1_1Functions_1ab614e0b5e1d0bbc9dae91d4cc233f69c" prot="private" virt="non-virtual"><scope>polaris::built_in_functions::Functions</scope><name>variables_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

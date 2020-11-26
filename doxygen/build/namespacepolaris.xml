@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespacepolaris" kind="namespace" language="C++">
+    <compoundname>polaris</compoundname>
+    <innerclass refid="classpolaris_1_1EvaluationError" prot="public">polaris::EvaluationError</innerclass>
+    <innerclass refid="classpolaris_1_1Parser" prot="public">polaris::Parser</innerclass>
+    <innernamespace refid="namespacepolaris_1_1built__in__functions">polaris::built_in_functions</innernamespace>
+    <innernamespace refid="namespacepolaris_1_1types">polaris::types</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="37" column="1"/>
+  </compounddef>
+</doxygen>

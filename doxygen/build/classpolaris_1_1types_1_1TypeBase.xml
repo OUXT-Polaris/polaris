@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classpolaris_1_1types_1_1TypeBase" kind="class" language="C++" prot="public">
+    <compoundname>polaris::types::TypeBase</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classpolaris_1_1types_1_1TypeBase_1ae731a58689630b807dffce1ad6e9e5d8" prot="private" static="no" mutable="no">
+        <type>T</type>
+        <definition>T polaris::types::TypeBase&lt; T &gt;::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/types/type_base.hpp" line="44" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/type_base.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpolaris_1_1types_1_1TypeBase_1ad959284bae24cb920c77e87ce2261ba4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>polaris::types::TypeBase&lt; T &gt;::TypeBase</definition>
+        <argsstring>()</argsstring>
+        <name>TypeBase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/types/type_base.hpp" line="30" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/type_base.hpp" bodystart="30" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classpolaris_1_1types_1_1TypeBase_1a871de71532dba3a3d31f8be7faf8e0cb" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>polaris::types::TypeBase&lt; T &gt;::TypeBase</definition>
+        <argsstring>(const T &amp;v)</argsstring>
+        <name>TypeBase</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/types/type_base.hpp" line="31" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/type_base.hpp" bodystart="31" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classpolaris_1_1types_1_1TypeBase_1af41f65c620094c48ae428d7083d2394a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>T</type>
+        <definition>T polaris::types::TypeBase&lt; T &gt;::getValue</definition>
+        <argsstring>() const</argsstring>
+        <name>getValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/types/type_base.hpp" line="33" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/type_base.hpp" bodystart="33" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classpolaris_1_1types_1_1TypeBase_1a0bef711b31884d83147afb3df96a21c7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void polaris::types::TypeBase&lt; T &gt;::setValue</definition>
+        <argsstring>(const T &amp;v)</argsstring>
+        <name>setValue</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/types/type_base.hpp" line="34" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/type_base.hpp" bodystart="34" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classpolaris_1_1types_1_1TypeBase_1ab0795a5159cc884e02e2ab98c855d145" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool polaris::types::TypeBase&lt; T &gt;::matchValueType</definition>
+        <argsstring>(const std::type_info &amp;type) const</argsstring>
+        <name>matchValueType</name>
+        <param>
+          <type>const std::type_info &amp;</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/types/type_base.hpp" line="35" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/type_base.hpp" bodystart="35" bodyend="41"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/polaris/polaris/include/polaris/types/type_base.hpp" line="28" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/type_base.hpp" bodystart="27" bodyend="45"/>
+    <listofallmembers>
+      <member refid="classpolaris_1_1types_1_1TypeBase_1af41f65c620094c48ae428d7083d2394a" prot="public" virt="non-virtual"><scope>polaris::types::TypeBase</scope><name>getValue</name></member>
+      <member refid="classpolaris_1_1types_1_1TypeBase_1ab0795a5159cc884e02e2ab98c855d145" prot="public" virt="non-virtual"><scope>polaris::types::TypeBase</scope><name>matchValueType</name></member>
+      <member refid="classpolaris_1_1types_1_1TypeBase_1a0bef711b31884d83147afb3df96a21c7" prot="public" virt="non-virtual"><scope>polaris::types::TypeBase</scope><name>setValue</name></member>
+      <member refid="classpolaris_1_1types_1_1TypeBase_1ad959284bae24cb920c77e87ce2261ba4" prot="public" virt="non-virtual"><scope>polaris::types::TypeBase</scope><name>TypeBase</name></member>
+      <member refid="classpolaris_1_1types_1_1TypeBase_1a871de71532dba3a3d31f8be7faf8e0cb" prot="public" virt="non-virtual"><scope>polaris::types::TypeBase</scope><name>TypeBase</name></member>
+      <member refid="classpolaris_1_1types_1_1TypeBase_1ae731a58689630b807dffce1ad6e9e5d8" prot="private" virt="non-virtual"><scope>polaris::types::TypeBase</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

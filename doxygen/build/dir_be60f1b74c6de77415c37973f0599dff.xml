@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_be60f1b74c6de77415c37973f0599dff" kind="dir">
+    <compoundname>/home/runner/work/polaris/polaris/include/polaris</compoundname>
+    <innerdir refid="dir_14a023d13380e39d00b385a549760404">/home/runner/work/polaris/polaris/include/polaris/built_in_functions</innerdir>
+    <innerdir refid="dir_9b0b78b757955f19ed4446bdf51f62cf">/home/runner/work/polaris/polaris/include/polaris/grammar</innerdir>
+    <innerdir refid="dir_d7f1e173a14f13297d8b94749a7e1541">/home/runner/work/polaris/polaris/include/polaris/parser</innerdir>
+    <innerdir refid="dir_f28305d1162a87b2dbdef00e7468a83d">/home/runner/work/polaris/polaris/include/polaris/types</innerdir>
+    <innerfile refid="exception_8hpp">exception.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/polaris/polaris/include/polaris/"/>
+  </compounddef>
+</doxygen>

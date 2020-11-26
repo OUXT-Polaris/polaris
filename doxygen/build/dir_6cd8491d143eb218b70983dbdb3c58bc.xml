@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_6cd8491d143eb218b70983dbdb3c58bc" kind="dir">
+    <compoundname>/home/runner/work/polaris/polaris/src/parser</compoundname>
+    <innerfile refid="parser_8cpp">parser.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/polaris/polaris/src/parser/"/>
+  </compounddef>
+</doxygen>

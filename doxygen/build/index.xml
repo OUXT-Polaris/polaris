@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.13">
+  <compound refid="classpolaris_1_1types_1_1Entity" kind="class"><name>polaris::types::Entity</name>
+    <member refid="classpolaris_1_1types_1_1Entity_1a9b2ca6d548897c368511ded7f1046d8a" kind="variable"><name>pose</name></member>
+    <member refid="classpolaris_1_1types_1_1Entity_1a7c7420f90bbc2cb5f932b157639a75c9" kind="variable"><name>type</name></member>
+    <member refid="classpolaris_1_1types_1_1Entity_1a8e011acf179ee451d1a34e7f704ddcbc" kind="variable"><name>polygon</name></member>
+    <member refid="classpolaris_1_1types_1_1Entity_1a33f66bb3758eec59c849261405661c5f" kind="function"><name>Entity</name></member>
+    <member refid="classpolaris_1_1types_1_1Entity_1a414da49cdfd1e91b149abdde64773007" kind="function"><name>Entity</name></member>
+    <member refid="classpolaris_1_1types_1_1Entity_1ab3f30d0c279b4f67032044773b997c5d" kind="function"><name>Entity</name></member>
+  </compound>
+  <compound refid="classpolaris_1_1EvaluationError" kind="class"><name>polaris::EvaluationError</name>
+    <member refid="classpolaris_1_1EvaluationError_1a8c439f05456826cf6296b23eb313f867" kind="variable"><name>ast_string</name></member>
+    <member refid="classpolaris_1_1EvaluationError_1a3cbd3b564c83edcc7b5213996d34e3e9" kind="variable"><name>description</name></member>
+    <member refid="classpolaris_1_1EvaluationError_1aa7543a6ca896b0cfefd848434fddb7a6" kind="function"><name>EvaluationError</name></member>
+  </compound>
+  <compound refid="classpolaris_1_1built__in__functions_1_1Functions" kind="class"><name>polaris::built_in_functions::Functions</name>
+    <member refid="classpolaris_1_1built__in__functions_1_1Functions_1ab614e0b5e1d0bbc9dae91d4cc233f69c" kind="variable"><name>variables_</name></member>
+    <member refid="classpolaris_1_1built__in__functions_1_1Functions_1ae777b8b04a23c3ea85f256be0fd7d010" kind="variable"><name>functions_</name></member>
+    <member refid="classpolaris_1_1built__in__functions_1_1Functions_1a678c7906827b42488725c89f66a47edc" kind="function"><name>Functions</name></member>
+    <member refid="classpolaris_1_1built__in__functions_1_1Functions_1a69a8006955409fc824a3b0feb75677c0" kind="function"><name>evaluate</name></member>
+    <member refid="classpolaris_1_1built__in__functions_1_1Functions_1acb64df236e3c30ce140419acc7df46d7" kind="function"><name>setVariables</name></member>
+    <member refid="classpolaris_1_1built__in__functions_1_1Functions_1a542326a0c926a105ef785598a439c44c" kind="function"><name>constructBoolean</name></member>
+    <member refid="classpolaris_1_1built__in__functions_1_1Functions_1a88c98143a64f4368ae892970fa636477" kind="function"><name>constructString</name></member>
+    <member refid="classpolaris_1_1built__in__functions_1_1Functions_1a7b4d8f42a30af49c464d6b5be9f45f10" kind="function"><name>constructInteger</name></member>
+    <member refid="classpolaris_1_1built__in__functions_1_1Functions_1a94c706c258856dbbd147ce4320e7b192" kind="function"><name>constructDouble</name></member>
+    <member refid="classpolaris_1_1built__in__functions_1_1Functions_1aa995e82a1d5b19dc5bce3a8eb1a00a15" kind="function"><name>constructQuaternion</name></member>
+    <member refid="classpolaris_1_1built__in__functions_1_1Functions_1aae8d84ec09234916e9fcc6a98e4c6bba" kind="function"><name>constructQuaternionFromRpy</name></member>
+    <member refid="classpolaris_1_1built__in__functions_1_1Functions_1a1d66869d0e3bed01e8ba2217eab01ced" kind="function"><name>constructPoint</name></member>
+    <member refid="classpolaris_1_1built__in__functions_1_1Functions_1a48111da2b965f645cd6e2b339c1ad9df" kind="function"><name>constructPose</name></member>
+    <member refid="classpolaris_1_1built__in__functions_1_1Functions_1af39db38b69e2bfc9c78fae41314edaec" kind="function"><name>constructArray</name></member>
+    <member refid="classpolaris_1_1built__in__functions_1_1Functions_1a6928f927ec04e4e9004ca1cc6ac54aa4" kind="function"><name>constructEntity</name></member>
+    <member refid="classpolaris_1_1built__in__functions_1_1Functions_1a8a59349806d2ec80d693b122cdcf8487" kind="function"><name>addition</name></member>
+    <member refid="classpolaris_1_1built__in__functions_1_1Functions_1a8a9522d03f3bfcdb0148691ce52a2517" kind="function"><name>subtraction</name></member>
+    <member refid="classpolaris_1_1built__in__functions_1_1Functions_1a02b4c002c6e0e29d4c97c5a2d1da3ce2" kind="function"><name>multiplication</name></member>
+    <member refid="classpolaris_1_1built__in__functions_1_1Functions_1a02e2e26c7a8b551b60e985acef5b7187" kind="function"><name>division</name></member>
+    <member refid="classpolaris_1_1built__in__functions_1_1Functions_1a32875f3dae0be1eac25d4a7ea0a30d52" kind="function"><name>fetchVariable</name></member>
+  </compound>
+  <compound refid="classpolaris_1_1Parser" kind="class"><name>polaris::Parser</name>
+    <member refid="classpolaris_1_1Parser_1a11a3fde121ecb8cbf08b24865c3958fc" kind="variable"><name>parser_ptr_</name></member>
+    <member refid="classpolaris_1_1Parser_1a9286a3ee285541b8c2fa14cbc31a1856" kind="variable"><name>variables_</name></member>
+    <member refid="classpolaris_1_1Parser_1a0cb0d5f16010d31f077bc6a164c1d00a" kind="variable"><name>verbose_</name></member>
+    <member refid="classpolaris_1_1Parser_1ac347c322ec74e983dd5e0377b9d61ca6" kind="variable"><name>functions_</name></member>
+    <member refid="classpolaris_1_1Parser_1ab1473e3621465e6dc853084ef3ca2454" kind="function"><name>Parser</name></member>
+    <member refid="classpolaris_1_1Parser_1a294cc2f2a5c6f51bf4c938f294d15eee" kind="function"><name>evaluate</name></member>
+    <member refid="classpolaris_1_1Parser_1a3da0f65ba0bab1f02cd9d5268eb5aba8" kind="function"><name>getValue</name></member>
+    <member refid="classpolaris_1_1Parser_1a7af5f7c6586127ad4b401c9d7a0d6c58" kind="function"><name>evaluate</name></member>
+  </compound>
+  <compound refid="classpolaris_1_1types_1_1TypeBase" kind="class"><name>polaris::types::TypeBase</name>
+    <member refid="classpolaris_1_1types_1_1TypeBase_1ae731a58689630b807dffce1ad6e9e5d8" kind="variable"><name>value</name></member>
+    <member refid="classpolaris_1_1types_1_1TypeBase_1ad959284bae24cb920c77e87ce2261ba4" kind="function"><name>TypeBase</name></member>
+    <member refid="classpolaris_1_1types_1_1TypeBase_1a871de71532dba3a3d31f8be7faf8e0cb" kind="function"><name>TypeBase</name></member>
+    <member refid="classpolaris_1_1types_1_1TypeBase_1af41f65c620094c48ae428d7083d2394a" kind="function"><name>getValue</name></member>
+    <member refid="classpolaris_1_1types_1_1TypeBase_1a0bef711b31884d83147afb3df96a21c7" kind="function"><name>setValue</name></member>
+    <member refid="classpolaris_1_1types_1_1TypeBase_1ab0795a5159cc884e02e2ab98c855d145" kind="function"><name>matchValueType</name></member>
+  </compound>
+  <compound refid="namespacepolaris" kind="namespace"><name>polaris</name>
+  </compound>
+  <compound refid="namespacepolaris_1_1built__in__functions" kind="namespace"><name>polaris::built_in_functions</name>
+  </compound>
+  <compound refid="namespacepolaris_1_1types" kind="namespace"><name>polaris::types</name>
+  </compound>
+  <compound refid="functions_8hpp" kind="file"><name>functions.hpp</name>
+  </compound>
+  <compound refid="exception_8hpp" kind="file"><name>exception.hpp</name>
+    <member refid="exception_8hpp_1a52524f4027d2d4d87bea015898c40ff1" kind="define"><name>POLARIS_THROW_EVALUATION_ERROR</name></member>
+  </compound>
+  <compound refid="grammar_8hpp" kind="file"><name>grammar.hpp</name>
+  </compound>
+  <compound refid="parser_8hpp" kind="file"><name>parser.hpp</name>
+  </compound>
+  <compound refid="entity_8hpp" kind="file"><name>entity.hpp</name>
+  </compound>
+  <compound refid="type__base_8hpp" kind="file"><name>type_base.hpp</name>
+  </compound>
+  <compound refid="functions_8cpp" kind="file"><name>functions.cpp</name>
+  </compound>
+  <compound refid="example_8cpp" kind="file"><name>example.cpp</name>
+    <member refid="example_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="parser_8cpp" kind="file"><name>parser.cpp</name>
+  </compound>
+  <compound refid="test__operator_8cpp" kind="file"><name>test_operator.cpp</name>
+    <member refid="test__operator_8cpp_1a22da5e02aac841eb06f7f3fce64b8994" kind="function"><name>TEST</name></member>
+    <member refid="test__operator_8cpp_1a5a77243e83e87887d03228cb6ff08984" kind="function"><name>TEST</name></member>
+    <member refid="test__operator_8cpp_1aa567531ae8c0e7d4e6cfdcd1fcae6d01" kind="function"><name>TEST</name></member>
+    <member refid="test__operator_8cpp_1a373617d3864a4b61f473809c496886d6" kind="function"><name>TEST</name></member>
+    <member refid="test__operator_8cpp_1a1da8e22dc280d3bd1fb95ed810749664" kind="function"><name>TEST</name></member>
+    <member refid="test__operator_8cpp_1aa1710bf0d2f04e9625fcfe4e1efe35fd" kind="function"><name>TEST</name></member>
+    <member refid="test__operator_8cpp_1affbe6b85a99e2abe4a240556570cb462" kind="function"><name>TEST</name></member>
+    <member refid="test__operator_8cpp_1a4e47a99b1d5671117b55023d564a6559" kind="function"><name>TEST</name></member>
+    <member refid="test__operator_8cpp_1ae2bdc4fe1c07622a91fb1ac70316a076" kind="function"><name>TEST</name></member>
+    <member refid="test__operator_8cpp_1aa6dec5337e8bc1960d719627bf4d5ece" kind="function"><name>TEST</name></member>
+    <member refid="test__operator_8cpp_1add81ae8c7ee73453ae22a28bc49080ca" kind="function"><name>TEST</name></member>
+    <member refid="test__operator_8cpp_1a6e3753881881392c95bf228693677f46" kind="function"><name>TEST</name></member>
+    <member refid="test__operator_8cpp_1a2e8bed5cc251857108b9e5be763c9af9" kind="function"><name>TEST</name></member>
+    <member refid="test__operator_8cpp_1a850d0aef9d19cf3b67ba66e95d0b86b8" kind="function"><name>TEST</name></member>
+    <member refid="test__operator_8cpp_1aedf21d851b95b6f947683c6b7c843f9f" kind="function"><name>TEST</name></member>
+    <member refid="test__operator_8cpp_1a549d6da28140de06a9af72ae456ac5ec" kind="function"><name>TEST</name></member>
+    <member refid="test__operator_8cpp_1ad8789a94268bfd9a837af25389498739" kind="function"><name>TEST</name></member>
+    <member refid="test__operator_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="test__types_8cpp" kind="file"><name>test_types.cpp</name>
+    <member refid="test__types_8cpp_1ab990a17a474510109179efece64e08a7" kind="function"><name>TEST</name></member>
+    <member refid="test__types_8cpp_1a39b7c3d596e433ed24ad285029c59a7b" kind="function"><name>TEST</name></member>
+    <member refid="test__types_8cpp_1abde4fe5a1ccab265acacd80830057bb8" kind="function"><name>TEST</name></member>
+    <member refid="test__types_8cpp_1a01aee4bab8461962b7556c3727df5601" kind="function"><name>TEST</name></member>
+    <member refid="test__types_8cpp_1ab1ab0f47ec92f9bc3676733724e2c4e8" kind="function"><name>TEST</name></member>
+    <member refid="test__types_8cpp_1ab9f656010cb57c5c19f97ff20255c330" kind="function"><name>TEST</name></member>
+    <member refid="test__types_8cpp_1a4957feacc90dab5b47755a9e532e184f" kind="function"><name>TEST</name></member>
+    <member refid="test__types_8cpp_1a81c5903dc75e6f72328edd3b206c17a3" kind="function"><name>TEST</name></member>
+    <member refid="test__types_8cpp_1acd2237748f3688c556a54819609c1bbb" kind="function"><name>TEST</name></member>
+    <member refid="test__types_8cpp_1af77a463e2e62704cb9b88d24642762ec" kind="function"><name>TEST</name></member>
+    <member refid="test__types_8cpp_1aa5903635d1ebf52efd400716411b161c" kind="function"><name>TEST</name></member>
+    <member refid="test__types_8cpp_1a88a89d961b82c5e5df19b6988cdfb92f" kind="function"><name>TEST</name></member>
+    <member refid="test__types_8cpp_1ae1b01d93064b2cd772d302e3ff914034" kind="function"><name>TEST</name></member>
+    <member refid="test__types_8cpp_1ae58fc79269a5643fc8c3f532ce0e8873" kind="function"><name>TEST</name></member>
+    <member refid="test__types_8cpp_1ad6537c2a8351b56d317e17fa7b037107" kind="function"><name>TEST</name></member>
+    <member refid="test__types_8cpp_1a3185d78708adae8be891a4a17f86fda1" kind="function"><name>TEST</name></member>
+    <member refid="test__types_8cpp_1a59378da6e999094b8caca7f81337d294" kind="function"><name>TEST</name></member>
+    <member refid="test__types_8cpp_1a2b993545dc8a9a102c2c70e01b70f48c" kind="function"><name>TEST</name></member>
+    <member refid="test__types_8cpp_1a23ae1693125f75a0735bf8c68a689c5a" kind="function"><name>TEST</name></member>
+    <member refid="test__types_8cpp_1a8466fc10986a835508b340e85508079d" kind="function"><name>TEST</name></member>
+    <member refid="test__types_8cpp_1a8d9f6cc5ecc3629fd4671681b4e84597" kind="function"><name>TEST</name></member>
+    <member refid="test__types_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="dir_14a023d13380e39d00b385a549760404" kind="dir"><name>/home/runner/work/polaris/polaris/include/polaris/built_in_functions</name>
+  </compound>
+  <compound refid="dir_3c0cdd5ad5fc4808e48eb43a5dc064cf" kind="dir"><name>/home/runner/work/polaris/polaris/src/built_in_functions</name>
+  </compound>
+  <compound refid="dir_1ff95392bc4e65547c61a42698fda530" kind="dir"><name>/home/runner/work/polaris/polaris/src/example</name>
+  </compound>
+  <compound refid="dir_9b0b78b757955f19ed4446bdf51f62cf" kind="dir"><name>/home/runner/work/polaris/polaris/include/polaris/grammar</name>
+  </compound>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>/home/runner/work/polaris/polaris/include</name>
+  </compound>
+  <compound refid="dir_6cd8491d143eb218b70983dbdb3c58bc" kind="dir"><name>/home/runner/work/polaris/polaris/src/parser</name>
+  </compound>
+  <compound refid="dir_d7f1e173a14f13297d8b94749a7e1541" kind="dir"><name>/home/runner/work/polaris/polaris/include/polaris/parser</name>
+  </compound>
+  <compound refid="dir_be60f1b74c6de77415c37973f0599dff" kind="dir"><name>/home/runner/work/polaris/polaris/include/polaris</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>/home/runner/work/polaris/polaris/src</name>
+  </compound>
+  <compound refid="dir_13e138d54eb8818da29c3992edef070a" kind="dir"><name>/home/runner/work/polaris/polaris/test</name>
+  </compound>
+  <compound refid="dir_f28305d1162a87b2dbdef00e7468a83d" kind="dir"><name>/home/runner/work/polaris/polaris/include/polaris/types</name>
+  </compound>
+</doxygenindex>
