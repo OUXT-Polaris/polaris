@@ -25,6 +25,9 @@
 
 namespace polaris
 {
+/**
+ * @brief describe evaluation error of polaris
+ */
 class EvaluationError : public std::runtime_error
 {
 public:
@@ -43,6 +46,9 @@ public:
 };
 }  // namespace polaris
 
+/**
+ * @brief macro for throwing exception
+ */
 #define POLARIS_THROW_EVALUATION_ERROR(ast, description) throw polaris::EvaluationError(ast, \
     description, \
     __FILE__, \

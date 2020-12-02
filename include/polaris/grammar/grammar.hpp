@@ -19,6 +19,9 @@
 
 namespace polaris
 {
+/**
+ * @brief peg based grammar description for polaris
+ */
 const char grammar[] =
   R"(
     PROGRAM                <-  STATEMENTS

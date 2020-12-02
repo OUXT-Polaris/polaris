@@ -15,10 +15,10 @@
 #ifndef POLARIS__BUILT_IN_FUNCTIONS__FUNCTIONS_HPP_
 #define POLARIS__BUILT_IN_FUNCTIONS__FUNCTIONS_HPP_
 
-#include <polaris/exception.hpp>
 #include <polaris/types/type_base.hpp>
 #include <polaris/types/entity.hpp>
 #include <polaris/types/task/task.hpp>
+#include <polaris/exception.hpp>
 
 #include <peglib.h>
 
@@ -38,9 +38,15 @@ namespace polaris
 {
 namespace built_in_functions
 {
+/**
+ * @brief Function class
+ */
 class Functions
 {
 public:
+  /**
+   * @brief Construct a new Functions object
+   */
   Functions()
   {
     functions_.insert(std::make_pair("integer",
@@ -86,6 +92,12 @@ public:
     functions_.insert(std::make_pair("IDENTIFIER",
       std::bind(&Functions::fetchVariable, this, std::placeholders::_1)));
   }
+  /**
+   * @brief evaluate abstract syntax tree
+   * @param function the name of the function
+   * @param ast shared pointer to the abstract syntax tree class
+   * @return boost::any interpretation result of the abstract syntax tree
+   */
   boost::any evaluate(std::string function, std::shared_ptr<peg::Ast> ast)
   {
     if (ast->name == "PREFIX_EXPR") {
@@ -122,29 +134,114 @@ public:
     return functions_[function](ast);
   }
 
+  /**
+   * @brief Set the variable object to the variable store
+   * @param variables variable
+   */
   void setVariables(std::unordered_map<std::string, boost::any> variables)
   {
     variables_ = variables;
   }
 
 private:
+  /**
+   * @brief local variables store
+   */
   std::unordered_map<std::string, boost::any> variables_;
+  /**
+   * @brief key/value data of the name of the function and it's arguments
+   */
   std::unordered_map<std::string,
     std::function<boost::any(std::shared_ptr<peg::Ast> ast)>> functions_;
+  /**
+   * @brief constructor for boolean type variable
+   * @param ast shared pointer to the abstract syntax tree class
+   * @return boost::any constracted boolean type variable
+   */
   boost::any constructBoolean(std::shared_ptr<peg::Ast> ast);
+  /**
+   * @brief constructor for string type variable
+   * @param ast shared pointer to the abstract syntax tree class
+   * @return boost::any constructed string type variable
+   */
   boost::any constructString(std::shared_ptr<peg::Ast> ast);
+  /**
+   * @brief constructor for integer type variable
+   * @param ast shared pointer to the abstract syntax tree class
+   * @return boost::any constructed integer type variable
+   */
   boost::any constructInteger(std::shared_ptr<peg::Ast> ast);
+  /**
+   * @brief constructor for double type variable
+   * @param ast shared pointer to the abstract syntax tree class
+   * @return boost::any constructed double type variable
+   */
   boost::any constructDouble(std::shared_ptr<peg::Ast> ast);
+  /**
+   * @brief constructor for quaternion type variable
+   * @param ast shared pointer to the abstract syntax tree class
+   * @return boost::any constructed quaternion type variable
+   */
   boost::any constructQuaternion(std::shared_ptr<peg::Ast> ast);
+  /**
+   * @brief constructor for quaternion type variable from RPY variable
+   * @param ast shared pointer to the abstract syntax tree class
+   * @return boost::any constructed quaternion type variable
+   */
   boost::any constructQuaternionFromRpy(std::shared_ptr<peg::Ast> ast);
+  /**
+   * @brief constructor for point type variable
+   * @param ast shared pointer to the abstract syntax tree class
+   * @return boost::any constructed point type variable
+   */
   boost::any constructPoint(std::shared_ptr<peg::Ast> ast);
+  /**
+   * @brief constructor for pose type variable
+   * @param ast shared pointer to the abstract syntax tree class
+   * @return boost::any constructed pose type variable
+   */
   boost::any constructPose(std::shared_ptr<peg::Ast> ast);
+  /**
+   * @brief constructor for array type variable
+   * @param ast shared pointer to the abstract syntax tree class
+   * @return boost::any constructed array type variable
+   */
   boost::any constructArray(std::shared_ptr<peg::Ast> ast);
+  /**
+   * @brief constructor for entity type variable
+   * @param ast shared pointer to the abstract syntax tree class
+   * @return boost::any constructed entity type variable
+   */
   boost::any constructEntity(std::shared_ptr<peg::Ast> ast);
+  /**
+   * @brief addition operator
+   * @param ast shared pointer to the abstract syntax tree class
+   * @return boost::any result of the addition operation
+   */
   boost::any addition(std::shared_ptr<peg::Ast> ast);
+  /**
+   * @brief subtraction operator
+   * @param ast shared pointer to the abstract syntax tree class
+   * @return boost::any result of the subtraction operation
+   */
   boost::any subtraction(std::shared_ptr<peg::Ast> ast);
+  /**
+   * @brief multiplication operator
+   * @param ast shared pointer to the abstract syntax tree class
+   * @return boost::any result of the multiplication operation
+   */
   boost::any multiplication(std::shared_ptr<peg::Ast> ast);
+  /**
+   * @brief division operator
+   * @param ast shared pointer to the abstract syntax tree class
+   * @return boost::any result of the division operation
+   */
   boost::any division(std::shared_ptr<peg::Ast> ast);
+  /**
+   * @brief function fetching variables from variable store
+   * @param ast shared pointer to the abstract syntax tree class
+   * @return boost::any stored variable
+   */
   boost::any fetchVariable(std::shared_ptr<peg::Ast> ast);
 };
 }  // namespace built_in_functions

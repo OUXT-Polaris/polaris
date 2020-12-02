@@ -24,10 +24,19 @@ namespace polaris
 {
 namespace types
 {
+/**
+ * @brief entity variable type
+ */
 class Entity
 {
 public:
   Entity() {}
+  /**
+   * @brief Construct a new Entity object
+   * @param pose pose of the entity
+   * @param type type of the entity
+   * @param polygon polygon of the entity
+   */
   explicit Entity(
     geometry_msgs::msg::Pose pose, std::vector<std::string> type,
     std::vector<geometry_msgs::msg::Point> polygon)
