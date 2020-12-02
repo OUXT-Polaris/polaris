@@ -41,10 +41,20 @@ const char task_state_description[] =
 </state_machine>
 )";
 
+/**
+ * @brief Task variable class
+ */
 class Task
 {
 public:
   Task();
+  /**
+   * @brief Construct a new Task object
+   * @param depends the list of depended tasks
+   * @param entities target entities of the task
+   * @param time estimated elapsed time to process this task
+   * @param reward reward of the task
+   */
   explicit Task(
     std::vector<Task> depends,
     std::vector<Entity> entities,
