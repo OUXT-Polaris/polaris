@@ -403,7 +403,8 @@
                 
                 
                 <h1 id="polaristypestypebase">polaris::types::TypeBase<a class="headerlink" href="#polaristypestypebase" title="Permanent link">#</a></h1>
-<p><a href="#detailed-description">More...</a></p>
+<p>base class of the type  <a href="#detailed-description">More...</a></p>
+<p><code>#include &lt;type_base.hpp&gt;</code></p>
 <h2 id="public-functions">Public Functions<a class="headerlink" href="#public-functions" title="Permanent link">#</a></h2>
 <table>
 <thead>
@@ -415,15 +416,15 @@
 <tbody>
 <tr>
 <td>void</td>
-<td><strong><a href="/polaris/doxygen/markdown/Classes/classpolaris_1_1types_1_1TypeBase#function-setvalue">setValue</a></strong>(const T &amp; v)</td>
+<td><strong><a href="/polaris/doxygen/markdown/Classes/classpolaris_1_1types_1_1TypeBase#function-setvalue">setValue</a></strong>(const T &amp; v) <br>Set the Value object.</td>
 </tr>
 <tr>
 <td>bool</td>
-<td><strong><a href="/polaris/doxygen/markdown/Classes/classpolaris_1_1types_1_1TypeBase#function-matchvaluetype">matchValueType</a></strong>(const std::type_info &amp; type) const</td>
+<td><strong><a href="/polaris/doxygen/markdown/Classes/classpolaris_1_1types_1_1TypeBase#function-matchvaluetype">matchValueType</a></strong>(const std::type_info &amp; type) const <br>check the value type</td>
 </tr>
 <tr>
 <td>T</td>
-<td><strong><a href="/polaris/doxygen/markdown/Classes/classpolaris_1_1types_1_1TypeBase#function-getvalue">getValue</a></strong>() const</td>
+<td><strong><a href="/polaris/doxygen/markdown/Classes/classpolaris_1_1types_1_1TypeBase#function-getvalue">getValue</a></strong>() const <br>Get the Value object.</td>
 </tr>
 <tr>
 <td></td>
@@ -431,7 +432,7 @@
 </tr>
 <tr>
 <td></td>
-<td><strong><a href="/polaris/doxygen/markdown/Classes/classpolaris_1_1types_1_1TypeBase#function-typebase">TypeBase</a></strong>(const T &amp; v)</td>
+<td><strong><a href="/polaris/doxygen/markdown/Classes/classpolaris_1_1types_1_1TypeBase#function-typebase">TypeBase</a></strong>(const T &amp; v) <br>Construct a new Type Base object.</td>
 </tr>
 </tbody>
 </table>
@@ -439,20 +440,42 @@
 <div class="highlight"><pre><span></span><code><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="nc">T</span><span class="o">&gt;</span>
 <span class="k">class</span> <span class="nc">polaris</span><span class="o">::</span><span class="n">types</span><span class="o">::</span><span class="n">TypeBase</span><span class="p">;</span>
 </code></pre></div>
+<p>base class of the type </p>
+<p><strong>Template Parameters</strong>: </p>
+<ul>
+<li><strong>T</strong> </li>
+</ul>
 <h2 id="public-functions-documentation">Public Functions Documentation<a class="headerlink" href="#public-functions-documentation" title="Permanent link">#</a></h2>
 <h3 id="function-setvalue">function setValue<a class="headerlink" href="#function-setvalue" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="kr">inline</span> <span class="kt">void</span> <span class="n">setValue</span><span class="p">(</span>
     <span class="k">const</span> <span class="n">T</span> <span class="o">&amp;</span> <span class="n">v</span>
 <span class="p">)</span>
 </code></pre></div>
+<p>Set the Value object. </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>v</strong> value </li>
+</ul>
 <h3 id="function-matchvaluetype">function matchValueType<a class="headerlink" href="#function-matchvaluetype" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="kr">inline</span> <span class="kt">bool</span> <span class="n">matchValueType</span><span class="p">(</span>
     <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">type_info</span> <span class="o">&amp;</span> <span class="n">type</span>
 <span class="p">)</span> <span class="k">const</span>
 </code></pre></div>
+<p>check the value type </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>type</strong> type info which you want to check </li>
+</ul>
+<p><strong>Return</strong>: </p>
+<ul>
+<li>true type matched </li>
+<li>false type does not matched </li>
+</ul>
 <h3 id="function-getvalue">function getValue<a class="headerlink" href="#function-getvalue" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="kr">inline</span> <span class="n">T</span> <span class="n">getValue</span><span class="p">()</span> <span class="k">const</span>
 </code></pre></div>
+<p>Get the Value object. </p>
+<p><strong>Return</strong>: T value </p>
 <h3 id="function-typebase">function TypeBase<a class="headerlink" href="#function-typebase" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="kr">inline</span> <span class="n">TypeBase</span><span class="p">()</span>
 </code></pre></div>
@@ -461,8 +484,13 @@
     <span class="k">const</span> <span class="n">T</span> <span class="o">&amp;</span> <span class="n">v</span>
 <span class="p">)</span>
 </code></pre></div>
+<p>Construct a new Type Base object. </p>
+<p><strong>Parameters</strong>: </p>
+<ul>
+<li><strong>v</strong> initialize variable with it's value </li>
+</ul>
 <hr />
-<p>Updated on  2 December 2020 at 03:11:29 UTC</p>
+<p>Updated on  2 December 2020 at 04:34:50 UTC</p>
                 
                   
                 

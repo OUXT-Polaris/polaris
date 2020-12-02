@@ -107,13 +107,13 @@
       <node id="197">
         <label>polaris/built_in_functions/functions.hpp</label>
         <link refid="functions_8hpp_source"/>
-        <childnode refid="189" relation="include">
-        </childnode>
         <childnode refid="198" relation="include">
         </childnode>
         <childnode refid="200" relation="include">
         </childnode>
         <childnode refid="203" relation="include">
+        </childnode>
+        <childnode refid="189" relation="include">
         </childnode>
         <childnode refid="190" relation="include">
         </childnode>
@@ -306,12 +306,12 @@
 <codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ast-&gt;name<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;STATEMENTS&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
 <codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>ast-&gt;nodes.size();<sp/>i++)<sp/>{</highlight></codeline>
 <codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>evaluate(ast-&gt;nodes[i]);</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>functions_.setVariables(variables_);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>functions_.<ref refid="classpolaris_1_1built__in__functions_1_1Functions_1acb64df236e3c30ce140419acc7df46d7" kindref="member">setVariables</ref>(variables_);</highlight></codeline>
 <codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="62"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ast-&gt;nodes.size()<sp/>&gt;=<sp/>3)<sp/>{</highlight></codeline>
 <codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ast-&gt;nodes[1]-&gt;name<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;INFIX_OPE&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>functions_.evaluate(ast-&gt;nodes[1]-&gt;token,<sp/>ast);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>functions_.<ref refid="classpolaris_1_1built__in__functions_1_1Functions_1a69a8006955409fc824a3b0feb75677c0" kindref="member">evaluate</ref>(ast-&gt;nodes[1]-&gt;token,<sp/>ast);</highlight></codeline>
 <codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="67"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ast-&gt;name<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;ASSIGNMENT&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
@@ -321,22 +321,22 @@
 <codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>value;</highlight></codeline>
 <codeline lineno="73"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ast-&gt;name<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;DOUBLE&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>functions_.evaluate(</highlight><highlight class="stringliteral">&quot;double&quot;</highlight><highlight class="normal">,<sp/>ast);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>functions_.<ref refid="classpolaris_1_1built__in__functions_1_1Functions_1a69a8006955409fc824a3b0feb75677c0" kindref="member">evaluate</ref>(</highlight><highlight class="stringliteral">&quot;double&quot;</highlight><highlight class="normal">,<sp/>ast);</highlight></codeline>
 <codeline lineno="76"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="77"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ast-&gt;name<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;INTEGER&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>functions_.evaluate(</highlight><highlight class="stringliteral">&quot;integer&quot;</highlight><highlight class="normal">,<sp/>ast);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>functions_.<ref refid="classpolaris_1_1built__in__functions_1_1Functions_1a69a8006955409fc824a3b0feb75677c0" kindref="member">evaluate</ref>(</highlight><highlight class="stringliteral">&quot;integer&quot;</highlight><highlight class="normal">,<sp/>ast);</highlight></codeline>
 <codeline lineno="79"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ast-&gt;name<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;STRING&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>functions_.evaluate(</highlight><highlight class="stringliteral">&quot;string&quot;</highlight><highlight class="normal">,<sp/>ast);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>functions_.<ref refid="classpolaris_1_1built__in__functions_1_1Functions_1a69a8006955409fc824a3b0feb75677c0" kindref="member">evaluate</ref>(</highlight><highlight class="stringliteral">&quot;string&quot;</highlight><highlight class="normal">,<sp/>ast);</highlight></codeline>
 <codeline lineno="82"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="83"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ast-&gt;name<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;BOOLEAN&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>functions_.evaluate(</highlight><highlight class="stringliteral">&quot;bool&quot;</highlight><highlight class="normal">,<sp/>ast);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>functions_.<ref refid="classpolaris_1_1built__in__functions_1_1Functions_1a69a8006955409fc824a3b0feb75677c0" kindref="member">evaluate</ref>(</highlight><highlight class="stringliteral">&quot;bool&quot;</highlight><highlight class="normal">,<sp/>ast);</highlight></codeline>
 <codeline lineno="85"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="86"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ast-&gt;name<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;ARRAY&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>functions_.evaluate(</highlight><highlight class="stringliteral">&quot;array&quot;</highlight><highlight class="normal">,<sp/>ast);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>functions_.<ref refid="classpolaris_1_1built__in__functions_1_1Functions_1a69a8006955409fc824a3b0feb75677c0" kindref="member">evaluate</ref>(</highlight><highlight class="stringliteral">&quot;array&quot;</highlight><highlight class="normal">,<sp/>ast);</highlight></codeline>
 <codeline lineno="88"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="89"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ast-&gt;name<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;CALL&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>ret<sp/>=<sp/>functions_.evaluate(ast-&gt;nodes[0]-&gt;token,<sp/>ast-&gt;nodes[1]);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>ret<sp/>=<sp/>functions_.<ref refid="classpolaris_1_1built__in__functions_1_1Functions_1a69a8006955409fc824a3b0feb75677c0" kindref="member">evaluate</ref>(ast-&gt;nodes[0]-&gt;token,<sp/>ast-&gt;nodes[1]);</highlight></codeline>
 <codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ret.type()<sp/>==<sp/></highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(boost::none))<sp/>{</highlight></codeline>
 <codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(variables_.count(ast-&gt;nodes[0]-&gt;token)<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
 <codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>variables_[ast-&gt;nodes[0]-&gt;token];</highlight></codeline>

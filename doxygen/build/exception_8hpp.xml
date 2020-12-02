@@ -77,12 +77,12 @@
     __FILE__, \
     __LINE__);</initializer>
         <briefdescription>
-        </briefdescription>
+<para>macro for throwing exception </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/polaris/polaris/include/polaris/exception.hpp" line="46" column="9" bodyfile="/home/runner/work/polaris/polaris/include/polaris/exception.hpp" bodystart="46" bodyend="-1"/>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/exception.hpp" line="52" column="9" bodyfile="/home/runner/work/polaris/polaris/include/polaris/exception.hpp" bodystart="52" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -117,30 +117,30 @@
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacepolaris" kindref="compound">polaris</ref></highlight></codeline>
 <codeline lineno="27"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="28" refid="classpolaris_1_1EvaluationError" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classpolaris_1_1EvaluationError" kindref="compound">EvaluationError</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>std::runtime_error</highlight></codeline>
-<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><ref refid="classpolaris_1_1EvaluationError" kindref="compound">EvaluationError</ref>(</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;peg::Ast&gt;<sp/>ast,<sp/>std::string<sp/>description,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>file,</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>line)</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/>:<sp/>std::runtime_error((</highlight><highlight class="stringliteral">&quot;\nast<sp/>=&gt;<sp/>\n&quot;</highlight><highlight class="normal"><sp/>+<sp/>peg::ast_to_s(ast)<sp/>+</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;\ndescription<sp/>=&gt;<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>description<sp/>+</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;\nfile<sp/>=&gt;<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>file<sp/>+</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;\nline<sp/>=&gt;<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>std::to_string(line)</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>).c_str()),</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>ast_string(peg::ast_to_s(ast)),<sp/>description(description)</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/>{}</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>ast_string;</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>description;</highlight></codeline>
-<codeline lineno="43"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="44"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>polaris</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>POLARIS_THROW_EVALUATION_ERROR(ast,<sp/>description)<sp/>throw<sp/>polaris::EvaluationError(ast,<sp/>\</highlight></codeline>
-<codeline lineno="47"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>description,<sp/>\</highlight></codeline>
-<codeline lineno="48"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>__FILE__,<sp/>\</highlight></codeline>
-<codeline lineno="49"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>__LINE__);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>POLARIS__EXCEPTION_HPP_</highlight></codeline>
+<codeline lineno="31" refid="classpolaris_1_1EvaluationError" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classpolaris_1_1EvaluationError" kindref="compound">EvaluationError</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>std::runtime_error</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><ref refid="classpolaris_1_1EvaluationError" kindref="compound">EvaluationError</ref>(</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>std::shared_ptr&lt;peg::Ast&gt;<sp/>ast,<sp/>std::string<sp/>description,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>file,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>line)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>:<sp/>std::runtime_error((</highlight><highlight class="stringliteral">&quot;\nast<sp/>=&gt;<sp/>\n&quot;</highlight><highlight class="normal"><sp/>+<sp/>peg::ast_to_s(ast)<sp/>+</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;\ndescription<sp/>=&gt;<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>description<sp/>+</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;\nfile<sp/>=&gt;<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>file<sp/>+</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;\nline<sp/>=&gt;<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>std::to_string(line)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>).c_str()),</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>ast_string(peg::ast_to_s(ast)),<sp/>description(description)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/>{}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>ast_string;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>description;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>polaris</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="preprocessor">#define<sp/>POLARIS_THROW_EVALUATION_ERROR(ast,<sp/>description)<sp/>throw<sp/>polaris::EvaluationError(ast,<sp/>\</highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>description,<sp/>\</highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>__FILE__,<sp/>\</highlight></codeline>
+<codeline lineno="55"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>__LINE__);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>POLARIS__EXCEPTION_HPP_</highlight></codeline>
     </programlisting>
     <location file="/home/runner/work/polaris/polaris/include/polaris/exception.hpp"/>
   </compounddef>

@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
   <compounddef id="classpolaris_1_1built__in__functions_1_1Functions" kind="class" language="C++" prot="public">
     <compoundname>polaris::built_in_functions::Functions</compoundname>
+    <includes refid="functions_8hpp" local="no">functions.hpp</includes>
       <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="classpolaris_1_1built__in__functions_1_1Functions_1ab614e0b5e1d0bbc9dae91d4cc233f69c" prot="private" static="no" mutable="no">
         <type>std::unordered_map&lt; std::string, boost::any &gt;</type>
@@ -9,12 +10,12 @@
         <argsstring></argsstring>
         <name>variables_</name>
         <briefdescription>
-        </briefdescription>
+<para>local variables store </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="131" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" bodystart="131" bodyend="-1"/>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="150" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" bodystart="150" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classpolaris_1_1built__in__functions_1_1Functions_1ae777b8b04a23c3ea85f256be0fd7d010" prot="private" static="no" mutable="no">
         <type>std::unordered_map&lt; std::string, std::function&lt; boost::any(std::shared_ptr&lt; peg::Ast &gt; ast)&gt; &gt;</type>
@@ -22,12 +23,12 @@
         <argsstring></argsstring>
         <name>functions_</name>
         <briefdescription>
-        </briefdescription>
+<para>key/value data of the name of the function and it&apos;s arguments </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="133" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" bodystart="133" bodyend="-1"/>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="155" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" bodystart="155" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -37,12 +38,12 @@
         <argsstring>()</argsstring>
         <name>Functions</name>
         <briefdescription>
-        </briefdescription>
+<para>Construct a new <ref refid="classpolaris_1_1built__in__functions_1_1Functions" kindref="compound">Functions</ref> object. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="44" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" bodystart="44" bodyend="88"/>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="50" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" bodystart="50" bodyend="94"/>
       </memberdef>
       <memberdef kind="function" id="classpolaris_1_1built__in__functions_1_1Functions_1a69a8006955409fc824a3b0feb75677c0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>boost::any</type>
@@ -58,12 +59,28 @@
           <declname>ast</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>evaluate abstract syntax tree </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>function</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the function </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ast</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>shared pointer to the abstract syntax tree class </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>boost::any interpretation result of the abstract syntax tree </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="89" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" bodystart="89" bodyend="123"/>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="101" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" bodystart="101" bodyend="135"/>
       </memberdef>
       <memberdef kind="function" id="classpolaris_1_1built__in__functions_1_1Functions_1acb64df236e3c30ce140419acc7df46d7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -75,12 +92,20 @@
           <declname>variables</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>Set the variable object to the variable store. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>variables</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>variable </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="125" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" bodystart="125" bodyend="128"/>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="141" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" bodystart="141" bodyend="144"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -94,12 +119,21 @@
           <declname>ast</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>constructor for boolean type variable </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ast</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>shared pointer to the abstract syntax tree class </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>boost::any constracted boolean type variable </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="134" column="1" bodyfile="/home/runner/work/polaris/polaris/src/built_in_functions/functions.cpp" bodystart="45" bodyend="59"/>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="161" column="1" bodyfile="/home/runner/work/polaris/polaris/src/built_in_functions/functions.cpp" bodystart="45" bodyend="59"/>
       </memberdef>
       <memberdef kind="function" id="classpolaris_1_1built__in__functions_1_1Functions_1a88c98143a64f4368ae892970fa636477" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>boost::any</type>
@@ -111,12 +145,21 @@
           <declname>ast</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>constructor for string type variable </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ast</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>shared pointer to the abstract syntax tree class </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>boost::any constructed string type variable </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="135" column="1" bodyfile="/home/runner/work/polaris/polaris/src/built_in_functions/functions.cpp" bodystart="224" bodyend="232"/>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="167" column="1" bodyfile="/home/runner/work/polaris/polaris/src/built_in_functions/functions.cpp" bodystart="224" bodyend="232"/>
       </memberdef>
       <memberdef kind="function" id="classpolaris_1_1built__in__functions_1_1Functions_1a7b4d8f42a30af49c464d6b5be9f45f10" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>boost::any</type>
@@ -128,12 +171,21 @@
           <declname>ast</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>constructor for integer type variable </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ast</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>shared pointer to the abstract syntax tree class </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>boost::any constructed integer type variable </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="136" column="1" bodyfile="/home/runner/work/polaris/polaris/src/built_in_functions/functions.cpp" bodystart="234" bodyend="250"/>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="173" column="1" bodyfile="/home/runner/work/polaris/polaris/src/built_in_functions/functions.cpp" bodystart="234" bodyend="250"/>
       </memberdef>
       <memberdef kind="function" id="classpolaris_1_1built__in__functions_1_1Functions_1a94c706c258856dbbd147ce4320e7b192" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>boost::any</type>
@@ -145,12 +197,21 @@
           <declname>ast</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>constructor for double type variable </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ast</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>shared pointer to the abstract syntax tree class </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>boost::any constructed double type variable </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="137" column="1" bodyfile="/home/runner/work/polaris/polaris/src/built_in_functions/functions.cpp" bodystart="252" bodyend="268"/>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="179" column="1" bodyfile="/home/runner/work/polaris/polaris/src/built_in_functions/functions.cpp" bodystart="252" bodyend="268"/>
       </memberdef>
       <memberdef kind="function" id="classpolaris_1_1built__in__functions_1_1Functions_1aa995e82a1d5b19dc5bce3a8eb1a00a15" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>boost::any</type>
@@ -162,12 +223,21 @@
           <declname>ast</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>constructor for quaternion type variable </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ast</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>shared pointer to the abstract syntax tree class </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>boost::any constructed quaternion type variable </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="138" column="1" bodyfile="/home/runner/work/polaris/polaris/src/built_in_functions/functions.cpp" bodystart="455" bodyend="521"/>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="185" column="1" bodyfile="/home/runner/work/polaris/polaris/src/built_in_functions/functions.cpp" bodystart="455" bodyend="521"/>
       </memberdef>
       <memberdef kind="function" id="classpolaris_1_1built__in__functions_1_1Functions_1aae8d84ec09234916e9fcc6a98e4c6bba" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>boost::any</type>
@@ -179,12 +249,21 @@
           <declname>ast</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>constructor for quaternion type variable from RPY variable </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ast</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>shared pointer to the abstract syntax tree class </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>boost::any constructed quaternion type variable </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="139" column="1" bodyfile="/home/runner/work/polaris/polaris/src/built_in_functions/functions.cpp" bodystart="398" bodyend="453"/>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="191" column="1" bodyfile="/home/runner/work/polaris/polaris/src/built_in_functions/functions.cpp" bodystart="398" bodyend="453"/>
       </memberdef>
       <memberdef kind="function" id="classpolaris_1_1built__in__functions_1_1Functions_1a1d66869d0e3bed01e8ba2217eab01ced" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>boost::any</type>
@@ -196,12 +275,21 @@
           <declname>ast</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>constructor for point type variable </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ast</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>shared pointer to the abstract syntax tree class </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>boost::any constructed point type variable </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="140" column="1" bodyfile="/home/runner/work/polaris/polaris/src/built_in_functions/functions.cpp" bodystart="343" bodyend="396"/>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="197" column="1" bodyfile="/home/runner/work/polaris/polaris/src/built_in_functions/functions.cpp" bodystart="343" bodyend="396"/>
       </memberdef>
       <memberdef kind="function" id="classpolaris_1_1built__in__functions_1_1Functions_1a48111da2b965f645cd6e2b339c1ad9df" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>boost::any</type>
@@ -213,12 +301,21 @@
           <declname>ast</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>constructor for pose type variable </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ast</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>shared pointer to the abstract syntax tree class </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>boost::any constructed pose type variable </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="141" column="1" bodyfile="/home/runner/work/polaris/polaris/src/built_in_functions/functions.cpp" bodystart="270" bodyend="341"/>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="203" column="1" bodyfile="/home/runner/work/polaris/polaris/src/built_in_functions/functions.cpp" bodystart="270" bodyend="341"/>
       </memberdef>
       <memberdef kind="function" id="classpolaris_1_1built__in__functions_1_1Functions_1af39db38b69e2bfc9c78fae41314edaec" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>boost::any</type>
@@ -230,12 +327,21 @@
           <declname>ast</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>constructor for array type variable </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ast</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>shared pointer to the abstract syntax tree class </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>boost::any constructed array type variable </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="142" column="1" bodyfile="/home/runner/work/polaris/polaris/src/built_in_functions/functions.cpp" bodystart="97" bodyend="222"/>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="209" column="1" bodyfile="/home/runner/work/polaris/polaris/src/built_in_functions/functions.cpp" bodystart="97" bodyend="222"/>
       </memberdef>
       <memberdef kind="function" id="classpolaris_1_1built__in__functions_1_1Functions_1a6928f927ec04e4e9004ca1cc6ac54aa4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>boost::any</type>
@@ -247,12 +353,21 @@
           <declname>ast</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>constructor for entity type variable </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ast</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>shared pointer to the abstract syntax tree class </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>boost::any constructed entity type variable </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="143" column="1" bodyfile="/home/runner/work/polaris/polaris/src/built_in_functions/functions.cpp" bodystart="61" bodyend="95"/>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="215" column="1" bodyfile="/home/runner/work/polaris/polaris/src/built_in_functions/functions.cpp" bodystart="61" bodyend="95"/>
       </memberdef>
       <memberdef kind="function" id="classpolaris_1_1built__in__functions_1_1Functions_1a8a59349806d2ec80d693b122cdcf8487" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>boost::any</type>
@@ -264,12 +379,21 @@
           <declname>ast</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>addition operator </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ast</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>shared pointer to the abstract syntax tree class </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>boost::any result of the addition operation </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="144" column="1" bodyfile="/home/runner/work/polaris/polaris/src/built_in_functions/functions.cpp" bodystart="661" bodyend="702"/>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="221" column="1" bodyfile="/home/runner/work/polaris/polaris/src/built_in_functions/functions.cpp" bodystart="661" bodyend="702"/>
       </memberdef>
       <memberdef kind="function" id="classpolaris_1_1built__in__functions_1_1Functions_1a8a9522d03f3bfcdb0148691ce52a2517" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>boost::any</type>
@@ -281,12 +405,21 @@
           <declname>ast</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>subtraction operator </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ast</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>shared pointer to the abstract syntax tree class </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>boost::any result of the subtraction operation </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="145" column="1" bodyfile="/home/runner/work/polaris/polaris/src/built_in_functions/functions.cpp" bodystart="618" bodyend="659"/>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="227" column="1" bodyfile="/home/runner/work/polaris/polaris/src/built_in_functions/functions.cpp" bodystart="618" bodyend="659"/>
       </memberdef>
       <memberdef kind="function" id="classpolaris_1_1built__in__functions_1_1Functions_1a02b4c002c6e0e29d4c97c5a2d1da3ce2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>boost::any</type>
@@ -298,12 +431,21 @@
           <declname>ast</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>multiplication operator </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ast</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>shared pointer to the abstract syntax tree class </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>boost::any result of the multiplication operation </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="146" column="1" bodyfile="/home/runner/work/polaris/polaris/src/built_in_functions/functions.cpp" bodystart="523" bodyend="573"/>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="233" column="1" bodyfile="/home/runner/work/polaris/polaris/src/built_in_functions/functions.cpp" bodystart="523" bodyend="573"/>
       </memberdef>
       <memberdef kind="function" id="classpolaris_1_1built__in__functions_1_1Functions_1a02e2e26c7a8b551b60e985acef5b7187" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>boost::any</type>
@@ -315,12 +457,21 @@
           <declname>ast</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>division operator </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ast</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>shared pointer to the abstract syntax tree class </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>boost::any result of the division operation </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="147" column="1" bodyfile="/home/runner/work/polaris/polaris/src/built_in_functions/functions.cpp" bodystart="575" bodyend="616"/>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="239" column="1" bodyfile="/home/runner/work/polaris/polaris/src/built_in_functions/functions.cpp" bodystart="575" bodyend="616"/>
       </memberdef>
       <memberdef kind="function" id="classpolaris_1_1built__in__functions_1_1Functions_1a32875f3dae0be1eac25d4a7ea0a30d52" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>boost::any</type>
@@ -332,19 +483,28 @@
           <declname>ast</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>function fetching variables from variable store </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ast</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>shared pointer to the abstract syntax tree class </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>boost::any stored variable </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="148" column="1" bodyfile="/home/runner/work/polaris/polaris/src/built_in_functions/functions.cpp" bodystart="36" bodyend="43"/>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="245" column="1" bodyfile="/home/runner/work/polaris/polaris/src/built_in_functions/functions.cpp" bodystart="36" bodyend="43"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-    </briefdescription>
+<para>Function class. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="42" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" bodystart="41" bodyend="149"/>
+    <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="45" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" bodystart="44" bodyend="246"/>
     <listofallmembers>
       <member refid="classpolaris_1_1built__in__functions_1_1Functions_1a8a59349806d2ec80d693b122cdcf8487" prot="private" virt="non-virtual"><scope>polaris::built_in_functions::Functions</scope><name>addition</name></member>
       <member refid="classpolaris_1_1built__in__functions_1_1Functions_1af39db38b69e2bfc9c78fae41314edaec" prot="private" virt="non-virtual"><scope>polaris::built_in_functions::Functions</scope><name>constructArray</name></member>
