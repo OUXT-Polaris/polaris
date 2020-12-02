@@ -9,159 +9,223 @@
     <includes local="no">vector</includes>
     <includes local="no">string</includes>
     <incdepgraph>
-      <node id="179">
+      <node id="305">
+        <label>boost/property_tree/xml_parser.hpp</label>
+      </node>
+      <node id="313">
         <label>functional</label>
       </node>
-      <node id="174">
+      <node id="307">
+        <label>boost/lexical_cast.hpp</label>
+      </node>
+      <node id="306">
+        <label>boost/foreach.hpp</label>
+      </node>
+      <node id="298">
         <label>geometry_msgs/msg/pose.hpp</label>
       </node>
-      <node id="169">
+      <node id="308">
+        <label>boost/graph/graphviz.hpp</label>
+      </node>
+      <node id="293">
         <label>peglib.h</label>
       </node>
-      <node id="164">
+      <node id="288">
         <label>string</label>
       </node>
-      <node id="171">
+      <node id="295">
         <label>exception</label>
       </node>
-      <node id="160">
+      <node id="284">
         <label>/home/runner/work/polaris/polaris/test/test_types.cpp</label>
         <link refid="test__types_8cpp"/>
-        <childnode refid="161" relation="include">
+        <childnode refid="285" relation="include">
         </childnode>
-        <childnode refid="162" relation="include">
+        <childnode refid="286" relation="include">
         </childnode>
-        <childnode refid="182" relation="include">
+        <childnode refid="316" relation="include">
         </childnode>
-        <childnode refid="176" relation="include">
+        <childnode refid="310" relation="include">
         </childnode>
-        <childnode refid="175" relation="include">
+        <childnode refid="299" relation="include">
         </childnode>
-        <childnode refid="164" relation="include">
+        <childnode refid="288" relation="include">
         </childnode>
       </node>
-      <node id="178">
+      <node id="312">
         <label>boost/any.hpp</label>
       </node>
-      <node id="182">
+      <node id="316">
         <label>geometry_msgs/msg/point.hpp</label>
       </node>
-      <node id="175">
+      <node id="299">
         <label>vector</label>
       </node>
-      <node id="161">
+      <node id="285">
         <label>gtest/gtest.h</label>
       </node>
-      <node id="162">
+      <node id="286">
         <label>polaris/parser/parser.hpp</label>
         <link refid="parser_8hpp_source"/>
-        <childnode refid="163" relation="include">
+        <childnode refid="287" relation="include">
         </childnode>
-        <childnode refid="167" relation="include">
+        <childnode refid="291" relation="include">
         </childnode>
-        <childnode refid="178" relation="include">
+        <childnode refid="312" relation="include">
         </childnode>
-        <childnode refid="177" relation="include">
+        <childnode refid="311" relation="include">
         </childnode>
-        <childnode refid="169" relation="include">
+        <childnode refid="293" relation="include">
         </childnode>
-        <childnode refid="165" relation="include">
+        <childnode refid="289" relation="include">
         </childnode>
-        <childnode refid="170" relation="include">
+        <childnode refid="294" relation="include">
         </childnode>
-        <childnode refid="164" relation="include">
+        <childnode refid="288" relation="include">
         </childnode>
-        <childnode refid="180" relation="include">
+        <childnode refid="314" relation="include">
         </childnode>
       </node>
-      <node id="181">
+      <node id="315">
         <label>utility</label>
       </node>
-      <node id="172">
+      <node id="296">
         <label>sstream</label>
       </node>
-      <node id="167">
+      <node id="291">
         <label>polaris/built_in_functions/functions.hpp</label>
         <link refid="functions_8hpp_source"/>
-        <childnode refid="168" relation="include">
+        <childnode refid="292" relation="include">
         </childnode>
-        <childnode refid="163" relation="include">
+        <childnode refid="287" relation="include">
         </childnode>
-        <childnode refid="173" relation="include">
+        <childnode refid="297" relation="include">
         </childnode>
-        <childnode refid="169" relation="include">
+        <childnode refid="300" relation="include">
         </childnode>
-        <childnode refid="174" relation="include">
+        <childnode refid="293" relation="include">
         </childnode>
-        <childnode refid="176" relation="include">
+        <childnode refid="298" relation="include">
         </childnode>
-        <childnode refid="177" relation="include">
+        <childnode refid="310" relation="include">
         </childnode>
-        <childnode refid="178" relation="include">
+        <childnode refid="311" relation="include">
         </childnode>
-        <childnode refid="179" relation="include">
+        <childnode refid="312" relation="include">
         </childnode>
-        <childnode refid="180" relation="include">
+        <childnode refid="313" relation="include">
         </childnode>
-        <childnode refid="170" relation="include">
+        <childnode refid="314" relation="include">
         </childnode>
-        <childnode refid="164" relation="include">
+        <childnode refid="294" relation="include">
         </childnode>
-        <childnode refid="181" relation="include">
+        <childnode refid="288" relation="include">
+        </childnode>
+        <childnode refid="315" relation="include">
         </childnode>
       </node>
-      <node id="166">
+      <node id="304">
+        <label>boost/property_tree/ptree.hpp</label>
+      </node>
+      <node id="290">
         <label>iostream</label>
       </node>
-      <node id="163">
+      <node id="287">
         <label>polaris/types/type_base.hpp</label>
         <link refid="type__base_8hpp_source"/>
-        <childnode refid="164" relation="include">
+        <childnode refid="288" relation="include">
         </childnode>
-        <childnode refid="165" relation="include">
+        <childnode refid="289" relation="include">
         </childnode>
-        <childnode refid="166" relation="include">
+        <childnode refid="290" relation="include">
         </childnode>
       </node>
-      <node id="173">
+      <node id="297">
         <label>polaris/types/entity.hpp</label>
         <link refid="entity_8hpp_source"/>
-        <childnode refid="174" relation="include">
+        <childnode refid="298" relation="include">
         </childnode>
-        <childnode refid="164" relation="include">
+        <childnode refid="288" relation="include">
         </childnode>
-        <childnode refid="175" relation="include">
+        <childnode refid="299" relation="include">
         </childnode>
       </node>
-      <node id="180">
+      <node id="314">
         <label>unordered_map</label>
       </node>
-      <node id="177">
+      <node id="309">
+        <label>mutex</label>
+      </node>
+      <node id="300">
+        <label>polaris/types/task/task.hpp</label>
+        <link refid="task_8hpp_source"/>
+        <childnode refid="301" relation="include">
+        </childnode>
+        <childnode refid="297" relation="include">
+        </childnode>
+        <childnode refid="299" relation="include">
+        </childnode>
+        <childnode refid="288" relation="include">
+        </childnode>
+        <childnode refid="294" relation="include">
+        </childnode>
+      </node>
+      <node id="311">
         <label>boost/optional.hpp</label>
       </node>
-      <node id="176">
+      <node id="310">
         <label>geometry_msgs/msg/quaternion.hpp</label>
       </node>
-      <node id="165">
+      <node id="301">
+        <label>polaris/types/task/state_machine.hpp</label>
+        <link refid="state__machine_8hpp_source"/>
+        <childnode refid="302" relation="include">
+        </childnode>
+        <childnode refid="303" relation="include">
+        </childnode>
+        <childnode refid="304" relation="include">
+        </childnode>
+        <childnode refid="305" relation="include">
+        </childnode>
+        <childnode refid="306" relation="include">
+        </childnode>
+        <childnode refid="307" relation="include">
+        </childnode>
+        <childnode refid="308" relation="include">
+        </childnode>
+        <childnode refid="309" relation="include">
+        </childnode>
+        <childnode refid="288" relation="include">
+        </childnode>
+        <childnode refid="299" relation="include">
+        </childnode>
+      </node>
+      <node id="289">
         <label>type_traits</label>
       </node>
-      <node id="168">
+      <node id="302">
+        <label>boost/graph/adjacency_list.hpp</label>
+      </node>
+      <node id="292">
         <label>polaris/exception.hpp</label>
         <link refid="exception_8hpp_source"/>
-        <childnode refid="169" relation="include">
+        <childnode refid="293" relation="include">
         </childnode>
-        <childnode refid="170" relation="include">
+        <childnode refid="294" relation="include">
         </childnode>
-        <childnode refid="171" relation="include">
+        <childnode refid="295" relation="include">
         </childnode>
-        <childnode refid="166" relation="include">
+        <childnode refid="290" relation="include">
         </childnode>
-        <childnode refid="172" relation="include">
+        <childnode refid="296" relation="include">
         </childnode>
-        <childnode refid="164" relation="include">
+        <childnode refid="288" relation="include">
         </childnode>
       </node>
-      <node id="170">
+      <node id="303">
+        <label>boost/graph/graph_utility.hpp</label>
+      </node>
+      <node id="294">
         <label>memory</label>
       </node>
     </incdepgraph>

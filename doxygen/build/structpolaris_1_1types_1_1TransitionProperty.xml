@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structpolaris_1_1types_1_1TransitionProperty" kind="struct" language="C++" prot="public">
+    <compoundname>polaris::types::TransitionProperty</compoundname>
+    <includes refid="state__machine_8hpp" local="no">state_machine.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpolaris_1_1types_1_1TransitionProperty_1a5993cbbc2261a9e6b1e65a8be75ce2ae" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string polaris::types::TransitionProperty::trigger_event</definition>
+        <argsstring></argsstring>
+        <name>trigger_event</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/types/task/state_machine.hpp" line="42" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/task/state_machine.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpolaris_1_1types_1_1TransitionProperty_1a8e389edfb271997b526168c316cc5297" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string polaris::types::TransitionProperty::from_state</definition>
+        <argsstring></argsstring>
+        <name>from_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/types/task/state_machine.hpp" line="43" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/task/state_machine.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structpolaris_1_1types_1_1TransitionProperty_1a0b46c1379c532f2e1807bfe75f08f430" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string polaris::types::TransitionProperty::to_state</definition>
+        <argsstring></argsstring>
+        <name>to_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/types/task/state_machine.hpp" line="44" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/task/state_machine.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>State Transition Property for State Machine Class. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/polaris/polaris/include/polaris/types/task/state_machine.hpp" line="41" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/task/state_machine.hpp" bodystart="40" bodyend="45"/>
+    <listofallmembers>
+      <member refid="structpolaris_1_1types_1_1TransitionProperty_1a8e389edfb271997b526168c316cc5297" prot="public" virt="non-virtual"><scope>polaris::types::TransitionProperty</scope><name>from_state</name></member>
+      <member refid="structpolaris_1_1types_1_1TransitionProperty_1a0b46c1379c532f2e1807bfe75f08f430" prot="public" virt="non-virtual"><scope>polaris::types::TransitionProperty</scope><name>to_state</name></member>
+      <member refid="structpolaris_1_1types_1_1TransitionProperty_1a5993cbbc2261a9e6b1e65a8be75ce2ae" prot="public" virt="non-virtual"><scope>polaris::types::TransitionProperty</scope><name>trigger_event</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
