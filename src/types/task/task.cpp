@@ -48,7 +48,10 @@ double Task::getSpendTime() const
 {
   double spend_time = time_;
   for (const auto depend : depends_) {
-    spend_time = spend_time + depend.getSpendTime();
+    const auto state = depend.getState();
+    if(state == TaskState::INITIALIZED || state == TaskState::RUNNING) {
+      spend_time = spend_time + depend.getSpendTime();
+    }
   }
   return spend_time;
 }
