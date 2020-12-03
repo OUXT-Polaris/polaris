@@ -3,6 +3,7 @@
   <compounddef id="classpolaris_1_1EvaluationError" kind="class" language="C++" prot="public">
     <compoundname>polaris::EvaluationError</compoundname>
     <basecompoundref prot="public" virt="non-virtual">runtime_error</basecompoundref>
+    <includes refid="exception_8hpp" local="no">exception.hpp</includes>
       <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="classpolaris_1_1EvaluationError_1a8c439f05456826cf6296b23eb313f867" prot="public" static="no" mutable="no">
         <type>const std::string</type>
@@ -15,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/polaris/polaris/include/polaris/exception.hpp" line="41" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/exception.hpp" bodystart="41" bodyend="-1"/>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/exception.hpp" line="44" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/exception.hpp" bodystart="44" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classpolaris_1_1EvaluationError_1a3cbd3b564c83edcc7b5213996d34e3e9" prot="public" static="no" mutable="no">
         <type>const std::string</type>
@@ -28,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/polaris/polaris/include/polaris/exception.hpp" line="42" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/exception.hpp" bodystart="42" bodyend="-1"/>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/exception.hpp" line="45" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/exception.hpp" bodystart="45" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -59,11 +60,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/polaris/polaris/include/polaris/exception.hpp" line="31" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/exception.hpp" bodystart="31" bodyend="40"/>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/exception.hpp" line="34" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/exception.hpp" bodystart="34" bodyend="43"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-    </briefdescription>
+<para>describe evaluation error of polaris </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
@@ -88,7 +89,7 @@
         <label>std::runtime_error</label>
       </node>
     </collaborationgraph>
-    <location file="/home/runner/work/polaris/polaris/include/polaris/exception.hpp" line="29" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/exception.hpp" bodystart="28" bodyend="43"/>
+    <location file="/home/runner/work/polaris/polaris/include/polaris/exception.hpp" line="32" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/exception.hpp" bodystart="31" bodyend="46"/>
     <listofallmembers>
       <member refid="classpolaris_1_1EvaluationError_1a8c439f05456826cf6296b23eb313f867" prot="public" virt="non-virtual"><scope>polaris::EvaluationError</scope><name>ast_string</name></member>
       <member refid="classpolaris_1_1EvaluationError_1a3cbd3b564c83edcc7b5213996d34e3e9" prot="public" virt="non-virtual"><scope>polaris::EvaluationError</scope><name>description</name></member>

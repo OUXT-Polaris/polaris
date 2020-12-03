@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classpolaris_1_1TaskPlanner" kind="class" language="C++" prot="public">
+    <compoundname>polaris::TaskPlanner</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpolaris_1_1TaskPlanner_1ac043cdac84ac744bccd02609a115d2b5" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>polaris::TaskPlanner::TaskPlanner</definition>
+        <argsstring>(std::vector&lt; polaris::types::Task &gt; tasks)</argsstring>
+        <name>TaskPlanner</name>
+        <param>
+          <type>std::vector&lt; <ref refid="classpolaris_1_1types_1_1Task" kindref="compound">polaris::types::Task</ref> &gt;</type>
+          <declname>tasks</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/types/task/task_planner.hpp" line="26" column="1" bodyfile="/home/runner/work/polaris/polaris/src/types/task/task_plenner.cpp" bodystart="21" bodyend="26"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/polaris/polaris/include/polaris/types/task/task_planner.hpp" line="24" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/task/task_planner.hpp" bodystart="23" bodyend="27"/>
+    <listofallmembers>
+      <member refid="classpolaris_1_1TaskPlanner_1ac043cdac84ac744bccd02609a115d2b5" prot="public" virt="non-virtual"><scope>polaris::TaskPlanner</scope><name>TaskPlanner</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

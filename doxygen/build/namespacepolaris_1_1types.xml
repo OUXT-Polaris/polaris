@@ -3,7 +3,155 @@
   <compounddef id="namespacepolaris_1_1types" kind="namespace" language="C++">
     <compoundname>polaris::types</compoundname>
     <innerclass refid="classpolaris_1_1types_1_1Entity" prot="public">polaris::types::Entity</innerclass>
+    <innerclass refid="structpolaris_1_1types_1_1StateInfo" prot="public">polaris::types::StateInfo</innerclass>
+    <innerclass refid="classpolaris_1_1types_1_1StateMachine" prot="public">polaris::types::StateMachine</innerclass>
+    <innerclass refid="structpolaris_1_1types_1_1StateProperty" prot="public">polaris::types::StateProperty</innerclass>
+    <innerclass refid="classpolaris_1_1types_1_1Task" prot="public">polaris::types::Task</innerclass>
+    <innerclass refid="structpolaris_1_1types_1_1TransitionProperty" prot="public">polaris::types::TransitionProperty</innerclass>
     <innerclass refid="classpolaris_1_1types_1_1TypeBase" prot="public">polaris::types::TypeBase</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="task_8hpp_1a30e2a9a586c0de6a7113adf5c126f503" prot="public" static="no">
+        <name>TaskState</name>
+        <enumvalue id="dummy_1a30e2a9a586c0de6a7113adf5c126f503adee5f03c2c4e73657824e028494b18c0" prot="public">
+          <name>INITIALIZED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1a30e2a9a586c0de6a7113adf5c126f503a43491564ebcfd38568918efbd6e840fd" prot="public">
+          <name>RUNNING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1a30e2a9a586c0de6a7113adf5c126f503a5c361f7317f0bce44a80464661b4bb40" prot="public">
+          <name>SUCCEED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1a30e2a9a586c0de6a7113adf5c126f503ab9e14d9b2886bcff408b85aefa780419" prot="public">
+          <name>FAILED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dummy_1a30e2a9a586c0de6a7113adf5c126f503afd6078a8b7e2247655ebd856da00b614" prot="public">
+          <name>YEILD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/types/task/task.hpp" line="45" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/task/task.hpp" bodystart="44" bodyend="51"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="state__machine_8hpp_1abdf739b8c3ed1f7afadfd80ecea5d644" prot="public" static="no">
+        <type>boost::adjacency_list&lt; boost::listS, boost::vecS, boost::bidirectionalS, <ref refid="structpolaris_1_1types_1_1StateProperty" kindref="compound">StateProperty</ref>, <ref refid="structpolaris_1_1types_1_1TransitionProperty" kindref="compound">TransitionProperty</ref> &gt;</type>
+        <definition>typedef boost::adjacency_list&lt;boost::listS, boost::vecS, boost::bidirectionalS, StateProperty, TransitionProperty&gt; polaris::types::graph_t</definition>
+        <argsstring></argsstring>
+        <name>graph_t</name>
+        <briefdescription>
+<para>Boost::Graph type for State Machine Class. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/types/task/state_machine.hpp" line="61" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/task/state_machine.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="state__machine_8hpp_1a226ee1c2cd26e888541fa61f05ed042e" prot="public" static="no">
+        <type>graph_t::vertex_descriptor</type>
+        <definition>typedef graph_t::vertex_descriptor polaris::types::vertex_t</definition>
+        <argsstring></argsstring>
+        <name>vertex_t</name>
+        <briefdescription>
+<para>vertex type for State Machine Class (State) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/types/task/state_machine.hpp" line="66" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/task/state_machine.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="state__machine_8hpp_1aa6761005b3d99739e146ea1f06289a82" prot="public" static="no">
+        <type>graph_t::edge_descriptor</type>
+        <definition>typedef graph_t::edge_descriptor polaris::types::edge_t</definition>
+        <argsstring></argsstring>
+        <name>edge_t</name>
+        <briefdescription>
+<para>edge type for State Machine Class (State Transition) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/types/task/state_machine.hpp" line="71" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/task/state_machine.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="state__machine_8hpp_1a4705ff94f67bb3c60f085e17cfd5f563" prot="public" static="no">
+        <type>boost::graph_traits&lt; graph_t &gt;::adjacency_iterator</type>
+        <definition>typedef boost::graph_traits&lt;graph_t&gt;::adjacency_iterator polaris::types::adjacency_iterator_t</definition>
+        <argsstring></argsstring>
+        <name>adjacency_iterator_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/types/task/state_machine.hpp" line="72" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/task/state_machine.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="state__machine_8hpp_1aa89c4ccb7c01887c659850179c63b728" prot="public" static="no">
+        <type>boost::graph_traits&lt; graph_t &gt;::out_edge_iterator</type>
+        <definition>typedef boost::graph_traits&lt;graph_t&gt;::out_edge_iterator polaris::types::out_edge_iterator_t</definition>
+        <argsstring></argsstring>
+        <name>out_edge_iterator_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/types/task/state_machine.hpp" line="73" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/task/state_machine.hpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="task_8hpp_1a6d998a0a7af5aac95401909cd53e9614" prot="public" static="no" mutable="no">
+        <type>const char</type>
+        <definition>const char polaris::types::task_state_description[]</definition>
+        <argsstring>[]</argsstring>
+        <name>task_state_description</name>
+        <initializer>=
+  R&quot;(
+&lt;state_machine&gt;
+  &lt;init_state name=&quot;initialized&quot;/&gt;
+  &lt;state_machine_name name=&quot;task_state_machine&quot;/&gt;
+
+  &lt;transition from = &quot;initialized&quot; to=&quot;running&quot; name=&quot;start&quot;/&gt;
+  &lt;transition from = &quot;running&quot; to=&quot;succeed&quot; name=&quot;success&quot;/&gt;
+  &lt;transition from = &quot;running&quot; to=&quot;failed&quot; name=&quot;failure&quot;/&gt;
+  &lt;transition from = &quot;running&quot; to=&quot;yield&quot; name=&quot;yield&quot;/&gt;
+  &lt;transition from = &quot;initialized&quot; to=&quot;yield&quot; name=&quot;yield&quot;/&gt;
+  &lt;transition from = &quot;yield&quot; to=&quot;initialized&quot; name=&quot;initialize&quot;/&gt;
+&lt;/state_machine&gt;
+)&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/types/task/task.hpp" line="29" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/task/task.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

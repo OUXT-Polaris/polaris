@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classpolaris_1_1StateMachineRuntimeError" kind="class" language="C++" prot="public">
+    <compoundname>polaris::StateMachineRuntimeError</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">runtime_error</basecompoundref>
+    <includes refid="exception_8hpp" local="no">exception.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpolaris_1_1StateMachineRuntimeError_1a23d9c42964f4ec2ae3b1fea34f72a432" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>polaris::StateMachineRuntimeError::StateMachineRuntimeError</definition>
+        <argsstring>(std::string description)</argsstring>
+        <name>StateMachineRuntimeError</name>
+        <param>
+          <type>std::string</type>
+          <declname>description</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/exception.hpp" line="54" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/exception.hpp" bodystart="54" bodyend="55"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>describe runtime error of the state machine library </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="15">
+        <label>runtime_error</label>
+      </node>
+      <node id="14">
+        <label>polaris::StateMachineRuntimeError</label>
+        <link refid="classpolaris_1_1StateMachineRuntimeError"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="17">
+        <label>runtime_error</label>
+      </node>
+      <node id="16">
+        <label>polaris::StateMachineRuntimeError</label>
+        <link refid="classpolaris_1_1StateMachineRuntimeError"/>
+        <childnode refid="17" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/runner/work/polaris/polaris/include/polaris/exception.hpp" line="52" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/exception.hpp" bodystart="51" bodyend="56"/>
+    <listofallmembers>
+      <member refid="classpolaris_1_1StateMachineRuntimeError_1a23d9c42964f4ec2ae3b1fea34f72a432" prot="public" virt="non-virtual"><scope>polaris::StateMachineRuntimeError</scope><name>StateMachineRuntimeError</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

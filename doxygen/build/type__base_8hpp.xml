@@ -10,43 +10,43 @@
     <includedby refid="functions_8cpp" local="no">/home/runner/work/polaris/polaris/src/built_in_functions/functions.cpp</includedby>
     <includedby refid="parser_8cpp" local="no">/home/runner/work/polaris/polaris/src/parser/parser.cpp</includedby>
     <incdepgraph>
-      <node id="63">
+      <node id="137">
         <label>string</label>
       </node>
-      <node id="65">
+      <node id="139">
         <label>iostream</label>
       </node>
-      <node id="62">
+      <node id="136">
         <label>/home/runner/work/polaris/polaris/include/polaris/types/type_base.hpp</label>
         <link refid="type__base_8hpp"/>
-        <childnode refid="63" relation="include">
+        <childnode refid="137" relation="include">
         </childnode>
-        <childnode refid="64" relation="include">
+        <childnode refid="138" relation="include">
         </childnode>
-        <childnode refid="65" relation="include">
+        <childnode refid="139" relation="include">
         </childnode>
       </node>
-      <node id="64">
+      <node id="138">
         <label>type_traits</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="68">
+      <node id="142">
         <label>/home/runner/work/polaris/polaris/include/polaris/parser/parser.hpp</label>
         <link refid="parser_8hpp_source"/>
       </node>
-      <node id="67">
+      <node id="141">
         <label>/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp</label>
         <link refid="functions_8hpp_source"/>
-        <childnode refid="68" relation="include">
+        <childnode refid="142" relation="include">
         </childnode>
       </node>
-      <node id="66">
+      <node id="140">
         <label>/home/runner/work/polaris/polaris/include/polaris/types/type_base.hpp</label>
         <link refid="type__base_8hpp"/>
-        <childnode refid="67" relation="include">
+        <childnode refid="141" relation="include">
         </childnode>
-        <childnode refid="68" relation="include">
+        <childnode refid="142" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -83,31 +83,31 @@
 <codeline lineno="23"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">types</highlight></codeline>
 <codeline lineno="25"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
-<codeline lineno="27" refid="classpolaris_1_1types_1_1TypeBase" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classpolaris_1_1types_1_1TypeBase" kindref="compound">TypeBase</ref></highlight></codeline>
-<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><ref refid="classpolaris_1_1types_1_1TypeBase" kindref="compound">TypeBase</ref>()<sp/>{}</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classpolaris_1_1types_1_1TypeBase" kindref="compound">TypeBase</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T<sp/>&amp;<sp/>v)</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/>:<sp/>value(v)<sp/>{}</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/>T<sp/>getValue()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>value;}</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setValue(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T<sp/>&amp;<sp/>v)<sp/>{value<sp/>=<sp/>v;}</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>matchValueType(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::type_info<sp/>&amp;<sp/>type)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="36"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(T)<sp/>==<sp/>type)<sp/>{</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/>T<sp/>value;</highlight></codeline>
-<codeline lineno="45"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight></codeline>
-<codeline lineno="47"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>types</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>polaris</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>POLARIS__TYPES__TYPE_BASE_HPP_</highlight></codeline>
+<codeline lineno="30"><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="31" refid="classpolaris_1_1types_1_1TypeBase" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classpolaris_1_1types_1_1TypeBase" kindref="compound">TypeBase</ref></highlight></codeline>
+<codeline lineno="32"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><ref refid="classpolaris_1_1types_1_1TypeBase" kindref="compound">TypeBase</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="39" refid="classpolaris_1_1types_1_1TypeBase_1a871de71532dba3a3d31f8be7faf8e0cb" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classpolaris_1_1types_1_1TypeBase_1a871de71532dba3a3d31f8be7faf8e0cb" kindref="member">TypeBase</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T<sp/>&amp;<sp/>v)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/>:<sp/>value(v)<sp/>{}</highlight></codeline>
+<codeline lineno="45" refid="classpolaris_1_1types_1_1TypeBase_1af41f65c620094c48ae428d7083d2394a" refkind="member"><highlight class="normal"><sp/><sp/>T<sp/><ref refid="classpolaris_1_1types_1_1TypeBase_1af41f65c620094c48ae428d7083d2394a" kindref="member">getValue</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>value;}</highlight></codeline>
+<codeline lineno="50" refid="classpolaris_1_1types_1_1TypeBase_1a0bef711b31884d83147afb3df96a21c7" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classpolaris_1_1types_1_1TypeBase_1a0bef711b31884d83147afb3df96a21c7" kindref="member">setValue</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T<sp/>&amp;<sp/>v)<sp/>{value<sp/>=<sp/>v;}</highlight></codeline>
+<codeline lineno="57" refid="classpolaris_1_1types_1_1TypeBase_1ab0795a5159cc884e02e2ab98c855d145" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classpolaris_1_1types_1_1TypeBase_1ab0795a5159cc884e02e2ab98c855d145" kindref="member">matchValueType</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::type_info<sp/>&amp;<sp/>type)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="58"><highlight class="keyword"><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(T)<sp/>==<sp/>type)<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/>T<sp/>value;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>types</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>polaris</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/>//<sp/>POLARIS__TYPES__TYPE_BASE_HPP_</highlight></codeline>
     </programlisting>
     <location file="/home/runner/work/polaris/polaris/include/polaris/types/type_base.hpp"/>
   </compounddef>

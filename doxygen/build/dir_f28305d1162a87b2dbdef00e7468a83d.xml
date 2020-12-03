@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
   <compounddef id="dir_f28305d1162a87b2dbdef00e7468a83d" kind="dir">
     <compoundname>/home/runner/work/polaris/polaris/include/polaris/types</compoundname>
+    <innerdir refid="dir_8204fe92d78957f5d982837407e30e50">/home/runner/work/polaris/polaris/include/polaris/types/task</innerdir>
     <innerfile refid="entity_8hpp">entity.hpp</innerfile>
     <innerfile refid="type__base_8hpp">type_base.hpp</innerfile>
     <briefdescription>

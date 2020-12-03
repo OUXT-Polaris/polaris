@@ -1,0 +1,230 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classpolaris_1_1types_1_1Task" kind="class" language="C++" prot="public">
+    <compoundname>polaris::types::Task</compoundname>
+    <includes refid="task_8hpp" local="no">task.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classpolaris_1_1types_1_1Task_1aaa06b9a95d77bd5a58903c5f792359ea" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classpolaris_1_1types_1_1Task" kindref="compound">Task</ref> &gt;</type>
+        <definition>std::vector&lt;Task&gt; polaris::types::Task::depends_</definition>
+        <argsstring></argsstring>
+        <name>depends_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/types/task/task.hpp" line="86" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/task/task.hpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpolaris_1_1types_1_1Task_1acd81aa3629d88f07cf3821e43d25645a" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double polaris::types::Task::time_</definition>
+        <argsstring></argsstring>
+        <name>time_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/types/task/task.hpp" line="87" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/task/task.hpp" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpolaris_1_1types_1_1Task_1a16eed30e429442ee6df47da04eacd5ef" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double polaris::types::Task::reward_</definition>
+        <argsstring></argsstring>
+        <name>reward_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/types/task/task.hpp" line="88" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/task/task.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpolaris_1_1types_1_1Task_1a712716aaab68dd96eda7c8fef8a13bef" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classpolaris_1_1types_1_1StateMachine" kindref="compound">StateMachine</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;StateMachine&gt; polaris::types::Task::state_machine_ptr_</definition>
+        <argsstring></argsstring>
+        <name>state_machine_ptr_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/types/task/task.hpp" line="89" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/task/task.hpp" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classpolaris_1_1types_1_1Task_1a4abffdfdd6d864e2b5ca024743eb97be" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classpolaris_1_1types_1_1Entity" kindref="compound">Entity</ref> &gt;</type>
+        <definition>std::vector&lt;Entity&gt; polaris::types::Task::entities_</definition>
+        <argsstring></argsstring>
+        <name>entities_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/types/task/task.hpp" line="90" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/task/task.hpp" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classpolaris_1_1types_1_1Task_1a90b1e6776bbb53173bc1aa4238696090" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>polaris::types::Task::Task</definition>
+        <argsstring>()</argsstring>
+        <name>Task</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/types/task/task.hpp" line="59" column="1" bodyfile="/home/runner/work/polaris/polaris/src/types/task/task.cpp" bodystart="26" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classpolaris_1_1types_1_1Task_1a016a42ef5ffd013c4c477aa279d5b0c5" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>polaris::types::Task::Task</definition>
+        <argsstring>(std::vector&lt; Task &gt; depends, std::vector&lt; Entity &gt; entities, double time, double reward)</argsstring>
+        <name>Task</name>
+        <param>
+          <type>std::vector&lt; <ref refid="classpolaris_1_1types_1_1Task" kindref="compound">Task</ref> &gt;</type>
+          <declname>depends</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="classpolaris_1_1types_1_1Entity" kindref="compound">Entity</ref> &gt;</type>
+          <declname>entities</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>reward</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classpolaris_1_1types_1_1Task" kindref="compound">Task</ref> object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>depends</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the list of depended tasks </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>entities</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>target entities of the task </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>estimated elapsed time to process this task </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>reward</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>reward of the task </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/types/task/task.hpp" line="67" column="1" bodyfile="/home/runner/work/polaris/polaris/src/types/task/task.cpp" bodystart="28" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classpolaris_1_1types_1_1Task_1ac476a57570139bc054b420ad106e352d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void polaris::types::Task::addDepends</definition>
+        <argsstring>(Task task)</argsstring>
+        <name>addDepends</name>
+        <param>
+          <type><ref refid="classpolaris_1_1types_1_1Task" kindref="compound">Task</ref></type>
+          <declname>task</declname>
+        </param>
+        <briefdescription>
+<para>add dependency </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>task</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the task depends on this task </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/types/task/task.hpp" line="76" column="1" bodyfile="/home/runner/work/polaris/polaris/src/types/task/task.cpp" bodystart="42" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classpolaris_1_1types_1_1Task_1a8ac8a3dc5e3fc333f0f399b962116229" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>TaskState</type>
+        <definition>TaskState polaris::types::Task::getState</definition>
+        <argsstring>() const</argsstring>
+        <name>getState</name>
+        <briefdescription>
+<para>Get current state of the task. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>TaskState </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/types/task/task.hpp" line="81" column="1" bodyfile="/home/runner/work/polaris/polaris/src/types/task/task.cpp" bodystart="56" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classpolaris_1_1types_1_1Task_1a2775015ee83e337204bdfbad1464c18f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double polaris::types::Task::getSpendTime</definition>
+        <argsstring>() const</argsstring>
+        <name>getSpendTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/types/task/task.hpp" line="82" column="1" bodyfile="/home/runner/work/polaris/polaris/src/types/task/task.cpp" bodystart="47" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classpolaris_1_1types_1_1Task_1a0c87e03e4a38658b0103a02bc9c49808" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double polaris::types::Task::getReward</definition>
+        <argsstring>() const</argsstring>
+        <name>getReward</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/types/task/task.hpp" line="83" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="classpolaris_1_1types_1_1Task" kindref="compound">Task</ref> variable class. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/runner/work/polaris/polaris/include/polaris/types/task/task.hpp" line="57" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/task/task.hpp" bodystart="56" bodyend="91"/>
+    <listofallmembers>
+      <member refid="classpolaris_1_1types_1_1Task_1ac476a57570139bc054b420ad106e352d" prot="public" virt="non-virtual"><scope>polaris::types::Task</scope><name>addDepends</name></member>
+      <member refid="classpolaris_1_1types_1_1Task_1aaa06b9a95d77bd5a58903c5f792359ea" prot="private" virt="non-virtual"><scope>polaris::types::Task</scope><name>depends_</name></member>
+      <member refid="classpolaris_1_1types_1_1Task_1a4abffdfdd6d864e2b5ca024743eb97be" prot="private" virt="non-virtual"><scope>polaris::types::Task</scope><name>entities_</name></member>
+      <member refid="classpolaris_1_1types_1_1Task_1a0c87e03e4a38658b0103a02bc9c49808" prot="public" virt="non-virtual"><scope>polaris::types::Task</scope><name>getReward</name></member>
+      <member refid="classpolaris_1_1types_1_1Task_1a2775015ee83e337204bdfbad1464c18f" prot="public" virt="non-virtual"><scope>polaris::types::Task</scope><name>getSpendTime</name></member>
+      <member refid="classpolaris_1_1types_1_1Task_1a8ac8a3dc5e3fc333f0f399b962116229" prot="public" virt="non-virtual"><scope>polaris::types::Task</scope><name>getState</name></member>
+      <member refid="classpolaris_1_1types_1_1Task_1a16eed30e429442ee6df47da04eacd5ef" prot="private" virt="non-virtual"><scope>polaris::types::Task</scope><name>reward_</name></member>
+      <member refid="classpolaris_1_1types_1_1Task_1a712716aaab68dd96eda7c8fef8a13bef" prot="private" virt="non-virtual"><scope>polaris::types::Task</scope><name>state_machine_ptr_</name></member>
+      <member refid="classpolaris_1_1types_1_1Task_1a90b1e6776bbb53173bc1aa4238696090" prot="public" virt="non-virtual"><scope>polaris::types::Task</scope><name>Task</name></member>
+      <member refid="classpolaris_1_1types_1_1Task_1a016a42ef5ffd013c4c477aa279d5b0c5" prot="public" virt="non-virtual"><scope>polaris::types::Task</scope><name>Task</name></member>
+      <member refid="classpolaris_1_1types_1_1Task_1acd81aa3629d88f07cf3821e43d25645a" prot="private" virt="non-virtual"><scope>polaris::types::Task</scope><name>time_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

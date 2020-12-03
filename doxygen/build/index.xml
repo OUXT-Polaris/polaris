@@ -45,6 +45,55 @@
     <member refid="classpolaris_1_1Parser_1a3da0f65ba0bab1f02cd9d5268eb5aba8" kind="function"><name>getValue</name></member>
     <member refid="classpolaris_1_1Parser_1a7af5f7c6586127ad4b401c9d7a0d6c58" kind="function"><name>evaluate</name></member>
   </compound>
+  <compound refid="structpolaris_1_1types_1_1StateInfo" kind="struct"><name>polaris::types::StateInfo</name>
+    <member refid="structpolaris_1_1types_1_1StateInfo_1a9a980d076f0d83b22644e45f80b56d7a" kind="variable"><name>current_state</name></member>
+    <member refid="structpolaris_1_1types_1_1StateInfo_1a2bce5f435fc4dcebc16e16ce0e4c2afc" kind="variable"><name>possible_transition_states</name></member>
+    <member refid="structpolaris_1_1types_1_1StateInfo_1a448b06b9d06108af1a87e8211e87260b" kind="variable"><name>possible_transitions</name></member>
+    <member refid="structpolaris_1_1types_1_1StateInfo_1aff6ac0eb423fc5feb2464fb568a92d69" kind="function"><name>StateInfo</name></member>
+  </compound>
+  <compound refid="classpolaris_1_1types_1_1StateMachine" kind="class"><name>polaris::types::StateMachine</name>
+    <member refid="classpolaris_1_1types_1_1StateMachine_1a31f683c24a973441cc4c8a723127f8aa" kind="variable"><name>mtx_</name></member>
+    <member refid="classpolaris_1_1types_1_1StateMachine_1a1b5fb5e8f2f2c8769ccf659b0b53df07" kind="variable"><name>state_graph_</name></member>
+    <member refid="classpolaris_1_1types_1_1StateMachine_1a7716c540353899987225a0a705efae24" kind="variable"><name>current_state_</name></member>
+    <member refid="classpolaris_1_1types_1_1StateMachine_1a17156ef77a62c29bdb7924dd65898cc2" kind="variable"><name>name_</name></member>
+    <member refid="classpolaris_1_1types_1_1StateMachine_1a52b557fb47ac799ee5d15a69235379e7" kind="function"><name>StateMachine</name></member>
+    <member refid="classpolaris_1_1types_1_1StateMachine_1ad9a07ba07b17647b7fe4eedf4bcfeb89" kind="function"><name>~StateMachine</name></member>
+    <member refid="classpolaris_1_1types_1_1StateMachine_1a1e092411570ec4f9a55d8f780821d818" kind="function"><name>tryTransition</name></member>
+    <member refid="classpolaris_1_1types_1_1StateMachine_1a5af7977caf212e880204fdd11bb88390" kind="function"><name>setCurrentState</name></member>
+    <member refid="classpolaris_1_1types_1_1StateMachine_1a51eb75220f4f0bceb16cea8fd2fd7cdf" kind="function"><name>getPossibeTransitionStates</name></member>
+    <member refid="classpolaris_1_1types_1_1StateMachine_1a9a582d25cd9a0a35a60b87f223471a12" kind="function"><name>getPossibeTransitions</name></member>
+    <member refid="classpolaris_1_1types_1_1StateMachine_1ae86ff5c1a1d3223fe43cf7999a0bb644" kind="function"><name>getCurrentState</name></member>
+    <member refid="classpolaris_1_1types_1_1StateMachine_1aed5642450c9d8d7d3072cf27d51a5dac" kind="function"><name>getStateInfo</name></member>
+    <member refid="classpolaris_1_1types_1_1StateMachine_1a6c42c73338870e1366b80267d6f42b5f" kind="function"><name>getName</name></member>
+    <member refid="classpolaris_1_1types_1_1StateMachine_1a6c3e587c51e2775bca057d48ecd8ed69" kind="function"><name>addTransition</name></member>
+  </compound>
+  <compound refid="classpolaris_1_1StateMachineRuntimeError" kind="class"><name>polaris::StateMachineRuntimeError</name>
+    <member refid="classpolaris_1_1StateMachineRuntimeError_1a23d9c42964f4ec2ae3b1fea34f72a432" kind="function"><name>StateMachineRuntimeError</name></member>
+  </compound>
+  <compound refid="structpolaris_1_1types_1_1StateProperty" kind="struct"><name>polaris::types::StateProperty</name>
+    <member refid="structpolaris_1_1types_1_1StateProperty_1a106320b960b194914680592c48e644c5" kind="variable"><name>name</name></member>
+  </compound>
+  <compound refid="classpolaris_1_1types_1_1Task" kind="class"><name>polaris::types::Task</name>
+    <member refid="classpolaris_1_1types_1_1Task_1aaa06b9a95d77bd5a58903c5f792359ea" kind="variable"><name>depends_</name></member>
+    <member refid="classpolaris_1_1types_1_1Task_1acd81aa3629d88f07cf3821e43d25645a" kind="variable"><name>time_</name></member>
+    <member refid="classpolaris_1_1types_1_1Task_1a16eed30e429442ee6df47da04eacd5ef" kind="variable"><name>reward_</name></member>
+    <member refid="classpolaris_1_1types_1_1Task_1a712716aaab68dd96eda7c8fef8a13bef" kind="variable"><name>state_machine_ptr_</name></member>
+    <member refid="classpolaris_1_1types_1_1Task_1a4abffdfdd6d864e2b5ca024743eb97be" kind="variable"><name>entities_</name></member>
+    <member refid="classpolaris_1_1types_1_1Task_1a90b1e6776bbb53173bc1aa4238696090" kind="function"><name>Task</name></member>
+    <member refid="classpolaris_1_1types_1_1Task_1a016a42ef5ffd013c4c477aa279d5b0c5" kind="function"><name>Task</name></member>
+    <member refid="classpolaris_1_1types_1_1Task_1ac476a57570139bc054b420ad106e352d" kind="function"><name>addDepends</name></member>
+    <member refid="classpolaris_1_1types_1_1Task_1a8ac8a3dc5e3fc333f0f399b962116229" kind="function"><name>getState</name></member>
+    <member refid="classpolaris_1_1types_1_1Task_1a2775015ee83e337204bdfbad1464c18f" kind="function"><name>getSpendTime</name></member>
+    <member refid="classpolaris_1_1types_1_1Task_1a0c87e03e4a38658b0103a02bc9c49808" kind="function"><name>getReward</name></member>
+  </compound>
+  <compound refid="classpolaris_1_1TaskPlanner" kind="class"><name>polaris::TaskPlanner</name>
+    <member refid="classpolaris_1_1TaskPlanner_1ac043cdac84ac744bccd02609a115d2b5" kind="function"><name>TaskPlanner</name></member>
+  </compound>
+  <compound refid="structpolaris_1_1types_1_1TransitionProperty" kind="struct"><name>polaris::types::TransitionProperty</name>
+    <member refid="structpolaris_1_1types_1_1TransitionProperty_1a5993cbbc2261a9e6b1e65a8be75ce2ae" kind="variable"><name>trigger_event</name></member>
+    <member refid="structpolaris_1_1types_1_1TransitionProperty_1a8e389edfb271997b526168c316cc5297" kind="variable"><name>from_state</name></member>
+    <member refid="structpolaris_1_1types_1_1TransitionProperty_1a0b46c1379c532f2e1807bfe75f08f430" kind="variable"><name>to_state</name></member>
+  </compound>
   <compound refid="classpolaris_1_1types_1_1TypeBase" kind="class"><name>polaris::types::TypeBase</name>
     <member refid="classpolaris_1_1types_1_1TypeBase_1ae731a58689630b807dffce1ad6e9e5d8" kind="variable"><name>value</name></member>
     <member refid="classpolaris_1_1types_1_1TypeBase_1ad959284bae24cb920c77e87ce2261ba4" kind="function"><name>TypeBase</name></member>
@@ -58,6 +107,18 @@
   <compound refid="namespacepolaris_1_1built__in__functions" kind="namespace"><name>polaris::built_in_functions</name>
   </compound>
   <compound refid="namespacepolaris_1_1types" kind="namespace"><name>polaris::types</name>
+    <member refid="task_8hpp_1a30e2a9a586c0de6a7113adf5c126f503" kind="enum"><name>TaskState</name></member>
+    <member refid="dummy_1a30e2a9a586c0de6a7113adf5c126f503adee5f03c2c4e73657824e028494b18c0" kind="enumvalue"><name>INITIALIZED</name></member>
+    <member refid="dummy_1a30e2a9a586c0de6a7113adf5c126f503a43491564ebcfd38568918efbd6e840fd" kind="enumvalue"><name>RUNNING</name></member>
+    <member refid="dummy_1a30e2a9a586c0de6a7113adf5c126f503a5c361f7317f0bce44a80464661b4bb40" kind="enumvalue"><name>SUCCEED</name></member>
+    <member refid="dummy_1a30e2a9a586c0de6a7113adf5c126f503ab9e14d9b2886bcff408b85aefa780419" kind="enumvalue"><name>FAILED</name></member>
+    <member refid="dummy_1a30e2a9a586c0de6a7113adf5c126f503afd6078a8b7e2247655ebd856da00b614" kind="enumvalue"><name>YEILD</name></member>
+    <member refid="state__machine_8hpp_1abdf739b8c3ed1f7afadfd80ecea5d644" kind="typedef"><name>graph_t</name></member>
+    <member refid="state__machine_8hpp_1a226ee1c2cd26e888541fa61f05ed042e" kind="typedef"><name>vertex_t</name></member>
+    <member refid="state__machine_8hpp_1aa6761005b3d99739e146ea1f06289a82" kind="typedef"><name>edge_t</name></member>
+    <member refid="state__machine_8hpp_1a4705ff94f67bb3c60f085e17cfd5f563" kind="typedef"><name>adjacency_iterator_t</name></member>
+    <member refid="state__machine_8hpp_1aa89c4ccb7c01887c659850179c63b728" kind="typedef"><name>out_edge_iterator_t</name></member>
+    <member refid="task_8hpp_1a6d998a0a7af5aac95401909cd53e9614" kind="variable"><name>task_state_description</name></member>
   </compound>
   <compound refid="functions_8hpp" kind="file"><name>functions.hpp</name>
   </compound>
@@ -70,6 +131,12 @@
   </compound>
   <compound refid="entity_8hpp" kind="file"><name>entity.hpp</name>
   </compound>
+  <compound refid="state__machine_8hpp" kind="file"><name>state_machine.hpp</name>
+  </compound>
+  <compound refid="task_8hpp" kind="file"><name>task.hpp</name>
+  </compound>
+  <compound refid="task__planner_8hpp" kind="file"><name>task_planner.hpp</name>
+  </compound>
   <compound refid="type__base_8hpp" kind="file"><name>type_base.hpp</name>
   </compound>
   <compound refid="functions_8cpp" kind="file"><name>functions.cpp</name>
@@ -78,6 +145,12 @@
     <member refid="example_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
   </compound>
   <compound refid="parser_8cpp" kind="file"><name>parser.cpp</name>
+  </compound>
+  <compound refid="state__machine_8cpp" kind="file"><name>state_machine.cpp</name>
+  </compound>
+  <compound refid="task_8cpp" kind="file"><name>task.cpp</name>
+  </compound>
+  <compound refid="task__plenner_8cpp" kind="file"><name>task_plenner.cpp</name>
   </compound>
   <compound refid="test__operator_8cpp" kind="file"><name>test_operator.cpp</name>
     <member refid="test__operator_8cpp_1a22da5e02aac841eb06f7f3fce64b8994" kind="function"><name>TEST</name></member>
@@ -133,15 +206,21 @@
   </compound>
   <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>/home/runner/work/polaris/polaris/include</name>
   </compound>
-  <compound refid="dir_6cd8491d143eb218b70983dbdb3c58bc" kind="dir"><name>/home/runner/work/polaris/polaris/src/parser</name>
-  </compound>
   <compound refid="dir_d7f1e173a14f13297d8b94749a7e1541" kind="dir"><name>/home/runner/work/polaris/polaris/include/polaris/parser</name>
+  </compound>
+  <compound refid="dir_6cd8491d143eb218b70983dbdb3c58bc" kind="dir"><name>/home/runner/work/polaris/polaris/src/parser</name>
   </compound>
   <compound refid="dir_be60f1b74c6de77415c37973f0599dff" kind="dir"><name>/home/runner/work/polaris/polaris/include/polaris</name>
   </compound>
   <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>/home/runner/work/polaris/polaris/src</name>
   </compound>
+  <compound refid="dir_8204fe92d78957f5d982837407e30e50" kind="dir"><name>/home/runner/work/polaris/polaris/include/polaris/types/task</name>
+  </compound>
+  <compound refid="dir_2282e74529724925a6bebe3588628578" kind="dir"><name>/home/runner/work/polaris/polaris/src/types/task</name>
+  </compound>
   <compound refid="dir_13e138d54eb8818da29c3992edef070a" kind="dir"><name>/home/runner/work/polaris/polaris/test</name>
+  </compound>
+  <compound refid="dir_0c0c9fa8a58db41e576adc3ce68c5ee9" kind="dir"><name>/home/runner/work/polaris/polaris/src/types</name>
   </compound>
   <compound refid="dir_f28305d1162a87b2dbdef00e7468a83d" kind="dir"><name>/home/runner/work/polaris/polaris/include/polaris/types</name>
   </compound>
