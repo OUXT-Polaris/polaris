@@ -16,215 +16,151 @@
     <includes local="no">string</includes>
     <includes local="no">vector</includes>
     <incdepgraph>
-      <node id="137">
-        <label>boost/property_tree/xml_parser.hpp</label>
-      </node>
-      <node id="150">
+      <node id="86">
         <label>functional</label>
       </node>
-      <node id="139">
-        <label>boost/lexical_cast.hpp</label>
-      </node>
-      <node id="123">
+      <node id="69">
         <label>/home/runner/work/polaris/polaris/src/built_in_functions/functions.cpp</label>
         <link refid="functions_8cpp"/>
-        <childnode refid="124" relation="include">
+        <childnode refid="70" relation="include">
         </childnode>
-        <childnode refid="128" relation="include">
+        <childnode refid="74" relation="include">
         </childnode>
-        <childnode refid="143" relation="include">
+        <childnode refid="75" relation="include">
         </childnode>
-        <childnode refid="153" relation="include">
+        <childnode refid="89" relation="include">
         </childnode>
-        <childnode refid="147" relation="include">
+        <childnode refid="83" relation="include">
         </childnode>
-        <childnode refid="154" relation="include">
+        <childnode refid="90" relation="include">
         </childnode>
-        <childnode refid="148" relation="include">
+        <childnode refid="84" relation="include">
         </childnode>
-        <childnode refid="149" relation="include">
+        <childnode refid="85" relation="include">
         </childnode>
-        <childnode refid="150" relation="include">
+        <childnode refid="86" relation="include">
         </childnode>
-        <childnode refid="151" relation="include">
+        <childnode refid="87" relation="include">
         </childnode>
-        <childnode refid="142" relation="include">
+        <childnode refid="77" relation="include">
         </childnode>
-        <childnode refid="125" relation="include">
+        <childnode refid="71" relation="include">
         </childnode>
-        <childnode refid="131" relation="include">
+        <childnode refid="82" relation="include">
         </childnode>
       </node>
-      <node id="138">
-        <label>boost/foreach.hpp</label>
-      </node>
-      <node id="130">
+      <node id="81">
         <label>geometry_msgs/msg/pose.hpp</label>
       </node>
-      <node id="140">
-        <label>boost/graph/graphviz.hpp</label>
-      </node>
-      <node id="144">
+      <node id="76">
         <label>peglib.h</label>
       </node>
-      <node id="125">
+      <node id="71">
         <label>string</label>
       </node>
-      <node id="145">
+      <node id="78">
         <label>exception</label>
       </node>
-      <node id="149">
+      <node id="85">
         <label>boost/any.hpp</label>
       </node>
-      <node id="153">
+      <node id="89">
         <label>quaternion_operation/quaternion_operation.h</label>
       </node>
-      <node id="154">
+      <node id="90">
         <label>geometry_msgs/msg/point.hpp</label>
       </node>
-      <node id="131">
+      <node id="82">
         <label>vector</label>
       </node>
-      <node id="152">
+      <node id="88">
         <label>utility</label>
       </node>
-      <node id="146">
+      <node id="79">
         <label>sstream</label>
       </node>
-      <node id="128">
+      <node id="74">
         <label>polaris/built_in_functions/functions.hpp</label>
         <link refid="functions_8hpp_source"/>
-        <childnode refid="124" relation="include">
+        <childnode refid="75" relation="include">
         </childnode>
-        <childnode refid="129" relation="include">
+        <childnode refid="70" relation="include">
         </childnode>
-        <childnode refid="132" relation="include">
+        <childnode refid="80" relation="include">
         </childnode>
-        <childnode refid="143" relation="include">
+        <childnode refid="76" relation="include">
         </childnode>
-        <childnode refid="144" relation="include">
+        <childnode refid="81" relation="include">
         </childnode>
-        <childnode refid="130" relation="include">
+        <childnode refid="83" relation="include">
         </childnode>
-        <childnode refid="147" relation="include">
+        <childnode refid="84" relation="include">
         </childnode>
-        <childnode refid="148" relation="include">
+        <childnode refid="85" relation="include">
         </childnode>
-        <childnode refid="149" relation="include">
+        <childnode refid="86" relation="include">
         </childnode>
-        <childnode refid="150" relation="include">
+        <childnode refid="87" relation="include">
         </childnode>
-        <childnode refid="151" relation="include">
+        <childnode refid="77" relation="include">
         </childnode>
-        <childnode refid="142" relation="include">
+        <childnode refid="71" relation="include">
         </childnode>
-        <childnode refid="125" relation="include">
-        </childnode>
-        <childnode refid="152" relation="include">
+        <childnode refid="88" relation="include">
         </childnode>
       </node>
-      <node id="136">
-        <label>boost/property_tree/ptree.hpp</label>
-      </node>
-      <node id="127">
+      <node id="73">
         <label>iostream</label>
       </node>
-      <node id="124">
+      <node id="70">
         <label>polaris/types/type_base.hpp</label>
         <link refid="type__base_8hpp_source"/>
-        <childnode refid="125" relation="include">
+        <childnode refid="71" relation="include">
         </childnode>
-        <childnode refid="126" relation="include">
+        <childnode refid="72" relation="include">
         </childnode>
-        <childnode refid="127" relation="include">
+        <childnode refid="73" relation="include">
         </childnode>
       </node>
-      <node id="129">
+      <node id="80">
         <label>polaris/types/entity.hpp</label>
         <link refid="entity_8hpp_source"/>
-        <childnode refid="130" relation="include">
+        <childnode refid="81" relation="include">
         </childnode>
-        <childnode refid="125" relation="include">
+        <childnode refid="71" relation="include">
         </childnode>
-        <childnode refid="131" relation="include">
+        <childnode refid="82" relation="include">
         </childnode>
       </node>
-      <node id="151">
+      <node id="87">
         <label>unordered_map</label>
       </node>
-      <node id="141">
-        <label>mutex</label>
-      </node>
-      <node id="132">
-        <label>polaris/types/task/task.hpp</label>
-        <link refid="task_8hpp_source"/>
-        <childnode refid="133" relation="include">
-        </childnode>
-        <childnode refid="129" relation="include">
-        </childnode>
-        <childnode refid="131" relation="include">
-        </childnode>
-        <childnode refid="125" relation="include">
-        </childnode>
-        <childnode refid="142" relation="include">
-        </childnode>
-      </node>
-      <node id="148">
+      <node id="84">
         <label>boost/optional.hpp</label>
       </node>
-      <node id="147">
+      <node id="83">
         <label>geometry_msgs/msg/quaternion.hpp</label>
       </node>
-      <node id="133">
-        <label>polaris/types/task/state_machine.hpp</label>
-        <link refid="state__machine_8hpp_source"/>
-        <childnode refid="134" relation="include">
-        </childnode>
-        <childnode refid="135" relation="include">
-        </childnode>
-        <childnode refid="136" relation="include">
-        </childnode>
-        <childnode refid="137" relation="include">
-        </childnode>
-        <childnode refid="138" relation="include">
-        </childnode>
-        <childnode refid="139" relation="include">
-        </childnode>
-        <childnode refid="140" relation="include">
-        </childnode>
-        <childnode refid="141" relation="include">
-        </childnode>
-        <childnode refid="125" relation="include">
-        </childnode>
-        <childnode refid="131" relation="include">
-        </childnode>
-      </node>
-      <node id="126">
+      <node id="72">
         <label>type_traits</label>
       </node>
-      <node id="134">
-        <label>boost/graph/adjacency_list.hpp</label>
-      </node>
-      <node id="143">
+      <node id="75">
         <label>polaris/exception.hpp</label>
         <link refid="exception_8hpp_source"/>
-        <childnode refid="144" relation="include">
+        <childnode refid="76" relation="include">
         </childnode>
-        <childnode refid="142" relation="include">
+        <childnode refid="77" relation="include">
         </childnode>
-        <childnode refid="145" relation="include">
+        <childnode refid="78" relation="include">
         </childnode>
-        <childnode refid="127" relation="include">
+        <childnode refid="73" relation="include">
         </childnode>
-        <childnode refid="146" relation="include">
+        <childnode refid="79" relation="include">
         </childnode>
-        <childnode refid="125" relation="include">
+        <childnode refid="71" relation="include">
         </childnode>
       </node>
-      <node id="135">
-        <label>boost/graph/graph_utility.hpp</label>
-      </node>
-      <node id="142">
+      <node id="77">
         <label>memory</label>
       </node>
     </incdepgraph>
@@ -297,14 +233,14 @@
 <codeline lineno="60"><highlight class="normal"></highlight></codeline>
 <codeline lineno="61"><highlight class="normal">boost::any<sp/>Functions::constructEntity(std::shared_ptr&lt;peg::Ast&gt;<sp/>ast)</highlight></codeline>
 <codeline lineno="62"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>pose_value<sp/>=<sp/><ref refid="classpolaris_1_1built__in__functions_1_1Functions_1a69a8006955409fc824a3b0feb75677c0" kindref="member">evaluate</ref>(ast-&gt;nodes[0]-&gt;name,<sp/>ast-&gt;nodes[0]);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>pose_value<sp/>=<sp/>evaluate(ast-&gt;nodes[0]-&gt;name,<sp/>ast-&gt;nodes[0]);</highlight></codeline>
 <codeline lineno="64"><highlight class="normal"><sp/><sp/>geometry_msgs::msg::Pose<sp/>pose;</highlight></codeline>
 <codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pose_value.type()<sp/>==<sp/></highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(types::TypeBase&lt;geometry_msgs::msg::Pose&gt;))<sp/>{</highlight></codeline>
 <codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>pose<sp/>=<sp/>boost::any_cast&lt;types::TypeBase&lt;geometry_msgs::msg::Pose&gt;&gt;(pose_value).getValue();</highlight></codeline>
 <codeline lineno="67"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
 <codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>POLARIS_THROW_EVALUATION_ERROR(ast-&gt;nodes[0],<sp/></highlight><highlight class="stringliteral">&quot;failed<sp/>to<sp/>parse<sp/>pose&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="69"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>type_value<sp/>=<sp/><ref refid="classpolaris_1_1built__in__functions_1_1Functions_1a69a8006955409fc824a3b0feb75677c0" kindref="member">evaluate</ref>(ast-&gt;nodes[1]-&gt;name,<sp/>ast-&gt;nodes[1]);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>type_value<sp/>=<sp/>evaluate(ast-&gt;nodes[1]-&gt;name,<sp/>ast-&gt;nodes[1]);</highlight></codeline>
 <codeline lineno="71"><highlight class="normal"><sp/><sp/>std::string<sp/>type;</highlight></codeline>
 <codeline lineno="72"><highlight class="normal"><sp/><sp/>std::vector&lt;std::string&gt;<sp/>types;</highlight></codeline>
 <codeline lineno="73"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(type_value.type()<sp/>==<sp/></highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(types::TypeBase&lt;std::string&gt;))<sp/>{</highlight></codeline>
@@ -314,7 +250,7 @@
 <codeline lineno="77"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
 <codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>POLARIS_THROW_EVALUATION_ERROR(ast-&gt;nodes[1],<sp/></highlight><highlight class="stringliteral">&quot;failed<sp/>to<sp/>parse<sp/>types&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="79"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>polygon_value<sp/>=<sp/><ref refid="classpolaris_1_1built__in__functions_1_1Functions_1a69a8006955409fc824a3b0feb75677c0" kindref="member">evaluate</ref>(ast-&gt;nodes[2]-&gt;name,<sp/>ast-&gt;nodes[2]);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>polygon_value<sp/>=<sp/>evaluate(ast-&gt;nodes[2]-&gt;name,<sp/>ast-&gt;nodes[2]);</highlight></codeline>
 <codeline lineno="81"><highlight class="normal"><sp/><sp/>std::vector&lt;geometry_msgs::msg::Point&gt;<sp/>polygon;</highlight></codeline>
 <codeline lineno="82"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(polygon_value.type()<sp/>==<sp/></highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(types::TypeBase&lt;std::vector&lt;geometry_msgs::msg::Point&gt;&gt;))<sp/>{</highlight></codeline>
 <codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>polygon<sp/>=</highlight></codeline>
@@ -337,13 +273,13 @@
 <codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>POLARIS_THROW_EVALUATION_ERROR(ast,</highlight></codeline>
 <codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;array<sp/>is<sp/>empty&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="102"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>first_value<sp/>=<sp/><ref refid="classpolaris_1_1built__in__functions_1_1Functions_1a69a8006955409fc824a3b0feb75677c0" kindref="member">evaluate</ref>(ast-&gt;nodes[0]-&gt;name,<sp/>ast-&gt;nodes[0]);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>first_value<sp/>=<sp/>evaluate(ast-&gt;nodes[0]-&gt;name,<sp/>ast-&gt;nodes[0]);</highlight></codeline>
 <codeline lineno="104"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;<sp/>value_type<sp/>=<sp/>first_value.type();</highlight></codeline>
 <codeline lineno="105"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(value_type<sp/>==<sp/></highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(types::TypeBase&lt;int&gt;))<sp/>{</highlight></codeline>
 <codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>types::TypeBase&lt;std::vector&lt;int&gt;&gt;<sp/>array;</highlight></codeline>
 <codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;int&gt;<sp/>array_value;</highlight></codeline>
 <codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;<sp/>node<sp/>:<sp/>ast-&gt;nodes)<sp/>{</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>value<sp/>=<sp/><ref refid="classpolaris_1_1built__in__functions_1_1Functions_1a69a8006955409fc824a3b0feb75677c0" kindref="member">evaluate</ref>(node-&gt;name,<sp/>node);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>value<sp/>=<sp/>evaluate(node-&gt;name,<sp/>node);</highlight></codeline>
 <codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(value.type()<sp/>==<sp/></highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(types::TypeBase&lt;int&gt;))<sp/>{</highlight></codeline>
 <codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>array_value.emplace_back(boost::any_cast&lt;types::TypeBase&lt;int&gt;&gt;(value).getValue());</highlight></codeline>
 <codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
@@ -357,7 +293,7 @@
 <codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>types::TypeBase&lt;std::vector&lt;double&gt;&gt;<sp/>array;</highlight></codeline>
 <codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/>array_value;</highlight></codeline>
 <codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;<sp/>node<sp/>:<sp/>ast-&gt;nodes)<sp/>{</highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>value<sp/>=<sp/><ref refid="classpolaris_1_1built__in__functions_1_1Functions_1a69a8006955409fc824a3b0feb75677c0" kindref="member">evaluate</ref>(node-&gt;name,<sp/>node);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>value<sp/>=<sp/>evaluate(node-&gt;name,<sp/>node);</highlight></codeline>
 <codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(value.type()<sp/>==<sp/></highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(types::TypeBase&lt;double&gt;))<sp/>{</highlight></codeline>
 <codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>array_value.emplace_back(boost::any_cast&lt;types::TypeBase&lt;double&gt;&gt;(value).getValue());</highlight></codeline>
 <codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
@@ -371,7 +307,7 @@
 <codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>types::TypeBase&lt;std::vector&lt;std::string&gt;&gt;<sp/>array;</highlight></codeline>
 <codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/>array_value;</highlight></codeline>
 <codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;<sp/>node<sp/>:<sp/>ast-&gt;nodes)<sp/>{</highlight></codeline>
-<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>value<sp/>=<sp/><ref refid="classpolaris_1_1built__in__functions_1_1Functions_1a69a8006955409fc824a3b0feb75677c0" kindref="member">evaluate</ref>(node-&gt;name,<sp/>node);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>value<sp/>=<sp/>evaluate(node-&gt;name,<sp/>node);</highlight></codeline>
 <codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(value.type()<sp/>==<sp/></highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(types::TypeBase&lt;std::string&gt;))<sp/>{</highlight></codeline>
 <codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>array_value.emplace_back(boost::any_cast&lt;types::TypeBase&lt;std::string&gt;&gt;(value).getValue());</highlight></codeline>
 <codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
@@ -385,7 +321,7 @@
 <codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>types::TypeBase&lt;std::vector&lt;bool&gt;&gt;<sp/>array;</highlight></codeline>
 <codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;bool&gt;<sp/>array_value;</highlight></codeline>
 <codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;<sp/>node<sp/>:<sp/>ast-&gt;nodes)<sp/>{</highlight></codeline>
-<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>value<sp/>=<sp/><ref refid="classpolaris_1_1built__in__functions_1_1Functions_1a69a8006955409fc824a3b0feb75677c0" kindref="member">evaluate</ref>(node-&gt;name,<sp/>node);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>value<sp/>=<sp/>evaluate(node-&gt;name,<sp/>node);</highlight></codeline>
 <codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(value.type()<sp/>==<sp/></highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(types::TypeBase&lt;bool&gt;))<sp/>{</highlight></codeline>
 <codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>array_value.emplace_back(boost::any_cast&lt;types::TypeBase&lt;bool&gt;&gt;(value).getValue());</highlight></codeline>
 <codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
@@ -399,7 +335,7 @@
 <codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>types::TypeBase&lt;std::vector&lt;geometry_msgs::msg::Quaternion&gt;&gt;<sp/>array;</highlight></codeline>
 <codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;geometry_msgs::msg::Quaternion&gt;<sp/>array_value;</highlight></codeline>
 <codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;<sp/>node<sp/>:<sp/>ast-&gt;nodes)<sp/>{</highlight></codeline>
-<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>value<sp/>=<sp/><ref refid="classpolaris_1_1built__in__functions_1_1Functions_1a69a8006955409fc824a3b0feb75677c0" kindref="member">evaluate</ref>(node-&gt;name,<sp/>node);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>value<sp/>=<sp/>evaluate(node-&gt;name,<sp/>node);</highlight></codeline>
 <codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(value.type()<sp/>==<sp/></highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(types::TypeBase&lt;geometry_msgs::msg::Quaternion&gt;))<sp/>{</highlight></codeline>
 <codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>array_value.emplace_back(boost::any_cast&lt;types::TypeBase&lt;geometry_msgs::msg::Quaternion&gt;&gt;(</highlight></codeline>
 <codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value).getValue());</highlight></codeline>
@@ -414,7 +350,7 @@
 <codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>types::TypeBase&lt;std::vector&lt;geometry_msgs::msg::Point&gt;&gt;<sp/>array;</highlight></codeline>
 <codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;geometry_msgs::msg::Point&gt;<sp/>array_value;</highlight></codeline>
 <codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;<sp/>node<sp/>:<sp/>ast-&gt;nodes)<sp/>{</highlight></codeline>
-<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>value<sp/>=<sp/><ref refid="classpolaris_1_1built__in__functions_1_1Functions_1a69a8006955409fc824a3b0feb75677c0" kindref="member">evaluate</ref>(node-&gt;name,<sp/>node);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>value<sp/>=<sp/>evaluate(node-&gt;name,<sp/>node);</highlight></codeline>
 <codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(value.type()<sp/>==<sp/></highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(types::TypeBase&lt;geometry_msgs::msg::Point&gt;))<sp/>{</highlight></codeline>
 <codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>array_value.emplace_back(boost::any_cast&lt;types::TypeBase&lt;geometry_msgs::msg::Point&gt;&gt;(</highlight></codeline>
 <codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value).getValue());</highlight></codeline>
@@ -429,7 +365,7 @@
 <codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>types::TypeBase&lt;std::vector&lt;geometry_msgs::msg::Pose&gt;&gt;<sp/>array;</highlight></codeline>
 <codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;geometry_msgs::msg::Pose&gt;<sp/>array_value;</highlight></codeline>
 <codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;<sp/>node<sp/>:<sp/>ast-&gt;nodes)<sp/>{</highlight></codeline>
-<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>value<sp/>=<sp/><ref refid="classpolaris_1_1built__in__functions_1_1Functions_1a69a8006955409fc824a3b0feb75677c0" kindref="member">evaluate</ref>(node-&gt;name,<sp/>node);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>value<sp/>=<sp/>evaluate(node-&gt;name,<sp/>node);</highlight></codeline>
 <codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(value.type()<sp/>==<sp/></highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(types::TypeBase&lt;geometry_msgs::msg::Pose&gt;))<sp/>{</highlight></codeline>
 <codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>array_value.emplace_back(boost::any_cast&lt;types::TypeBase&lt;geometry_msgs::msg::Pose&gt;&gt;(</highlight></codeline>
 <codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value).getValue());</highlight></codeline>
@@ -444,7 +380,7 @@
 <codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>types::TypeBase&lt;std::vector&lt;types::Entity&gt;&gt;<sp/>array;</highlight></codeline>
 <codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;types::Entity&gt;<sp/>array_value;</highlight></codeline>
 <codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;<sp/>node<sp/>:<sp/>ast-&gt;nodes)<sp/>{</highlight></codeline>
-<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>value<sp/>=<sp/><ref refid="classpolaris_1_1built__in__functions_1_1Functions_1a69a8006955409fc824a3b0feb75677c0" kindref="member">evaluate</ref>(node-&gt;name,<sp/>node);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>value<sp/>=<sp/>evaluate(node-&gt;name,<sp/>node);</highlight></codeline>
 <codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(value.type()<sp/>==<sp/></highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(types::TypeBase&lt;types::Entity&gt;))<sp/>{</highlight></codeline>
 <codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>array_value.emplace_back(boost::any_cast&lt;types::TypeBase&lt;types::Entity&gt;&gt;(</highlight></codeline>
 <codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value).getValue());</highlight></codeline>
@@ -510,7 +446,7 @@
 <codeline lineno="273"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ast-&gt;name<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;ARGUMENTS&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
 <codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ast-&gt;nodes[0]-&gt;name<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;CALL&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
 <codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ast-&gt;nodes[0]-&gt;nodes[0]-&gt;name<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;IDENTIFIER&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
-<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>boost::any<sp/>val<sp/>=<sp/><ref refid="classpolaris_1_1built__in__functions_1_1Functions_1a69a8006955409fc824a3b0feb75677c0" kindref="member">evaluate</ref>(ast-&gt;nodes[0]-&gt;nodes[0]-&gt;token,<sp/>ast-&gt;nodes[0]);</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>boost::any<sp/>val<sp/>=<sp/>evaluate(ast-&gt;nodes[0]-&gt;nodes[0]-&gt;token,<sp/>ast-&gt;nodes[0]);</highlight></codeline>
 <codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ast-&gt;nodes[0]-&gt;nodes[0]-&gt;token<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;point&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
 <codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(val.type()<sp/>==<sp/></highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(types::TypeBase&lt;geometry_msgs::msg::Point&gt;))<sp/>{</highlight></codeline>
 <codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>p<sp/>=<sp/>boost::any_cast&lt;types::TypeBase&lt;geometry_msgs::msg::Point&gt;&gt;(val).getValue();</highlight></codeline>
@@ -541,7 +477,7 @@
 <codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ast-&gt;nodes[1]-&gt;name<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;CALL&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
 <codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ast-&gt;nodes[1]-&gt;nodes[0]-&gt;name<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;IDENTIFIER&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
-<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>boost::any<sp/>val<sp/>=<sp/><ref refid="classpolaris_1_1built__in__functions_1_1Functions_1a69a8006955409fc824a3b0feb75677c0" kindref="member">evaluate</ref>(ast-&gt;nodes[1]-&gt;nodes[0]-&gt;token,<sp/>ast-&gt;nodes[1]);</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>boost::any<sp/>val<sp/>=<sp/>evaluate(ast-&gt;nodes[1]-&gt;nodes[0]-&gt;token,<sp/>ast-&gt;nodes[1]);</highlight></codeline>
 <codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ast-&gt;nodes[1]-&gt;nodes[0]-&gt;token<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;quaternion&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
 <codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(val.type()<sp/>==<sp/></highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(types::TypeBase&lt;geometry_msgs::msg::Quaternion&gt;))<sp/>{</highlight></codeline>
 <codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>q<sp/>=</highlight></codeline>
@@ -583,7 +519,7 @@
 <codeline lineno="346"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ast-&gt;name<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;ARGUMENTS&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
 <codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>{</highlight></codeline>
 <codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ast-&gt;nodes[0]-&gt;name<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;CALL&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
-<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>val<sp/>=<sp/><ref refid="classpolaris_1_1built__in__functions_1_1Functions_1a69a8006955409fc824a3b0feb75677c0" kindref="member">evaluate</ref>(ast-&gt;nodes[0]-&gt;nodes[0]-&gt;token,<sp/>ast-&gt;nodes[0]-&gt;nodes[1]);</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>val<sp/>=<sp/>evaluate(ast-&gt;nodes[0]-&gt;nodes[0]-&gt;token,<sp/>ast-&gt;nodes[0]-&gt;nodes[1]);</highlight></codeline>
 <codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(val.type()<sp/>!=<sp/></highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(types::TypeBase&lt;double&gt;))<sp/>{</highlight></codeline>
 <codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>POLARIS_THROW_EVALUATION_ERROR(ast,<sp/></highlight><highlight class="stringliteral">&quot;failed<sp/>to<sp/>interprit<sp/>as<sp/>double<sp/>value&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -596,7 +532,7 @@
 <codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>boost::any_cast&lt;types::TypeBase&lt;double&gt;&gt;(constructDouble(ast-&gt;nodes[0])).getValue();</highlight></codeline>
 <codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ast-&gt;nodes[1]-&gt;name<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;CALL&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
-<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>val<sp/>=<sp/><ref refid="classpolaris_1_1built__in__functions_1_1Functions_1a69a8006955409fc824a3b0feb75677c0" kindref="member">evaluate</ref>(ast-&gt;nodes[1]-&gt;nodes[0]-&gt;token,<sp/>ast-&gt;nodes[1]-&gt;nodes[1]);</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>val<sp/>=<sp/>evaluate(ast-&gt;nodes[1]-&gt;nodes[0]-&gt;token,<sp/>ast-&gt;nodes[1]-&gt;nodes[1]);</highlight></codeline>
 <codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(val.type()<sp/>!=<sp/></highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(types::TypeBase&lt;double&gt;))<sp/>{</highlight></codeline>
 <codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>POLARIS_THROW_EVALUATION_ERROR(ast,<sp/></highlight><highlight class="stringliteral">&quot;failed<sp/>to<sp/>interprit<sp/>as<sp/>double<sp/>value&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -609,7 +545,7 @@
 <codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>boost::any_cast&lt;types::TypeBase&lt;double&gt;&gt;(constructDouble(ast-&gt;nodes[1])).getValue();</highlight></codeline>
 <codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ast-&gt;nodes[2]-&gt;name<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;CALL&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
-<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>val<sp/>=<sp/><ref refid="classpolaris_1_1built__in__functions_1_1Functions_1a69a8006955409fc824a3b0feb75677c0" kindref="member">evaluate</ref>(ast-&gt;nodes[2]-&gt;nodes[0]-&gt;token,<sp/>ast-&gt;nodes[2]-&gt;nodes[1]);</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>val<sp/>=<sp/>evaluate(ast-&gt;nodes[2]-&gt;nodes[0]-&gt;token,<sp/>ast-&gt;nodes[2]-&gt;nodes[1]);</highlight></codeline>
 <codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(val.type()<sp/>!=<sp/></highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(types::TypeBase&lt;double&gt;))<sp/>{</highlight></codeline>
 <codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>POLARIS_THROW_EVALUATION_ERROR(ast,<sp/></highlight><highlight class="stringliteral">&quot;failed<sp/>to<sp/>interprit<sp/>as<sp/>double<sp/>value&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -638,7 +574,7 @@
 <codeline lineno="401"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ast-&gt;name<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;ARGUMENTS&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
 <codeline lineno="402"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>{</highlight></codeline>
 <codeline lineno="403"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ast-&gt;nodes[0]-&gt;name<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;CALL&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
-<codeline lineno="404"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>val<sp/>=<sp/><ref refid="classpolaris_1_1built__in__functions_1_1Functions_1a69a8006955409fc824a3b0feb75677c0" kindref="member">evaluate</ref>(ast-&gt;nodes[0]-&gt;nodes[0]-&gt;token,<sp/>ast-&gt;nodes[0]-&gt;nodes[1]);</highlight></codeline>
+<codeline lineno="404"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>val<sp/>=<sp/>evaluate(ast-&gt;nodes[0]-&gt;nodes[0]-&gt;token,<sp/>ast-&gt;nodes[0]-&gt;nodes[1]);</highlight></codeline>
 <codeline lineno="405"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(val.type()<sp/>!=<sp/></highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(types::TypeBase&lt;double&gt;))<sp/>{</highlight></codeline>
 <codeline lineno="406"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>POLARIS_THROW_EVALUATION_ERROR(ast,<sp/></highlight><highlight class="stringliteral">&quot;failed<sp/>to<sp/>interprit<sp/>as<sp/>double<sp/>value&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="407"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -651,7 +587,7 @@
 <codeline lineno="414"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>boost::any_cast&lt;types::TypeBase&lt;double&gt;&gt;(constructDouble(ast-&gt;nodes[0])).getValue();</highlight></codeline>
 <codeline lineno="415"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="416"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ast-&gt;nodes[1]-&gt;name<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;CALL&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
-<codeline lineno="417"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>val<sp/>=<sp/><ref refid="classpolaris_1_1built__in__functions_1_1Functions_1a69a8006955409fc824a3b0feb75677c0" kindref="member">evaluate</ref>(ast-&gt;nodes[1]-&gt;nodes[0]-&gt;token,<sp/>ast-&gt;nodes[1]-&gt;nodes[1]);</highlight></codeline>
+<codeline lineno="417"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>val<sp/>=<sp/>evaluate(ast-&gt;nodes[1]-&gt;nodes[0]-&gt;token,<sp/>ast-&gt;nodes[1]-&gt;nodes[1]);</highlight></codeline>
 <codeline lineno="418"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(val.type()<sp/>!=<sp/></highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(types::TypeBase&lt;double&gt;))<sp/>{</highlight></codeline>
 <codeline lineno="419"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>POLARIS_THROW_EVALUATION_ERROR(ast,<sp/></highlight><highlight class="stringliteral">&quot;failed<sp/>to<sp/>interprit<sp/>as<sp/>double<sp/>value&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="420"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -664,7 +600,7 @@
 <codeline lineno="427"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>boost::any_cast&lt;types::TypeBase&lt;double&gt;&gt;(constructDouble(ast-&gt;nodes[1])).getValue();</highlight></codeline>
 <codeline lineno="428"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="429"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ast-&gt;nodes[2]-&gt;name<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;CALL&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
-<codeline lineno="430"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>val<sp/>=<sp/><ref refid="classpolaris_1_1built__in__functions_1_1Functions_1a69a8006955409fc824a3b0feb75677c0" kindref="member">evaluate</ref>(ast-&gt;nodes[2]-&gt;nodes[0]-&gt;token,<sp/>ast-&gt;nodes[2]-&gt;nodes[1]);</highlight></codeline>
+<codeline lineno="430"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>val<sp/>=<sp/>evaluate(ast-&gt;nodes[2]-&gt;nodes[0]-&gt;token,<sp/>ast-&gt;nodes[2]-&gt;nodes[1]);</highlight></codeline>
 <codeline lineno="431"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(val.type()<sp/>!=<sp/></highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(types::TypeBase&lt;double&gt;))<sp/>{</highlight></codeline>
 <codeline lineno="432"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>POLARIS_THROW_EVALUATION_ERROR(ast,<sp/></highlight><highlight class="stringliteral">&quot;failed<sp/>to<sp/>interprit<sp/>as<sp/>double<sp/>value&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="433"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -695,7 +631,7 @@
 <codeline lineno="458"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ast-&gt;name<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;ARGUMENTS&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
 <codeline lineno="459"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>{</highlight></codeline>
 <codeline lineno="460"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ast-&gt;nodes[0]-&gt;name<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;CALL&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
-<codeline lineno="461"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>val<sp/>=<sp/><ref refid="classpolaris_1_1built__in__functions_1_1Functions_1a69a8006955409fc824a3b0feb75677c0" kindref="member">evaluate</ref>(ast-&gt;nodes[0]-&gt;nodes[0]-&gt;token,<sp/>ast-&gt;nodes[0]-&gt;nodes[1]);</highlight></codeline>
+<codeline lineno="461"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>val<sp/>=<sp/>evaluate(ast-&gt;nodes[0]-&gt;nodes[0]-&gt;token,<sp/>ast-&gt;nodes[0]-&gt;nodes[1]);</highlight></codeline>
 <codeline lineno="462"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(val.type()<sp/>!=<sp/></highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(types::TypeBase&lt;double&gt;))<sp/>{</highlight></codeline>
 <codeline lineno="463"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>POLARIS_THROW_EVALUATION_ERROR(ast,<sp/></highlight><highlight class="stringliteral">&quot;failed<sp/>to<sp/>interprit<sp/>as<sp/>double<sp/>value&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="464"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -708,7 +644,7 @@
 <codeline lineno="471"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>boost::any_cast&lt;types::TypeBase&lt;double&gt;&gt;(constructDouble(ast-&gt;nodes[0])).getValue();</highlight></codeline>
 <codeline lineno="472"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="473"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ast-&gt;nodes[1]-&gt;name<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;CALL&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
-<codeline lineno="474"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>val<sp/>=<sp/><ref refid="classpolaris_1_1built__in__functions_1_1Functions_1a69a8006955409fc824a3b0feb75677c0" kindref="member">evaluate</ref>(ast-&gt;nodes[1]-&gt;nodes[0]-&gt;token,<sp/>ast-&gt;nodes[1]-&gt;nodes[1]);</highlight></codeline>
+<codeline lineno="474"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>val<sp/>=<sp/>evaluate(ast-&gt;nodes[1]-&gt;nodes[0]-&gt;token,<sp/>ast-&gt;nodes[1]-&gt;nodes[1]);</highlight></codeline>
 <codeline lineno="475"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(val.type()<sp/>!=<sp/></highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(types::TypeBase&lt;double&gt;))<sp/>{</highlight></codeline>
 <codeline lineno="476"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>POLARIS_THROW_EVALUATION_ERROR(ast,<sp/></highlight><highlight class="stringliteral">&quot;failed<sp/>to<sp/>interprit<sp/>as<sp/>double<sp/>value&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="477"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -721,7 +657,7 @@
 <codeline lineno="484"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>boost::any_cast&lt;types::TypeBase&lt;double&gt;&gt;(constructDouble(ast-&gt;nodes[1])).getValue();</highlight></codeline>
 <codeline lineno="485"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="486"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ast-&gt;nodes[2]-&gt;name<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;CALL&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
-<codeline lineno="487"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>val<sp/>=<sp/><ref refid="classpolaris_1_1built__in__functions_1_1Functions_1a69a8006955409fc824a3b0feb75677c0" kindref="member">evaluate</ref>(ast-&gt;nodes[2]-&gt;nodes[0]-&gt;token,<sp/>ast-&gt;nodes[2]-&gt;nodes[1]);</highlight></codeline>
+<codeline lineno="487"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>val<sp/>=<sp/>evaluate(ast-&gt;nodes[2]-&gt;nodes[0]-&gt;token,<sp/>ast-&gt;nodes[2]-&gt;nodes[1]);</highlight></codeline>
 <codeline lineno="488"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(val.type()<sp/>!=<sp/></highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(types::TypeBase&lt;double&gt;))<sp/>{</highlight></codeline>
 <codeline lineno="489"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>POLARIS_THROW_EVALUATION_ERROR(ast,<sp/></highlight><highlight class="stringliteral">&quot;failed<sp/>to<sp/>interprit<sp/>as<sp/>double<sp/>value&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="490"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -734,7 +670,7 @@
 <codeline lineno="497"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>boost::any_cast&lt;types::TypeBase&lt;double&gt;&gt;(constructDouble(ast-&gt;nodes[2])).getValue();</highlight></codeline>
 <codeline lineno="498"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="499"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ast-&gt;nodes[3]-&gt;name<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;CALL&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
-<codeline lineno="500"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>val<sp/>=<sp/><ref refid="classpolaris_1_1built__in__functions_1_1Functions_1a69a8006955409fc824a3b0feb75677c0" kindref="member">evaluate</ref>(ast-&gt;nodes[3]-&gt;nodes[0]-&gt;token,<sp/>ast-&gt;nodes[3]-&gt;nodes[1]);</highlight></codeline>
+<codeline lineno="500"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>val<sp/>=<sp/>evaluate(ast-&gt;nodes[3]-&gt;nodes[0]-&gt;token,<sp/>ast-&gt;nodes[3]-&gt;nodes[1]);</highlight></codeline>
 <codeline lineno="501"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(val.type()<sp/>!=<sp/></highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(types::TypeBase&lt;double&gt;))<sp/>{</highlight></codeline>
 <codeline lineno="502"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>POLARIS_THROW_EVALUATION_ERROR(ast,<sp/></highlight><highlight class="stringliteral">&quot;failed<sp/>to<sp/>interprit<sp/>as<sp/>double<sp/>value&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="503"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -759,8 +695,8 @@
 <codeline lineno="522"><highlight class="normal"></highlight></codeline>
 <codeline lineno="523"><highlight class="normal">boost::any<sp/>Functions::multiplication(std::shared_ptr&lt;peg::Ast&gt;<sp/>ast)</highlight></codeline>
 <codeline lineno="524"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="525"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>v0<sp/>=<sp/><ref refid="classpolaris_1_1built__in__functions_1_1Functions_1a69a8006955409fc824a3b0feb75677c0" kindref="member">evaluate</ref>(ast-&gt;nodes[0]-&gt;name,<sp/>ast-&gt;nodes[0]);</highlight></codeline>
-<codeline lineno="526"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>v1<sp/>=<sp/><ref refid="classpolaris_1_1built__in__functions_1_1Functions_1a69a8006955409fc824a3b0feb75677c0" kindref="member">evaluate</ref>(ast-&gt;nodes[2]-&gt;name,<sp/>ast-&gt;nodes[2]);</highlight></codeline>
+<codeline lineno="525"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>v0<sp/>=<sp/>evaluate(ast-&gt;nodes[0]-&gt;name,<sp/>ast-&gt;nodes[0]);</highlight></codeline>
+<codeline lineno="526"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>v1<sp/>=<sp/>evaluate(ast-&gt;nodes[2]-&gt;name,<sp/>ast-&gt;nodes[2]);</highlight></codeline>
 <codeline lineno="527"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>(quaternion<sp/>value)<sp/>*<sp/>(quaternion<sp/>value)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="528"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(v0.type()<sp/>==<sp/></highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(types::TypeBase&lt;geometry_msgs::msg::Quaternion&gt;)<sp/>&amp;&amp;</highlight></codeline>
 <codeline lineno="529"><highlight class="normal"><sp/><sp/><sp/><sp/>v1.type()<sp/>==<sp/></highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(types::TypeBase&lt;geometry_msgs::msg::Quaternion&gt;))</highlight></codeline>
@@ -811,8 +747,8 @@
 <codeline lineno="574"><highlight class="normal"></highlight></codeline>
 <codeline lineno="575"><highlight class="normal">boost::any<sp/>Functions::division(std::shared_ptr&lt;peg::Ast&gt;<sp/>ast)</highlight></codeline>
 <codeline lineno="576"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="577"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>v0<sp/>=<sp/><ref refid="classpolaris_1_1built__in__functions_1_1Functions_1a69a8006955409fc824a3b0feb75677c0" kindref="member">evaluate</ref>(ast-&gt;nodes[0]-&gt;name,<sp/>ast-&gt;nodes[0]);</highlight></codeline>
-<codeline lineno="578"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>v1<sp/>=<sp/><ref refid="classpolaris_1_1built__in__functions_1_1Functions_1a69a8006955409fc824a3b0feb75677c0" kindref="member">evaluate</ref>(ast-&gt;nodes[2]-&gt;name,<sp/>ast-&gt;nodes[2]);</highlight></codeline>
+<codeline lineno="577"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>v0<sp/>=<sp/>evaluate(ast-&gt;nodes[0]-&gt;name,<sp/>ast-&gt;nodes[0]);</highlight></codeline>
+<codeline lineno="578"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>v1<sp/>=<sp/>evaluate(ast-&gt;nodes[2]-&gt;name,<sp/>ast-&gt;nodes[2]);</highlight></codeline>
 <codeline lineno="579"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>(double<sp/>value)<sp/>*<sp/>(double<sp/>value)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="580"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(v0.type()<sp/>==<sp/></highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(types::TypeBase&lt;double&gt;)<sp/>&amp;&amp;</highlight></codeline>
 <codeline lineno="581"><highlight class="normal"><sp/><sp/><sp/><sp/>v1.type()<sp/>==<sp/></highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(types::TypeBase&lt;double&gt;))</highlight></codeline>
@@ -854,8 +790,8 @@
 <codeline lineno="617"><highlight class="normal"></highlight></codeline>
 <codeline lineno="618"><highlight class="normal">boost::any<sp/>Functions::subtraction(std::shared_ptr&lt;peg::Ast&gt;<sp/>ast)</highlight></codeline>
 <codeline lineno="619"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="620"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>v0<sp/>=<sp/><ref refid="classpolaris_1_1built__in__functions_1_1Functions_1a69a8006955409fc824a3b0feb75677c0" kindref="member">evaluate</ref>(ast-&gt;nodes[0]-&gt;name,<sp/>ast-&gt;nodes[0]);</highlight></codeline>
-<codeline lineno="621"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>v1<sp/>=<sp/><ref refid="classpolaris_1_1built__in__functions_1_1Functions_1a69a8006955409fc824a3b0feb75677c0" kindref="member">evaluate</ref>(ast-&gt;nodes[2]-&gt;name,<sp/>ast-&gt;nodes[2]);</highlight></codeline>
+<codeline lineno="620"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>v0<sp/>=<sp/>evaluate(ast-&gt;nodes[0]-&gt;name,<sp/>ast-&gt;nodes[0]);</highlight></codeline>
+<codeline lineno="621"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>v1<sp/>=<sp/>evaluate(ast-&gt;nodes[2]-&gt;name,<sp/>ast-&gt;nodes[2]);</highlight></codeline>
 <codeline lineno="622"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>(double<sp/>value)<sp/>-<sp/>(double<sp/>value)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="623"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(v0.type()<sp/>==<sp/></highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(types::TypeBase&lt;double&gt;)<sp/>&amp;&amp;</highlight></codeline>
 <codeline lineno="624"><highlight class="normal"><sp/><sp/><sp/><sp/>v1.type()<sp/>==<sp/></highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(types::TypeBase&lt;double&gt;))</highlight></codeline>
@@ -897,8 +833,8 @@
 <codeline lineno="660"><highlight class="normal"></highlight></codeline>
 <codeline lineno="661"><highlight class="normal">boost::any<sp/>Functions::addition(std::shared_ptr&lt;peg::Ast&gt;<sp/>ast)</highlight></codeline>
 <codeline lineno="662"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="663"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>v0<sp/>=<sp/><ref refid="classpolaris_1_1built__in__functions_1_1Functions_1a69a8006955409fc824a3b0feb75677c0" kindref="member">evaluate</ref>(ast-&gt;nodes[0]-&gt;name,<sp/>ast-&gt;nodes[0]);</highlight></codeline>
-<codeline lineno="664"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>v1<sp/>=<sp/><ref refid="classpolaris_1_1built__in__functions_1_1Functions_1a69a8006955409fc824a3b0feb75677c0" kindref="member">evaluate</ref>(ast-&gt;nodes[2]-&gt;name,<sp/>ast-&gt;nodes[2]);</highlight></codeline>
+<codeline lineno="663"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>v0<sp/>=<sp/>evaluate(ast-&gt;nodes[0]-&gt;name,<sp/>ast-&gt;nodes[0]);</highlight></codeline>
+<codeline lineno="664"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>v1<sp/>=<sp/>evaluate(ast-&gt;nodes[2]-&gt;name,<sp/>ast-&gt;nodes[2]);</highlight></codeline>
 <codeline lineno="665"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>(double<sp/>value)<sp/>+<sp/>(double<sp/>value)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="666"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(v0.type()<sp/>==<sp/></highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(types::TypeBase&lt;double&gt;)<sp/>&amp;&amp;</highlight></codeline>
 <codeline lineno="667"><highlight class="normal"><sp/><sp/><sp/><sp/>v1.type()<sp/>==<sp/></highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(types::TypeBase&lt;double&gt;))</highlight></codeline>
