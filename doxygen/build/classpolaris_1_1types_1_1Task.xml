@@ -179,7 +179,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/polaris/polaris/include/polaris/types/task/task.hpp" line="81" column="1" bodyfile="/home/runner/work/polaris/polaris/src/types/task/task.cpp" bodystart="56" bodyend="76"/>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/types/task/task.hpp" line="81" column="1" bodyfile="/home/runner/work/polaris/polaris/src/types/task/task.cpp" bodystart="59" bodyend="79"/>
       </memberdef>
       <memberdef kind="function" id="classpolaris_1_1types_1_1Task_1a2775015ee83e337204bdfbad1464c18f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -192,7 +192,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/polaris/polaris/include/polaris/types/task/task.hpp" line="82" column="1" bodyfile="/home/runner/work/polaris/polaris/src/types/task/task.cpp" bodystart="47" bodyend="54"/>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/types/task/task.hpp" line="82" column="1" bodyfile="/home/runner/work/polaris/polaris/src/types/task/task.cpp" bodystart="47" bodyend="57"/>
       </memberdef>
       <memberdef kind="function" id="classpolaris_1_1types_1_1Task_1a0c87e03e4a38658b0103a02bc9c49808" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
