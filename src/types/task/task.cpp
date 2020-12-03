@@ -12,9 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+#include <polaris/exception.hpp>
 #include <polaris/types/task/task.hpp>
 
 #include <vector>
+#include <memory>
+#include <string>
 
 namespace polaris
 {
@@ -34,6 +37,42 @@ Task::Task(
   std::string description = task_state_description;
   state_machine_ptr_ = std::make_shared<StateMachine>(description);
   entities_ = entities;
+}
+
+void Task::addDepends(Task task)
+{
+  depends_.emplace_back(task);
+}
+
+double Task::getSpendTime() const
+{
+  double spend_time = time_;
+  for (const auto depend : depends_) {
+    spend_time = spend_time + depend.getSpendTime();
+  }
+  return spend_time;
+}
+
+TaskState Task::getState() const
+{
+  const auto current_state = state_machine_ptr_->getCurrentState();
+  if (current_state == "initialized") {
+    return TaskState::INITIALIZED;
+  }
+  if (current_state == "running") {
+    return TaskState::RUNNING;
+  }
+  if (current_state == "succeed") {
+    return TaskState::SUCCEED;
+  }
+  if (current_state == "failed") {
+    return TaskState::FAILED;
+  }
+  if (current_state == "yeild") {
+    return TaskState::YEILD;
+  }
+  std::string message = "task state " + current_state + " is invalid.";
+  throw StateMachineRuntimeError(message);
 }
 }  // namespace types
 }  // namespace polaris

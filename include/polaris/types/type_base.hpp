@@ -25,7 +25,7 @@ namespace types
 {
 /**
  * @brief base class of the type
- * @tparam T 
+ * @tparam T
  */
 template<typename T>
 class TypeBase

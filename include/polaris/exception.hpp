@@ -44,6 +44,16 @@ public:
   const std::string ast_string;
   const std::string description;
 };
+
+/**
+ * @brief describe runtime error of the state machine library
+ */
+class StateMachineRuntimeError : public std::runtime_error
+{
+public:
+  explicit StateMachineRuntimeError(std::string description)
+  : std::runtime_error(description.c_str()) {}
+};
 }  // namespace polaris
 
 /**

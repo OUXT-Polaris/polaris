@@ -29,17 +29,26 @@ namespace types
 const char task_state_description[] =
   R"(
 <state_machine>
-  <init_state name="initialize"/>
+  <init_state name="initialized"/>
   <state_machine_name name="task_state_machine"/>
 
-  <transition from = "initialize" to="running" name="start"/>
+  <transition from = "initialized" to="running" name="start"/>
   <transition from = "running" to="succeed" name="success"/>
   <transition from = "running" to="failed" name="failure"/>
   <transition from = "running" to="yield" name="yield"/>
-  <transition from = "initialize" to="yield" name="yield"/>
-  <transition from = "yield" to="initialize" name="initialized"/>
+  <transition from = "initialized" to="yield" name="yield"/>
+  <transition from = "yield" to="initialized" name="initialize"/>
 </state_machine>
 )";
+
+enum class TaskState
+{
+  INITIALIZED,
+  RUNNING,
+  SUCCEED,
+  FAILED,
+  YEILD
+};
 
 /**
  * @brief Task variable class
@@ -60,6 +69,18 @@ public:
     std::vector<Entity> entities,
     double time,
     double reward);
+  /**
+   * @brief add dependency
+   * @param task the task depends on this task
+   */
+  void addDepends(Task task);
+  /**
+   * @brief Get current state of the task
+   * @return TaskState
+   */
+  TaskState getState() const;
+  double getSpendTime() const;
+  double getReward() const;
 
 private:
   std::vector<Task> depends_;
