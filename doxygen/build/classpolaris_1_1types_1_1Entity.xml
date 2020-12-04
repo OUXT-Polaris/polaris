@@ -2,7 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
   <compounddef id="classpolaris_1_1types_1_1Entity" kind="class" language="C++" prot="public">
     <compoundname>polaris::types::Entity</compoundname>
-    <includes refid="entity_8hpp" local="no">entity.hpp</includes>
       <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="classpolaris_1_1types_1_1Entity_1a9b2ca6d548897c368511ded7f1046d8a" prot="public" static="no" mutable="no">
         <type>geometry_msgs::msg::Pose</type>
@@ -15,7 +14,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/polaris/polaris/include/polaris/types/entity.hpp" line="56" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/entity.hpp" bodystart="56" bodyend="-1"/>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/types/entity.hpp" line="47" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/entity.hpp" bodystart="47" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classpolaris_1_1types_1_1Entity_1a7c7420f90bbc2cb5f932b157639a75c9" prot="public" static="no" mutable="no">
         <type>std::vector&lt; std::string &gt;</type>
@@ -28,7 +27,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/polaris/polaris/include/polaris/types/entity.hpp" line="57" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/entity.hpp" bodystart="57" bodyend="-1"/>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/types/entity.hpp" line="48" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/entity.hpp" bodystart="48" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classpolaris_1_1types_1_1Entity_1a8e011acf179ee451d1a34e7f704ddcbc" prot="public" static="no" mutable="no">
         <type>std::vector&lt; geometry_msgs::msg::Point &gt;</type>
@@ -41,7 +40,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/polaris/polaris/include/polaris/types/entity.hpp" line="58" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/entity.hpp" bodystart="58" bodyend="-1"/>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/types/entity.hpp" line="49" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/entity.hpp" bodystart="49" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -56,7 +55,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/polaris/polaris/include/polaris/types/entity.hpp" line="33" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/entity.hpp" bodystart="33" bodyend="33"/>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/types/entity.hpp" line="30" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/entity.hpp" bodystart="30" bodyend="30"/>
       </memberdef>
       <memberdef kind="function" id="classpolaris_1_1types_1_1Entity_1a414da49cdfd1e91b149abdde64773007" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
         <type></type>
@@ -76,34 +75,12 @@
           <declname>polygon</declname>
         </param>
         <briefdescription>
-<para>Construct a new <ref refid="classpolaris_1_1types_1_1Entity" kindref="compound">Entity</ref> object. </para>        </briefdescription>
+        </briefdescription>
         <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>pose</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>pose of the entity </para></parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>type</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>type of the entity </para></parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>polygon</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>polygon of the entity </para></parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>        </detaileddescription>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/polaris/polaris/include/polaris/types/entity.hpp" line="40" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/entity.hpp" bodystart="40" bodyend="47"/>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/types/entity.hpp" line="31" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/entity.hpp" bodystart="31" bodyend="38"/>
       </memberdef>
       <memberdef kind="function" id="classpolaris_1_1types_1_1Entity_1ab3f30d0c279b4f67032044773b997c5d" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
         <type></type>
@@ -128,14 +105,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/polaris/polaris/include/polaris/types/entity.hpp" line="48" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/entity.hpp" bodystart="48" bodyend="55"/>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/types/entity.hpp" line="39" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/entity.hpp" bodystart="39" bodyend="46"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>entity variable type </para>    </briefdescription>
+    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/runner/work/polaris/polaris/include/polaris/types/entity.hpp" line="31" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/entity.hpp" bodystart="30" bodyend="59"/>
+    <location file="/home/runner/work/polaris/polaris/include/polaris/types/entity.hpp" line="28" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/entity.hpp" bodystart="27" bodyend="50"/>
     <listofallmembers>
       <member refid="classpolaris_1_1types_1_1Entity_1a33f66bb3758eec59c849261405661c5f" prot="public" virt="non-virtual"><scope>polaris::types::Entity</scope><name>Entity</name></member>
       <member refid="classpolaris_1_1types_1_1Entity_1a414da49cdfd1e91b149abdde64773007" prot="public" virt="non-virtual"><scope>polaris::types::Entity</scope><name>Entity</name></member>

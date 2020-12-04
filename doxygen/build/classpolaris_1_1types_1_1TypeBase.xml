@@ -2,7 +2,6 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
   <compounddef id="classpolaris_1_1types_1_1TypeBase" kind="class" language="C++" prot="public">
     <compoundname>polaris::types::TypeBase</compoundname>
-    <includes refid="type__base_8hpp" local="no">type_base.hpp</includes>
     <templateparamlist>
       <param>
         <type>typename</type>
@@ -22,7 +21,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/polaris/polaris/include/polaris/types/type_base.hpp" line="66" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/type_base.hpp" bodystart="66" bodyend="-1"/>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/types/type_base.hpp" line="44" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/type_base.hpp" bodystart="44" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -37,7 +36,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/polaris/polaris/include/polaris/types/type_base.hpp" line="34" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/type_base.hpp" bodystart="34" bodyend="34"/>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/types/type_base.hpp" line="30" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/type_base.hpp" bodystart="30" bodyend="30"/>
       </memberdef>
       <memberdef kind="function" id="classpolaris_1_1types_1_1TypeBase_1a871de71532dba3a3d31f8be7faf8e0cb" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
         <type></type>
@@ -49,20 +48,12 @@
           <declname>v</declname>
         </param>
         <briefdescription>
-<para>Construct a new Type Base object. </para>        </briefdescription>
+        </briefdescription>
         <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>v</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>initialize variable with it&apos;s value </para></parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>        </detaileddescription>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/polaris/polaris/include/polaris/types/type_base.hpp" line="39" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/type_base.hpp" bodystart="39" bodyend="40"/>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/types/type_base.hpp" line="31" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/type_base.hpp" bodystart="31" bodyend="32"/>
       </memberdef>
       <memberdef kind="function" id="classpolaris_1_1types_1_1TypeBase_1af41f65c620094c48ae428d7083d2394a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>T</type>
@@ -70,13 +61,12 @@
         <argsstring>() const</argsstring>
         <name>getValue</name>
         <briefdescription>
-<para>Get the Value object. </para>        </briefdescription>
+        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>T value </para></simplesect>
-</para>        </detaileddescription>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/polaris/polaris/include/polaris/types/type_base.hpp" line="45" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/type_base.hpp" bodystart="45" bodyend="45"/>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/types/type_base.hpp" line="33" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/type_base.hpp" bodystart="33" bodyend="33"/>
       </memberdef>
       <memberdef kind="function" id="classpolaris_1_1types_1_1TypeBase_1a0bef711b31884d83147afb3df96a21c7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -88,20 +78,12 @@
           <declname>v</declname>
         </param>
         <briefdescription>
-<para>Set the Value object. </para>        </briefdescription>
+        </briefdescription>
         <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>v</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>value </para></parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>        </detaileddescription>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/polaris/polaris/include/polaris/types/type_base.hpp" line="50" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/type_base.hpp" bodystart="50" bodyend="50"/>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/types/type_base.hpp" line="34" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/type_base.hpp" bodystart="34" bodyend="34"/>
       </memberdef>
       <memberdef kind="function" id="classpolaris_1_1types_1_1TypeBase_1ab0795a5159cc884e02e2ab98c855d145" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -113,37 +95,19 @@
           <declname>type</declname>
         </param>
         <briefdescription>
-<para>check the value type </para>        </briefdescription>
+        </briefdescription>
         <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>type</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>type info which you want to check </para></parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>true type matched </para></simplesect>
-<simplesect kind="return"><para>false type does not matched </para></simplesect>
-</para>        </detaileddescription>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/runner/work/polaris/polaris/include/polaris/types/type_base.hpp" line="57" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/type_base.hpp" bodystart="57" bodyend="63"/>
+        <location file="/home/runner/work/polaris/polaris/include/polaris/types/type_base.hpp" line="35" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/type_base.hpp" bodystart="35" bodyend="41"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>base class of the type </para>    </briefdescription>
+    </briefdescription>
     <detaileddescription>
-<para><parameterlist kind="templateparam"><parameteritem>
-<parameternamelist>
-<parametername>T</parametername>
-</parameternamelist>
-<parameterdescription>
-<para></para></parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>    </detaileddescription>
-    <location file="/home/runner/work/polaris/polaris/include/polaris/types/type_base.hpp" line="32" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/type_base.hpp" bodystart="31" bodyend="67"/>
+    </detaileddescription>
+    <location file="/home/runner/work/polaris/polaris/include/polaris/types/type_base.hpp" line="28" column="1" bodyfile="/home/runner/work/polaris/polaris/include/polaris/types/type_base.hpp" bodystart="27" bodyend="45"/>
     <listofallmembers>
       <member refid="classpolaris_1_1types_1_1TypeBase_1af41f65c620094c48ae428d7083d2394a" prot="public" virt="non-virtual"><scope>polaris::types::TypeBase</scope><name>getValue</name></member>
       <member refid="classpolaris_1_1types_1_1TypeBase_1ab0795a5159cc884e02e2ab98c855d145" prot="public" virt="non-virtual"><scope>polaris::types::TypeBase</scope><name>matchValueType</name></member>

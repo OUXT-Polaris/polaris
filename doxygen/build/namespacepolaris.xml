@@ -4,14 +4,12 @@
     <compoundname>polaris</compoundname>
     <innerclass refid="classpolaris_1_1EvaluationError" prot="public">polaris::EvaluationError</innerclass>
     <innerclass refid="classpolaris_1_1Parser" prot="public">polaris::Parser</innerclass>
-    <innerclass refid="classpolaris_1_1StateMachineRuntimeError" prot="public">polaris::StateMachineRuntimeError</innerclass>
-    <innerclass refid="classpolaris_1_1TaskPlanner" prot="public">polaris::TaskPlanner</innerclass>
     <innernamespace refid="namespacepolaris_1_1built__in__functions">polaris::built_in_functions</innernamespace>
     <innernamespace refid="namespacepolaris_1_1types">polaris::types</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="38" column="1"/>
+    <location file="/home/runner/work/polaris/polaris/include/polaris/built_in_functions/functions.hpp" line="37" column="1"/>
   </compounddef>
 </doxygen>
